@@ -1,0 +1,385 @@
+*{
+    margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.bg{
+    background: #F2FAFF;
+}
+.main-width{
+    width: 100%;
+    /* border: 1px solid black; */
+    
+    
+}
+.under1320width{
+max-width: 1320px;
+    min-width: 279px;
+    /* height: 35px; */
+    /* border: 1px solid black; */
+    margin: 0 auto;
+
+}
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 0 8px;
+}
+.under-d-flex{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.social-icon img {
+    width: 34px;
+    cursor: pointer;    
+}
+.infoexamplemail{
+  font-family: Roboto-Regular;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 35px;
+    align-items: center;
+}
+
+/* bgfnhgfngfhgfhn */
+
+
+/* img{
+    pointer-events: none
+  } */
+  
+  /* .no-copy-text{
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+  }
+   */
+  
+  
+  
+  @font-face {
+    /* Light 300 */
+    font-family: Roboto-Light;
+    src: url(../Roboto/Roboto-Light.ttf);
+  }
+  @font-face {
+    /* Regular 400 */
+    font-family: Roboto-Regular;
+    src: url(../Roboto/Roboto-Regular.ttf);
+  }
+  @font-face {
+    /* Light 500 */
+    font-family: Roboto-Medium;
+    src: url(../Roboto/Roboto-Medium.ttf);
+  }
+  @font-face {
+    /* Light 700 */
+    font-family: Roboto-Bold;
+    src: url(../Roboto/Roboto-Bold.ttf);
+  }
+  @font-face {
+    /* Light 700 */
+    font-family: PlayfairDisplay-Bold;
+    src: url(../playfair-display/PlayfairDisplay-Bold.otf);
+  }
+  
+  nav{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    background: white;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 21px 8px;
+    
+   
+   
+    /* border: 1px solid black; */
+  }
+  .nav2{
+    box-shadow: rgba(39, 170, 243, 0.25) 0px 2px 8px 0px;
+  }
+  .desi-logo {
+    width: 241px;
+    height: 82px;
+  }
+  .under {
+    color: black;
+  }
+  /* .naves .under:hover {
+    color: #f9a526;
+  } */
+  
+  #navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  /* ul {
+    margin-top: revert-layer;
+    padding-right: 0;
+  } */
+  
+  #navbar li {
+    list-style: none;
+    /* padding: 5px 18px; */
+    position: relative;
+  }
+  #navbar li a {
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  
+    text-decoration: none;
+    justify-content: center;
+  }
+  
+  #mobile {
+    display: none;
+  }
+  #mobile i {
+    color: black;
+    align-items: center;
+  }
+  
+  .nav-item {
+    /* padding: 10px; */
+  }
+  
+  .social-icon ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  #navbar .do {
+    font-family: Roboto-Bold;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 35px;
+    align-items: center;
+ 
+  }
+  #navbar .stme {
+    /* color: #f9a526; */
+  }
+  /* #navbar .instalinkt {
+    color: #f9a526;
+  }
+  #navbar .fblinkt {
+    color: #f9a526;
+  } */
+  @media screen and (max-width: 1426px) {
+    #navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: fixed;
+      top: 114.5px;
+      right: -300px;
+      width: 300px;
+      height: 100vh;
+      background: white;
+      padding: 0px 0 0 0px;
+      transition: 0.3s ease-in-out;
+    }
+  
+    #navbar .do {
+      padding-top: 0px;
+    }
+    #navbar.active {
+      right: 0px;
+    }
+    #navbar li {
+      margin-bottom: 25px;
+    }
+    #mobile {
+      display: block;
+    }
+    #mobile i {
+      font-size: 20px;
+      cursor: pointer;
+      color: black;
+    }
+  }
+  /* .stme {
+    border-radius: 10px;
+    background: #191919;
+    padding: 10px 10px 10px 10px;
+    
+    color: white;
+  }
+  .stme:hover {
+    border: 1px solid #f9a526;
+    transition: 0.3s ease-in-out;
+    
+  }
+  .instalinkt{
+    border-radius: 50%;
+    background: #191919;
+    padding: 10px 11px  ;
+    color: #f9a526;
+    
+  }
+  
+  .fblinkt{
+    border-radius: 60%;
+    background: #191919;
+    padding: 10px 14px  ;
+    color: #f9a526;
+  } */
+  
+  
+  /* .nav2 li a span {
+    display: block;
+    transition: all 0.15s ease-in;
+  }
+  .hidden-span {
+    opacity: 0;
+  }
+  
+  .nav2 li a:hover span {
+    transform: translateY(-25px);
+    -webkit-transform: translateY(-25px);
+    opacity: 0;
+  }
+  .nav2 li a:hover .hidden-span {
+    transform: translateY(-18px);
+    -webkit-transform: translateY(-17px);
+  
+    opacity: 1;
+  } */
+  
+  @media screen and (max-width: 600px) {
+    
+   
+    #navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: fixed;
+      top: 93.5px;
+      right: -300px;
+      width: 300px;
+      height: 100vh;
+      /* background: black; */
+  
+      padding: 0px 0 0 0px;
+      transition: 0.3s ease-in-out;
+    }
+    .desi-logo {
+      width: 120px;
+    }
+  }
+  
+  
+  
+  /* vfvdfvdf */
+
+  .container {
+    position: relative;
+    box-sizing: border-box;
+    width: fit-content;
+  }
+  
+  .mainbox {
+    box-sizing: border-box;
+    position: relative;
+    width: 230px;
+    height: 38px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 160px;
+    background-color:white;
+    transition: all 0.3s ease;
+    border: 1px solid black;
+    /* padding: 10px; */
+  }
+  
+  .checkbox:focus {
+    border: none;
+    outline: none;
+  }
+  
+  .checkbox:checked {
+    right: 10px;
+  }
+  
+  .checkbox:checked ~ .mainbox {
+    width: 50px;
+  }
+  
+  .checkbox:checked ~ .mainbox .search_input {
+    width: 0;
+    height: 0px;
+  }
+  
+  .checkbox:checked ~ .mainbox .iconContainer {
+    padding-right: 8px;
+  }
+  
+  .checkbox {
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 17px;
+    top: 10px;
+    z-index: 9;
+    cursor: pointer;
+    appearance: none;
+  }
+  
+  .search_input {
+    box-sizing: border-box;
+    height: 100%;
+    width: 170px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    /* padding-bottom: 4px; */
+    padding-left: 10px;
+    font-size: 1em;
+    color: black;
+    transition: all 0.3s ease;
+  }
+  
+  .search_input::placeholder {
+    color: black;
+  }
+  
+  .iconContainer {
+    box-sizing: border-box;
+    padding-top: 5px;
+    width: fit-content;
+    transition: all 0.3s ease;
+  }
+  
+  .search_icon {
+    box-sizing: border-box;
+    fill: #0096EA    ;
+    background: black;
+    font-size: 2.3em;
+    padding: 10px;
+    border-radius: 50px;
+
+  }

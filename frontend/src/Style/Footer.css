@@ -1,0 +1,108 @@
+.footer-bg {
+  background: rgba(0, 0, 0, 0.8);
+}
+.part-1-width {
+  width: 100%;
+  max-width: 397px;
+  min-width: 279px;
+  height: 307px;
+  /* border: 1px solid white; */
+  text-align: left;
+}
+
+.flonix-white-logo img {
+  width: 241px;
+  height: 82px;
+}
+.footer-pera {
+  margin: 15px 0 36px 0;
+}
+.footer-pera p {
+  font-family: Roboto-Medium;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: justify;
+  color: #ffffff;
+}
+.footer-icon-width {
+  width: 223px;
+  height: 44px;
+  gap: 16px;
+  /* border: 1px solid white; */
+}
+.footer-icon-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-icon-flex img {
+  width: 44px;
+  height: 44px;
+}
+
+.part-2-width {
+  width: 100%;
+  max-width: 175.88px;
+  height: 297px;
+  /* border: 1px solid white; */
+  text-align: left;
+}
+.quick-link-heading{
+    font-family:  Roboto-Bold;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 35px;
+      color: white;
+}
+.quick-padding{
+padding: 15px 0 39px 0;
+}
+.links-policy{
+    /* padding-top: 30px; */
+}
+.links-policy p{
+    font-family: Roboto-Medium;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    color: white;
+    
+}
+
+.part-3-width {
+  width: 100%;
+  max-width: 175.88px;
+  height: 307px;
+  /* border: 1px solid white; */
+  text-align: left;
+}
+.our-product{
+    /* padding-top: 30px; */
+}
+.our-product p{
+    font-family: Roboto-Medium;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    color: white;
+    
+}
+.part-4-width {
+  width: 100%;
+  max-width: 400.71px;
+  min-width: 279px;
+  height: 307px;
+  /* border: 1px solid white; */
+  text-align: left;
+}
+.copyright{
+background: black;
+color: white;
+padding: 15px 0;
+}
+.copyright p{
+    font-family: Roboto-Regular;
+    font-weight: 400;
+    font-size: 18px; 
+    line-height: 35px; 
+}
