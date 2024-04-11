@@ -1,0 +1,219 @@
+.blogs-page-width-854{
+max-width: 854px;
+min-width:279px ;
+height: 1769px;
+width: 100%;
+border-radius: 10px;
+/* border: 1px solid black; */
+}
+
+.blog-page-imges-1 img{
+    width: 100%;
+max-width: 849px;
+min-width: 279px;
+height: 425px;
+border-radius: 10px;
+}
+.blogs-page-all-heading{
+    font-family:  Roboto-Bold;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28.13px;
+    text-align: justify;
+    margin: 25px 0;
+}
+.blogs-page-all-pera{
+    font-family: Roboto-Regular;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: justify;
+    margin: 25px 0;
+}
+
+.blog-page-imges-2 img {
+    width: 100%;
+max-width: 850px;
+min-width: 279px;
+height: 333px;
+border-radius: 10px;
+}
+
+.blogs-page-width-405 {
+    max-width: 405px;
+    min-width:279px ;
+    height: 1769px;
+    width: 100%;
+    border-radius: 10px;
+    /* border: 1px solid black; */
+
+}
+
+.blogs-page-catogery-width-1{
+    max-width: 405px;
+    min-width: 279px;
+    height: 425px;
+    width: 100%;
+    border-radius: 10px;
+    /* border: 1px solid black; */
+    background: white;
+    box-shadow: rgba(39, 170, 243, 0.25) 0px 2px 8px 0px;
+
+}
+
+
+/* .blogs-page-under-catogery-width{
+    
+    max-width: 298px;
+    min-width: 279px;
+    height: 348px;
+    width: 100%;
+    border-radius: 10px;
+    
+    margin: 38px 87px 39px 20px;
+
+   } */
+   .blogs-page-under-catogery-width {
+    /* max-width: 298px; */
+    min-width: 279px;
+    /* height: 348px; */
+    width: 100%;
+    border-radius: 10px;
+    /* border: 1px solid black; */
+    padding: 38px 87px 39px 20px;
+}
+
+
+   .blogsearchbox {
+    box-sizing: border-box;
+    /* position: relative; */
+    /* z-index: -999; */
+    width: 297px;
+    height: 45px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 160px;
+    background-color: white;
+    transition: all 0.3s ease;
+    border: 1px solid black;
+    /* padding: 10px; */
+}
+.blog-search-icon {
+    box-sizing: border-box;
+    /* fill: #0096EA; */
+    /* background: black; */
+    font-size: 2.3em;
+    padding: 10px;
+    border-radius: 50px;
+}
+.search-catgories-margin{
+    margin: 40px 0 18px 0;
+    text-align: left;
+}
+.search-catgories-margin p{
+    font-family: Roboto-Medium;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 35px;
+}
+.search-status-text p{
+    text-align: left;
+    font-family: Roboto-Regular;
+    font-weight: 400;
+    font-size: 18px; 
+    line-height: 35px; 
+}
+
+
+.blogs-page-catogery-width-2{
+    max-width: 405px;
+    min-width: 279px;
+    width: 100%;
+    height: 1292.54px;
+    /* border: 1px solid black; */
+    box-shadow: rgba(39, 170, 243, 0.25) 0px 2px 8px 0px;
+    margin-top: 50px;
+    background: white;
+    border-radius: 10px;
+}
+
+.recnts-blogs{
+    /* margin: 37px 15px 37px 20px; */
+    padding: 37px 15px 37px 20px;
+
+}
+
+.recent-blogs-pera p{
+    text-align: left;
+    font-family: Roboto-Medium;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 35px;
+}
+.blogs-ing-texr-top-margin{
+    margin-top: 40px;
+}
+.blogs-image-and-text{
+    margin-bottom: 35px;
+}
+.blogs-img-flex-text{
+justify-content: space-between;
+display: flex;
+max-width: 360px;
+min-width: 279px;
+width: 360px;
+height: 97px;
+gap: 10px;
+border-radius: 10px;
+/* border: 1px solid black; */
+margin-bottom: 35px;
+}
+
+.recent-blog-img img{
+    width: 112px;
+    height: 97px;
+    border-radius: 10px;
+}
+
+.blog-text-recent-width-box{
+    width: 238px;
+    height: 97px;
+    text-align: left;
+    /* border: 1px solid black; */
+}
+
+.blog-text-recent-width-box .blog-recent-heading{
+    font-family: Roboto-Medium;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 15px;
+    text-align: left;
+
+   
+
+}
+.blog-text-recent-width-box .blog-recent-pera{
+    text-align: left;
+    font-family: Roboto-Regular;
+    font-weight: 400;
+    font-size: 16px; 
+    line-height: 25px; 
+    text-align: left;
+    padding-top: 7px;
+    
+}
+
+.blog-recent-last-img-1{
+    margin: 35px 0;
+}
+.blog-recent-last-img-1 img {
+
+    width: 100%;
+    max-width: 365px;
+    min-width: 297px;
+    border-radius: 15px;
+    
+
+}
