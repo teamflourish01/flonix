@@ -1,0 +1,163 @@
+.product-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+.product-selecter {
+  max-width: 300px;
+  min-width: 279px;
+  width: 100%;
+  /* border: 1px solid black; */
+  /* height: 693px; */
+  /* border-radius: 10px; */
+}
+.rectengle-one {
+  max-width: 300px;
+  min-width: 279px;
+  width: 100%;
+  height: 77px;
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid black;
+  background-color: black;
+  padding: 19px 21px;
+}
+.rectengle-one p {
+  font-family: PTSans-Regular;
+  gap: 0px;
+  opacity: 0px;
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 35px;
+  text-align: left;
+  cursor: pointer;
+}
+.rectengle-all {
+  max-width: 300px;
+  min-width: 279px;
+  width: 100%;
+  height: 77px;
+  border: 1px solid black;
+  background: #f2faff;
+  padding: 19px 21px;
+  cursor: pointer;
+  /* border-radius: 10px 10px 0 0; */
+}
+.rectengle-all p {
+  font-family: PTSans-Regular;
+  gap: 0px;
+  opacity: 0px;
+  color: black;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 35px;
+  text-align: left;
+}
+.rectengle-last {
+  border: 1px solid black;
+  background: #f2faff;
+  padding: 19px 21px;
+  border-radius: 0px 0px 10px 10px;
+}
+.rectengle-last p {
+  font-family: PTSans-Regular;
+  gap: 0px;
+  opacity: 0px;
+  color: black;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 35px;
+  text-align: left;
+  cursor: pointer;
+}
+/* product card css start */
+.product-card {
+  max-width: 986px;
+  min-width: 279px;
+  width: 100%;
+}
+.card-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card {
+  max-width: 314.51px;
+  min-width: 279px;
+  width: 100%;
+  height: 398.56px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  border-radius: 18.08px;
+}
+.card img {
+  max-width: 314.51px;
+  min-width: 279px;
+  width: 100%;
+  height: 314.51px;
+  border-radius: 18.08px 18.08px 0px 0px;
+}
+.card p {
+  font-size: 16.27px;
+  line-height: 31.63px;
+  font-family: sans-serif;
+  font-family: Roboto-Medium;
+  font-weight: 500;
+  padding: 20px;
+}
+
+/* Pagination css start */
+section {
+  text-align: center;
+}
+
+.pagination {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+}
+
+.page-number {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  text-align: center;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.current {
+  background-color: #ccc;
+}
+.page-arrow {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  text-align: center;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Click Functionality */
+.rectengle-all.active {
+  background-color: black;
+  color: white;
+  
+}
+.rectengle-all.active p {
+  color: white;
+}

@@ -88,6 +88,12 @@ max-width: 1320px;
     font-family: PlayfairDisplay-Bold;
     src: url(../playfair-display/PlayfairDisplay-Bold.otf);
   }
+  @font-face {
+    /* Regular 400 */
+    font-family:PTSans-Regular ;
+    src: url(../PT_Sans/PTSans-Regular.ttf);
+  }
+  
   
   nav{
     margin: 0;
