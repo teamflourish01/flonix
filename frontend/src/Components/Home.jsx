@@ -758,13 +758,7 @@ const Home = () => {
                           <label className="form-label">Your name</label>
                           <input
                           className="form-inputs"
-                            style={{
-                              width: "370px",
-                              padding: "20px",
-                              margin: "5px 0",
-                              borderRadius: "15px",
-                              border: "1px solid black",
-                            }}
+                            
                             type="text"
                           />
                         </div>
@@ -772,13 +766,7 @@ const Home = () => {
                           <label className="form-label">Email address</label>
                           <input
                           className="form-inputs"
-                            style={{
-                              width: "370px",
-                              padding: "20px",
-                              margin: "5px 0",
-                              borderRadius: "15px",
-                              border: "1px solid black",
-                            }}
+                            
                             type="text"
                           />
                         </div>
