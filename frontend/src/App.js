@@ -8,6 +8,8 @@ import BlogsPage from './Components/BlogsPage';
 import NewsEvent from './Components/NewsEvent';
 import Footer from './Components/Footer';
 import NewsEventpage from './Components/NewsEventpage';
+import Contact from './Components/Contact';
+import About from './Components/About';
 
 
 
@@ -17,10 +19,13 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/About" element={<About />} />
         <Route path="/Blogs" element={<Blogs/>} />
         <Route path="/BlogsPage" element={<BlogsPage />} />
         <Route path="/NewsEvent" element={<NewsEvent/>} />
         <Route path="/NewsEventpage" element={<NewsEventpage />} />
+        <Route path="/Contact" element={<Contact/>} />
+
         
       </Routes>
 
