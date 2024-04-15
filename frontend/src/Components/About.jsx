@@ -6,6 +6,12 @@ import aboutimg1 from "../images/aboutimg1.svg";
 import aboutimg2 from "../images/aboutimg2.svg";
 import aboutimg3 from "../images/aboutimg3.svg";
 import aboutimg4 from "../images/aboutimg4.svg";
+import mission from "../images/mission.svg"
+import vision from "../images/vision.svg"
+import goals from "../images/goals.svg"
+import Vectorarrow from "../images/Vectorarrow.svg"
+import TechnologicalTesto from "./TechnologicalTesto";
+
 
 const About = () => {
   return (
@@ -231,7 +237,13 @@ const About = () => {
                           <div class="verticle-line-up back-orange">
                             <div className=" dots-orange-dots dot-orange"></div>
                           </div>
+                          <div class="pane-warp ">
+            <div class="steps-pane">
+              <img src={Vectorarrow} alt="" />
+            </div>
+          </div>
                         </div>
+                        
                       </div>
                     </div>
 
@@ -242,10 +254,16 @@ const About = () => {
                           <div class="verticle-line back-orange">
                           <div className=" dots-orange-dots-down dot-orange"></div> 
                           </div>
+                          <div class="pane-warp ">
+            <div class="steps-pane">
+              <img src={Vectorarrow} alt="" />
+            </div>
+          </div>
                         </div>
                       </div>
-
+                      
                       <div class="inverted-pane-warp ">
+                      
                         <div class="inverted-steps-pane">
                           <p>Company Timeline</p>
                           <p>
@@ -263,6 +281,11 @@ const About = () => {
                           <div class="verticle-line-up back-orange">
                           <div className=" dots-orange-dots dot-orange"></div>
                           </div>
+                          <div class="pane-warp ">
+            <div class="steps-pane">
+              <img src={Vectorarrow} alt="" />
+            </div>
+          </div>
                         </div>
                       </div>
                     </div>
@@ -274,6 +297,11 @@ const About = () => {
                           <div class="verticle-line back-orange">
                           <div className=" dots-orange-dots-down dot-orange"></div>
                           </div>
+                          <div class="pane-warp ">
+            <div class="steps-pane">
+              <img src={Vectorarrow} alt="" />
+            </div>
+          </div>
                         </div>
                       </div>
 
@@ -306,6 +334,73 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <section className="bg" style={{margin:"50px 0 "}}>
+        <div className="main-width">
+          <div  style={{padding:"50px 0"}}>
+            <div className="under1320width">
+              <div className="d-flex">
+
+
+              <div class="mission-box">
+							<div class="under-mission-box">
+								<div class="about-mission-box-icon">
+									<img src={mission} alt="" />
+								</div>
+								<div class="features-info">
+									<h4 class="title">Mission</h4>
+									<p className="about-pera-heading">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, </p>
+								</div>
+							</div>
+						</div> 
+            <div class="mission-box">
+							<div class="under-mission-box">
+								<div class="about-mission-box-icon">
+									<img src={vision} alt="" />
+								</div>
+								<div class="features-info">
+									<h4 class="title">Mission</h4>
+									<p className="about-pera-heading">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, </p>
+								</div>
+							</div>
+						</div> 
+            <div class="mission-box">
+							<div class="under-mission-box">
+								<div class="about-mission-box-icon">
+									<img src={goals} alt="" />
+								</div>
+								<div class="features-info">
+									<h4 class="title">Mission</h4>
+									<p className="about-pera-heading">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, </p>
+								</div>
+							</div>
+						</div> 
+                
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="" style={{margin:"50px 0 70px 0"}}>
+        <div className="main-width">
+          <div >
+            <div className="under1320width">
+            <p
+                  className="all-heading"
+                  style={{ padding: "0", margin: "0 0 50px 0" }}
+                >
+                  Technological Achievement
+                </p>
+                   <div className="under-widt-testo">
+                    <TechnologicalTesto/>
+                   </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
     </>
   );
 };

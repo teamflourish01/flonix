@@ -473,34 +473,7 @@ const Home = () => {
 
                 <Testimonial/>
                 </div>
-                {/* <div className="testimonial-width">
-                  <div className="testimonial-under-width">
-                    <div className="testimonial-display-flex">
-                      <div className="testimonial-name-heading-pera-width">
-                        <p className="testimonial-name">Kevin Kevin</p>
-                        <p className="testimonial-degistion">
-                          Distributer of xyz company
-                        </p>
-                        <div className="testimonial-review">
-                          <p>
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry. Lorem Ipsum has been the
-                            industry's standard dummy text ever since the 1500s,{" "}
-                          </p>
-                        </div>
-                      </div>
-                      <div>
-                        <div className="shadow-testimonial-box">
-                          <div className="testimonial-box">
-                            <div class="inner-testimonial">
-                              <img src={testimonialimg} alt="" />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
+                
               </div>
             </div>
           </div>

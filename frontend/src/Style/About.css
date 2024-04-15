@@ -98,6 +98,17 @@ height: 167px;
   box-shadow: 7px 0px 5px #bcbcbc; */
 }
 
+.steps-pane {
+  /* margin-right: 190px; */
+  text-align: right;
+  /* margin-bottom: 20px; */
+  margin: -19.5px 0 0 140px;
+}
+.steps-pane img {
+  width: 20px;
+  height: 20px;
+}
+
 .inverted-pane-warp {
   /* height: 140px;
   width: 25px;
@@ -138,8 +149,15 @@ height: 167px;
     .steps-timeline {
         border-top: 3px dashed #EA854F;
         padding-top: 55px;
+        /* border-width: thin; */
+        
         /* margin: 50px 0; */
         display: flex;
+        
+        
+        
+      
+        
     }
     .steps-timeline-second {
         /* border-top: 3px dashed #EA854F; */
@@ -343,4 +361,106 @@ height: 167px;
     margin-left: -5.9px;
     margin-top: 71px;
     /* margin-right: 34px; */
+}
+
+
+.mission-box{
+  max-width: 425px;
+  min-width: 279px;
+  width: 100%;
+height: 571px;
+/* border: 1px solid black; */
+
+
+}
+.under-mission-box{
+  max-width: 425px;
+  min-width: 279px;
+  width: 100%;
+height: 501px;
+/* border: 1px solid black; */
+margin-top: 70px;
+  background-color: #fff;
+  box-shadow: 0px 0px 21.5px 0px #27AAF340;
+
+  /* margin-bottom: 110px; */
+  /* padding: 90px 50px 40px; */
+  position: relative;
+  /* transition: 0.3s; */
+}
+.about-mission-box-icon {
+  font-size: 36px;
+  width: 141px;
+  height: 141px;
+  line-height: 180px;
+  text-align: center;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 21.5px 0px #27AAF340;
+
+  /* box-shadow: 0 0 0 10px #fff; */
+  position: absolute;
+  top: -71px;
+  left: 50%;
+  transform: translate(-50%);
+  /* color: #bdbdbd; */
+  transition: 0.3s;
+}
+.features-info .title {
+  padding: 107px 0 35px 0;
+  font-family: Roboto-Medium;
+font-size: 24px;
+font-weight: 500;
+line-height: 35px;
+text-align: center;
+
+}
+.features-info .about-pera-heading{
+  padding: 0 28px 85px 28px;
+  font-family: Roboto-Regular;
+font-size: 18px;
+font-weight: 400;
+line-height: 30px;
+text-align: center;
+
+}
+
+.under-widt-testo{
+  max-width: 1153px;
+  min-width: 279px;
+
+  width: 100%;
+
+  height: 484px;
+  margin: 0 auto;
+  /* border: 1px solid black; */
+  
+}
+.under-testo-single-card{
+  max-width: 349px;
+  min-width: 279px;
+  width: 100%;
+height: 484px;
+/* border: 1px solid black; */
+
+
+}
+.certificate-img{
+  text-align: -webkit-center;
+}
+.certificate-img img{
+  max-width: 243px;
+ min-width: 279px;
+  width: 100%;
+height: 343px;
+}
+.certificate-pera p{
+
+ font-family: Roboto-Regular;
+font-size: 18px;
+font-weight: 400;
+line-height: 30px;
+text-align: center;
+padding-top: 40px;
+
 }
