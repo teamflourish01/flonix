@@ -8,6 +8,7 @@ import NewsEvent from "./Components/NewsEvent";
 import Footer from "./Components/Footer";
 import NewsEventpage from "./Components/NewsEventpage";
 import Product from "./Components/Product";
+import ProductDetail from "./Components/Product-Details";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/NewsEvent" element={<NewsEvent />} />
         <Route path="/NewsEventpage" element={<NewsEventpage />} />
         <Route path="/Product" element={<Product />} />
+        <Route path="/Productdetail" element={<ProductDetail />} />
       </Routes>
 
       <Footer />
