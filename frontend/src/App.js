@@ -15,6 +15,7 @@ import About from './Components/About';
 
 
 import Product from "./Components/Product";
+import ProductDetail from "./Components/Product-Details";
 
 
 function App() {
@@ -37,6 +38,8 @@ function App() {
         
 
         <Route path="/Product" element={<Product />} />
+
+        <Route path="/Productdetail" element={<ProductDetail />} />
 
       </Routes>
 
