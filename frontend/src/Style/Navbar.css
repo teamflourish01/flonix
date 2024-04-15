@@ -117,6 +117,7 @@ max-width: 1320px;
   }
   .nav2{
     box-shadow: rgba(39, 170, 243, 0.25) 0px 2px 8px 0px;
+    z-index: 1;
   }
   .desi-logo {
     width: 241px;
