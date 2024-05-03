@@ -1,0 +1,185 @@
+.privacy-policy-padding{
+    padding: 0 8px;
+}
+.privacy-policy-bg{
+    background-image: url(../images/privecypolicybg.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    max-width: 1320px;
+    min-width: 250px;
+    height: 450px;
+    border-radius: 20px;
+    display: flex; /* Flexbox ka use karke content ko center aur middle mein align karenge */
+    justify-content: center; /* Horizontal alignment */
+    align-items: center; /* Vertical alignment */
+}
+.background-text-privacy-policy{
+    max-width: 720px;
+    min-width: 250px;
+    margin: 0 auto;
+}
+.background-text-privacy-policy .privacy-policy-banner-heading{
+    
+    font-family: PlayfairDisplay-Bold;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 35px;
+    text-align: center;
+    color: white;
+    
+    
+}
+.background-text-privacy-policy .privacy-policy-banner-peragraph{
+    
+    font-family: Roboto-Bold;
+font-size: 18px;
+font-weight: 700;
+line-height: 30px;
+text-align: center;
+color: white;
+padding-top: 30px;
+
+
+}
+.all-heading-and-pera .privacy-policy-heading{
+    font-family: Roboto-Bold;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: justify;
+    
+}
+.all-heading-and-pera .privacy-policy-peragraph{
+    font-family: Roboto-Regular;
+font-size: 18px;
+font-weight: 400;
+line-height: 30px;
+text-align: justify;
+
+}
+
+@media screen and (max-width: 1024px) {
+    .privacy-policy-padding{
+        padding: 0 30px;
+    }
+    .privacy-policy-bg{
+        background-image: url(../images/privecypolicybg.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        /* background-size: contain; */
+        max-width: 964px;
+        min-width: 250px;
+        height: 450px;
+        border-radius: 20px;
+        display: flex; /* Flexbox ka use karke content ko center aur middle mein align karenge */
+        justify-content: center; /* Horizontal alignment */
+        align-items: center; /* Vertical alignment */
+    }
+    .background-text-privacy-policy{
+        max-width: 626px;
+        min-width: 250px;
+        margin: 0 auto;
+    }
+    .background-text-privacy-policy .privacy-policy-banner-heading{
+        
+        font-family: PlayfairDisplay-Bold;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 35px;
+        text-align: center;
+        color: white;
+        
+        
+    }
+    .background-text-privacy-policy .privacy-policy-banner-peragraph{
+        
+        font-family: Roboto-Regular;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: center;
+    color: white;
+    padding-top: 30px;
+    }
+    .all-heading-and-pera .privacy-policy-heading{
+        font-family: Roboto-Bold;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 30px;
+        text-align: justify;
+        
+    }
+    .all-heading-and-pera .privacy-policy-peragraph{
+        font-family: Roboto-Regular;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: justify;
+    
+    }
+
+
+}
+@media screen and (max-width: 767px) {
+    .privacy-policy-padding{
+        padding: 0 15px;
+    }
+    .privacy-policy-bg{
+        background-image: url(../images/privecypolicybg.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        /* background-size: contain; */
+        max-width: 738px;
+        min-width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        display: flex; /* Flexbox ka use karke content ko center aur middle mein align karenge */
+        justify-content: center; /* Horizontal alignment */
+        align-items: center; /* Vertical alignment */
+    }
+    .background-text-privacy-policy{
+        max-width: 344px;
+        min-width: 200px;
+        margin: 0 auto;
+    }
+    .background-text-privacy-policy .privacy-policy-banner-heading{
+        
+        font-family: PlayfairDisplay-Bold;
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 35px;
+        text-align: center;
+        color: white;
+        
+        
+    }
+    .background-text-privacy-policy .privacy-policy-banner-peragraph{
+        
+        font-family: Roboto-Regular;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    color: white;
+    padding-top: 30px;
+    }
+    .all-heading-and-pera .privacy-policy-heading{
+        font-family: Roboto-Bold;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 30px;
+        text-align: justify;
+        
+    }
+    .all-heading-and-pera .privacy-policy-peragraph{
+        font-family: Roboto-Regular;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: justify;
+    
+    }
+
+
+}

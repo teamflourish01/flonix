@@ -1,15 +1,17 @@
+
+
 .news-event-page-img-1{
     max-width: 1320px;
-min-width: 279px;
-height: 517px;
+min-width: 250px;
+/* height: 517px; */
 width: 100%;
 margin: 30px 0;
 
 }
 .news-event-page-img-1 img {
 max-width: 1320px;
-min-width: 279px;
-height: 517px;
+min-width: 250px;
+/* height: 517px; */
 width: 100%;
 
 
@@ -31,19 +33,94 @@ display: flex;
 
 
 }
+.news-event-page-icon-div p{
+    font-family: Roboto-Regular;
+font-size: 16px;
+font-weight: 400;
+line-height: 18.75px;
+text-align: justify;
+
+
+}
 .news-event-page-icon-div p i {
     padding: 0 10px 0 0;
-    color: #FA9054;
+    color: #0096ea;
+}
+
+.d-flex-newseventpage{
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  gap: 50px 10px;
 }
 .news-event-page-icon-div {
     width: 140px;
 }
 
 
-.news-event-page-img-2 img{
+.news-event-page-img-2 img {
     max-width: 420px;
-    min-width: 279px;
+    min-width: 250px;
     width: 100%;
-    height: 313px;
+    /* height: 313px; */
     border-radius: 10px;
+}
+.news-event-page-img-3 img{
+    max-width: 1320px;
+min-width: 250px;
+/* height: 517px; */
+width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .d-flex-newseventpage{
+        display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      justify-content: space-between;
+      gap: 20px 20px;
+    }
+    .news-event-page-icon-div p{
+        font-family: Roboto-Regular;
+    
+font-size: 14px;
+font-weight: 400;
+line-height: 16.41px;
+
+
+    
+    
+    }
+}
+@media screen and (max-width: 767px) {
+    .d-flex-newseventpage{
+        display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      justify-content: space-between;
+      gap: 20px 20px;
+    }
+    .news-event-page-icon-div p  {
+        font-family: Roboto-Regular;
+font-size: 12px;
+font-weight: 400;
+line-height: 14.06px;
+text-align: justify;
+
+       
+    }
+    .news-event-page-display-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
 }

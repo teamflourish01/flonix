@@ -13,40 +13,98 @@ const Contact = () => {
           <div className="main-width">
             <div>
               <div className="under1320width">
-                <div style={{padding:"50px 0"}}>
-                <div className="d-flex">
-                  <div className=" pure">
-                    <div className="blogsbannerpera">
-                      <p>Contact Us</p>
+                <div className="blog-banner-padding">
+                  <div className="d-grid-blog-banner">
+                    <div className=" pure">
+                      <div className="blogsbannerpera">
+                        <p>Contact Us</p>
+                      </div>
+                    </div>
+                    <div className="blogbannerimage">
+                      <img src={blogbannerimage} alt="" />
                     </div>
                   </div>
-                  <div className="blogbannerimage">
-                    <img  src={blogbannerimage} alt="" />
-                  </div>
-                </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+    
 
-      <section className="" style={{margin:"50px 0"}}>
+      
+      <section className="" style={{ margin: "50px 0 " }}>
         <div className="main-width">
-          <div >
+          <div style={{ padding: "50px 0" }}>
             <div className="under1320width">
-              <div className="d-flex">
-                <div className='contact-form-box'>
-                    <p className='contact-form-heading' >Contact us for Water solution</p>
-              <form className="">
-                    <div className="form-width">
+              <div className=' contact-page-padding'>
+                <p
+                  className="all-heading"
+                  style={{ padding: "0", margin: "0 0 50px 0" }}
+                >
+                  Inquiry Here
+                </p>
+                <div className="d-grid-contact">
+                  <div className="inquiry-icon-width">
+                    <div className="" >
                       <div
-                      className="contact-flex"
+                      className="inquiry-icon-flex"
+                       
+                      >
+                        <div>
+                          <img
+                            style={{ width: "46px" }}
+                            src={inquiryicone1}
+                            alt=""
+                          />
+                        </div>
+                        <div className="form-address">
+                          <p className="form-heading">Address</p>
+                          <p className="form-pera">Godown NO: 707, Chitrakut, Saniya Hemad, Taluka: Chorasi, Dist: Surat</p>
+                        </div>
+                      </div>
+                      <div
+                       className="inquiry-icon-flex-up-down-margin"
+                      >
+                        <div>
+                          <img
+                            style={{ width: "46px" }}
+                            src={inquiryicone2}
+                            alt=""
+                          />
+                        </div>
+                        <div className="form-address" >
+                          <p className="form-heading">Email</p>
+                          <p className="form-pera">zoe.miller@mydomain.com</p>
+                        </div>
+                      </div>
+                      <div
+                       className="inquiry-icon-flex"
+                        
+                      >
+                        <div>
+                          <img
+                            style={{ width: "46px" }}
+                            src={inquiryicone3}
+                            alt=""
+                          />
+                        </div>
+                        <div className="form-address">
+                          <p className="form-heading">Phone</p>
+                          <p className="form-pera">+91 9909332099 | <span>+91 9909332099 |</span> <span>+91 9909332099</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <form className="form-width">
+                    <div className="">
+                      <div
+                      className="form-flex"
                       >
                         <div className="form-label-input">
                           <label className="form-label">Your name</label>
                           <input
-                          className="contact-form-inputs"
+                          className="form-inputs"
                             
                             type="text"
                           />
@@ -54,20 +112,21 @@ const Contact = () => {
                         <div className="form-label-input">
                           <label className="form-label">Email address</label>
                           <input
-                          className="contact-form-inputs"
+                          className="form-inputs"
                             
                             type="text"
                           />
                         </div>
                       </div>
                       <div
-                      className="contact-flex-up-down-margin"
+                      className="form-flex-up-down-margin"
                         
                       >
+                        
                         <div className="form-label-input">
                           <label className="form-label">City</label>
                           <input
-                          className="contact-form-inputs"
+                          className="form-inputs"
                             
                             type="text"
                           />
@@ -75,25 +134,38 @@ const Contact = () => {
                         <div className="form-label-input">
                           <label className="form-label">Mobile number</label>
                           <input
-                          className="contact-form-inputs"
+                          className="form-inputs"
                             
                             type="text"
                           />
                         </div>
                       </div>
-                      <div className="contact-form-label-textarea" style={{ textAlign: "left" }}>
-                        <label className="contact-form-label">Message</label>
+                      <div className="form-label-textarea" style={{ textAlign: "left" }}>
+                        <label className="form-label">Message</label>
                         <textarea
-                        className="contact-form-textarea"
+                        className="form-textarea"
                           
                         />
                       </div>
                     </div>
-                    <div className="contact-form-button" >
+                    <div className="form-button" >
                   <button >SUBMIT NOW</button>
                 </div>
                   </form>
-                  </div>
+                  
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="" style={{margin:"50px 0"}}>
+        <div className="main-width">
+          <div >
+            <div className="under1320width">
+              <div className="contact-page-padding">
+                
                   <div className='contact-map'>
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.2992906750073!2d72.87904167471952!3d21.219977281184562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be045a6df94f859%3A0x1507b9b519aa5868!2sFlonix%20Technology!5e0!3m2!1sen!2sin!4v1712822237314!5m2!1sen!2sin"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                   </div>
@@ -104,7 +176,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="" style={{margin:"50px 0"}}>
+      {/* <section className="" style={{margin:"50px 0"}}>
         <div className="main-width">
           <div >
           <p
@@ -161,11 +233,11 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="" style={{margin:"50px 0"}}>
         <div className="main-width">
-          <div >
+          <div className='contact-page-padding' >
             <div className='contact-our-network' >
             <p
                   className="all-heading"
@@ -176,7 +248,8 @@ const Contact = () => {
                 <p className='conatact-our-network-heading'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
             </div>
             <div className="under1320width">
-              <div className="d-flex">
+              <div >
+              <div className="d-grid-contact-oue-network">
                 <div className='contact-our-network-box'>
                     <div className='contact-why-box'>
                         <p className='why-flonix-filteration-heading'>Why Flonix Filtration?</p>
@@ -255,8 +328,6 @@ const Contact = () => {
 
 
                 </div>
-              </div>
-              <div className="d-flex" style={{margin:"40px 0"}}>
                 <div className='contact-our-network-box'>
                     <div className='contact-why-box'>
                         <p className='why-flonix-filteration-heading'>Why Flonix Filtration?</p>
@@ -335,8 +406,6 @@ const Contact = () => {
 
 
                 </div>
-              </div>
-              <div className="d-flex">
                 <div className='contact-our-network-box'>
                     <div className='contact-why-box'>
                         <p className='why-flonix-filteration-heading'>Why Flonix Filtration?</p>
@@ -415,8 +484,11 @@ const Contact = () => {
 
 
                 </div>
+                
+
               </div>
               
+              </div>
             </div>
           </div>
         </div>

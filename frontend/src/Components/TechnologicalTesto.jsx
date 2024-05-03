@@ -11,18 +11,19 @@ const TechnologicalTesto = () => {
     const { className, style, onClick } = props;
     return (
       <IoIosArrowForward
-        style={{
-          position: "absolute",
-          top: "43%",
-          right: "-6%",
-          borderRadius: "50%",
-          boxShadow: "rgba(39, 170, 243, 0.35) 0px 5px 15px",
-          width: "56px",
-          height: "56px",
-          padding: "10px",
-          zIndex: "1000",
-          cursor:"pointer"
-        }}
+      className="arrow-forward"
+        // style={{
+        //   position: "absolute",
+        //   top: "43%",
+        //   right: "-6%",
+        //   borderRadius: "50%",
+        //   boxShadow: "rgba(39, 170, 243, 0.35) 0px 5px 15px",
+        //   width: "56px",
+        //   height: "56px",
+        //   padding: "10px",
+        //   zIndex: "1000",
+        //   cursor:"pointer"
+        // }}
         onClick={onClick}
       />
     );
@@ -32,18 +33,19 @@ const TechnologicalTesto = () => {
     const { className, style, onClick } = props;
     return (
       <IoIosArrowBack
-        style={{
-          position: "absolute",
-          top: "43%",
-          left: "-6%",
-          borderRadius: "50%",
-          boxShadow: "rgba(39, 170, 243, 0.35) 0px 5px 15px",
-          width: "56px",
-          height: "56px",
-          padding: "10px",
-          zIndex: "1000",
-          cursor:"pointer"
-        }}
+      className="arrow-back"
+        // style={{
+        //   position: "absolute",
+        //   top: "43%",
+        //   left: "-6%",
+        //   borderRadius: "50%",
+        //   boxShadow: "rgba(39, 170, 243, 0.35) 0px 5px 15px",
+        //   width: "56px",
+        //   height: "56px",
+        //   padding: "10px",
+        //   zIndex: "1000",
+        //   cursor:"pointer"
+        // }}
         onClick={onClick}
       />
     );
@@ -64,20 +66,20 @@ const TechnologicalTesto = () => {
     prevArrow: <SamplePrevArrow />,
     responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 1025,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 2,
+            slidesToScroll: 2,
             infinite: true,
             dots: true
           }
         },
         {
-          breakpoint: 600,
+          breakpoint: 767,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            initialSlide: 2
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 1
           }
         },
         {

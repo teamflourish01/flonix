@@ -13,8 +13,8 @@ const Footer = () => {
         <div className="main-width">
           <div>
             <div className="under1320width">
-              <div style={{ padding: "119px 0" }}>
-                <div className="d-flex">
+              <div className="footer-space" >
+                <div className="d-flex-footer">
                   <div className="part-1-width">
                     <div className="flonix-white-logo">
                       <img src={flonixlogowhite} alt="" />
@@ -42,9 +42,9 @@ const Footer = () => {
                     <hr style={{width:"31px", border:"1px solid #0096EA",margin:"5px 0 0 0"}}/>
                     </div>
                     <div className="links-policy">
-                    <p>Privacy Policy</p>
-                    <p>Return Policy</p>
-                    <p>Terms & Conditions</p>
+                    <p><a style={{textDecoration:"none",color:"white"}} href="/PrivacyPolicy">Privacy Policy </a></p>
+                    <p> <a style={{textDecoration:"none",color:"white"}}  href="/ReturnPolicy"> Return Policy </a> </p>
+                    <p> <a style={{textDecoration:"none",color:"white"}}  href="/TermsAndCondition">Terms & Conditions </a></p>
                     <p>Products</p>
                     <p>About Us</p>
                     <p>Certificate</p>
