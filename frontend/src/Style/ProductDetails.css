@@ -1,56 +1,60 @@
 .product-d-flex {
   display: flex;
-  flex-wrap: wrap;
-  padding: 0 8px;
+  /* flex-wrap: wrap; */
+  /* padding: 0 8px; */
   justify-content: space-between;
+  gap: 50px 10px;
 }
 
 .Detail-Image {
   max-width: 493.59px;
-  min-width: 279px;
+  min-width: 250px;
   width: 100%;
-  height: 621.13px;
-  /* border: 1px solid black; */
+  /* height: 621.13px; */
+  
 }
 .Detail-Image .bigimg {
   max-width: 493px;
-  min-width: 279px;
+  min-width: 250px;
   width: 100%;
-  height: 493px;
+  /* height: 493px; */
 }
 .detail4img {
   max-width: 492.59px;
-  min-width: 279px;
+  min-width: 250px;
   width: 100%;
-  height: 114.13px;
-  /* border: 1px solid black; */
+  /* height: 114.13px; */
+  
   display: flex;
   justify-content: space-between;
   padding-top: 14px;
 }
 .detail4img .smallimg {
-  width: 114.13px;
-  height: 114.13px;
+  
+  max-width: 114.13px;
+  min-width: 20px;
+  width: 100%;
+  /* height: 114.13px; */
 }
 
-/* details Contain css */
+
 
 .Detail-content {
   max-width: 779px;
-  min-width: 279px;
+  min-width: 250px;
   width: 100%;
-  height: 621px;
-  /* border: 1px solid black; */
+  /* height: 621px; */
+ 
 }
 .product-detail {
   max-width: 698px;
-  min-width: 279px;
+  min-width: 250px;
   width: 100%;
-  height: 466px;
+  /* height: 466px; */
 }
 .hader {
   max-width: 698px;
-  min-width: 279px;
+  min-width: 250px;
   width: 100%;
   text-align: justify;
 }
@@ -59,7 +63,7 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 35px;
-  /* padding-bottom: 9px; */
+  
 }
 .hader .starclr {
   color: #ea854f;
@@ -84,35 +88,34 @@
   font-size: 24px;
   line-height: 35px;
 }
+.tikicone li::before {
+  content: "\1F5F8";
+  color: white;
+  font-size: 14px;
+  background: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  margin-right: 12px;
+}
 .tikicone li {
   font-family: Roboto-Regular;
   font-weight: 400;
   list-style: none;
   font-size: 18px;
   line-height: 30px;
-  text-align: justify;
+  text-align: left;
   margin: 14px 0;
-  
-}
-.tikicone li::before {
-  content: "\1F5F8";
-  color: white;
-  font-size: 14px;
-  background:black;
-  border-radius: 50%;
-  padding: 4px 7px;
-  margin-right: 12px;
 }
 
 .btndiv {
   text-align: left;
-  /* margin-top: 14px; */
+  
 }
 .inqrybtn {
   max-width: 195px;
-  min-width: 279px;
+  min-width: 100px;
   width: 100%;
-  height: 60px;
+  /* height: 60px; */
   border-radius: 40px;
   background-color: black;
   color: white;
@@ -123,21 +126,21 @@
   text-align: center;
 }
 
-/* 3 icone div */
+
 .threeicon {
   max-width: 779px;
-  min-width: 279px;
+  min-width: 100px;
   width: 100%;
-  height: 114px;
+  /* height: 114px; */
   margin-top: 41px;
   box-shadow: 0px 0px 21.5px 0px #27aaf340;
 }
 .iconediv {
-  height: 96px;
+  /* height: 96px; */
   padding: 9px 13px;
 
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
   background-color: white;
 }
@@ -148,7 +151,7 @@
 .iconeimages img {
   max-width: 51px;
   width: 100%;
-  height: 51px;
+  /* height: 51px; */
 }
 .threeicon p {
   font-family: Roboto-Medium;
@@ -157,12 +160,12 @@
   line-height: 35px;
   align-items: center;
 }
-/* Table Content */
+
 .tablecontent {
   max-width: 1320px;
   min-width: 279px;
   width: 100%;
-  height: 661px;
+  /* height: 661px; */
 }
 .tbleHading {
   display: flex;
@@ -177,9 +180,9 @@
   max-width: 1318px;
   min-width: 279px;
   width: 100%;
-  height: 500px;
+  /* height: 500px; */
 }
-/* Table Css */
+
 
 table {
   border-collapse: collapse;
@@ -195,7 +198,7 @@ th {
   background-color: #f2faff;
 }
 .css-a5mhaz {
-  /* padding: var(--chakra-space-4); */
+  
   outline: 2px solid transparent;
   outline-offset: 2px;
   padding: 20px 8px;
@@ -254,7 +257,7 @@ th {
   width: 100%;
   margin: 0 auto;
 }
-/* Related Products  */
+
 .relatedproducts h1 {
   font-family: Roboto-Bold;
   font-size: 50px;
@@ -266,23 +269,7 @@ th {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.card {
-  max-width: 314.51px;
-  min-width: 279px;
-  width: 100%;
-  height: 398.56px;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-  border-radius: 18.08px;
-}
-.card img {
-  max-width: 314.51px;
-  min-width: 279px;
-  width: 100%;
-  height: 314.51px;
-  border-radius: 18.08px 18.08px 0px 0px;
-}
+
 .card p {
   font-size: 16.27px;
   line-height: 31.63px;
@@ -291,3 +278,283 @@ th {
   font-weight: 500;
   padding: 20px;
 }
+.xt5y {
+  /* padding: 0 0 0 16px ; */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 134px;
+  bottom: 0;
+  z-index: -999;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+.faq-container {
+  /* Container styling */
+  max-width: 779px;
+  min-width: 200px;
+  margin: 0 auto;
+  padding: 0 2px;
+}
+
+.faq-section {
+  /* Section styling */
+  /* border-bottom: 1px solid #ccc; */
+  margin: 25px 0;
+  background: white;
+    padding: 17px 40px;
+    box-shadow: 0px 0px 4.5px 0px #27AAF340;
+
+}
+
+.faq-question {
+  /* Question styling */
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Roboto-Medium;
+font-size: 22px;
+font-weight: 500;
+line-height: 25.78px;
+text-align: left;
+
+}
+
+.arrow-icon {
+  /* Arrow icon styling */
+  margin-left: 10px;
+  transition: transform 0.2s;
+}
+
+.arrow-icon.open {
+  /* Arrow icon rotation when open */
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  /* Answer styling */
+  /* padding-left: 20px; */
+  padding-top: 5px;
+  text-align: left;
+  
+  
+}
+.faq-answer-space{
+  margin: 10px 0;
+}
+.faq-answer-space li{
+  font-family: Roboto-Medium;
+font-size: 18px;
+font-weight: 500;
+line-height: 21.09px;
+text-align: left;
+
+}
+.faq-answer-space p{
+  padding: 0 26px;
+  font-family: Roboto-Regular;
+font-size: 16px;
+font-weight: 400;
+line-height: 18.75px;
+text-align: left;
+
+}
+
+@media screen and (max-width: 1024px) {
+  .xt5y {
+    /* padding: 0 0 0 16px ; */
+    position: relative;;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    z-index: -999;
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+  .product-detail {
+    max-width: 779px;
+    min-width: 250px;
+    width: 100%;
+    /* height: 466px; */
+  }
+  .hader {
+    max-width: 779px;
+    min-width: 250px;
+    width: 100%;
+    text-align: justify;
+  }
+  .product-d-flex {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    gap:  10px;
+}
+.hader h2 {
+  font-family: Roboto-Medium;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 35px;
+}
+.hader .text {
+  font-family: Roboto-Regular;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: justify;
+}
+.keyfeature h2 {
+  font-family: Roboto-Medium;
+  text-align: justify;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 35px;
+}
+.tikicone li {
+  font-family: Roboto-Regular;
+  font-weight: 400;
+  list-style: none;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: justify;
+  margin: 14px 0;
+}
+.inqrybtn {
+  max-width: 195px;
+  min-width: 100px;
+  width: 100%;
+  /* height: 60px; */
+  border-radius: 40px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  line-height: 35px;
+  font-family: Roboto-Bold;
+  font-weight: 700;
+  text-align: center;
+}
+.threeicon p {
+  font-family: Roboto-Medium;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23px;
+  align-items: center;
+}
+  
+  .faq-answer-space li{
+    font-family: Roboto-Medium;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.09px;
+  text-align: left;
+  
+  }
+  .faq-answer-space p{
+    padding: 0 26px;
+    font-family: Roboto-Regular;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.75px;
+  text-align: left;
+  
+  }
+}
+@media screen and (max-width: 767px) {
+  .iconediv {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    gap: 50px  10px;
+  }
+  .hader h2 {
+    font-family: Roboto-Medium;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 35px;
+  }
+  .hader .text {
+    font-family: Roboto-Regular;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: justify;
+  }
+  .keyfeature h2 {
+    font-family: Roboto-Medium;
+    text-align: justify;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 35px;
+  }
+  .tikicone li {
+    font-family: Roboto-Regular;
+    font-weight: 400;
+    list-style: none;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    margin: 14px 0;
+  }
+
+  .inqrybtn {
+    max-width: 195px;
+    min-width: 100px;
+    width: 100%;
+    /* height: 60px; */
+    border-radius: 40px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    line-height: 35px;
+    font-family: Roboto-Bold;
+    font-weight: 700;
+    text-align: center;
+  }
+  .threeicon p {
+    font-family: Roboto-Medium;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 23px;
+    align-items: center;
+  }
+  .faq-section {
+    /* border-bottom: 1px solid #ccc; */
+    margin: 25px 0;
+    background: white;
+    padding: 17px 10px;
+    box-shadow: 0px 0px 4.5px 0px #27AAF340;
+}
+  .faq-question {
+    /* Question styling */
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Roboto-Medium;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: left;
+  
+  }
+  .faq-answer-space li{
+    font-family: Roboto-Medium;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: left;
+  
+  }
+  .faq-answer-space p{
+    padding: 0 0 0 21px;
+    font-family: Roboto-Regular;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.41px;
+  text-align: left;
+  
+  }
+  
+  }

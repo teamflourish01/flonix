@@ -17,7 +17,8 @@ const Navbar = () => {
   };
   return (
     <>
-      <section className="bg">
+    <section  className="screen-tablet-hidden" >
+      <div className="bg">
         <div className="main-width">
           <div style={{ padding: "15px 0" }}>
             <div className="under1320width">
@@ -39,13 +40,14 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+      </div>
       </section>
       <nav className="sticky-top nav2 no-copy-text">
         <div className="nav under1320width">
           <a href="/">
             <img className="desi-logo" src={flonixlogoblack} alt="" />
           </a>
-
+           
           <div>
             <ul
               id="navbar"
@@ -55,6 +57,7 @@ const Navbar = () => {
               }}
               className={clicked ? "#navbar active" : "#navbar"}
             >
+              <div className="under-nav-flex" >
               <li className="naves">
                 <Link className="  under active " to="/">
                   <span className="do">Home</span>
@@ -88,14 +91,20 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="naves">
-                <Link className="under" to="/Event">
+                <Link className="under" to="/Ebrochure">
                   <span className="do">E- Brochure</span>
                 </Link>
               </li>
-            </ul>
-          </div>
-
-          <div class="container">
+              <div className="navs-main-icon">
+          <div className="navs-icon navs-d-flex">
+                  <img src={twitter} alt="" />
+                  <img src={fb} alt="" />
+                  <img src={insta} alt="" />
+                  <img src={youtube} alt="" />
+                </div>
+                </div>
+              </div>
+              <div class="search-bar">
             {/* <input checked="" class="checkbox" type="checkbox"/>  */}
             <div class="mainbox">
               <div class="iconContainer">
@@ -115,6 +124,12 @@ const Navbar = () => {
               />
             </div>
           </div>
+          
+            </ul>
+            
+          </div>
+
+          
 
           <div id="mobile" onClick={handleclick}>
             <i

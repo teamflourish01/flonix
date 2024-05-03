@@ -7,32 +7,33 @@ import newseventimage1 from "../images/newseventimage1.svg";
 const NewsEvent = () => {
   return (
     <>
-      <section>
+    <section>
         <div className="wavebgbanner">
           <div className="main-width">
             <div>
               <div className="under1320width">
-                <div style={{ padding: "50px 0" }}>
-                  <div className="d-flex">
-                    <div className=" pure">
-                      <div className="blogsbannerpera">
-                        <p>News & Events</p>
-                      </div>
-                    </div>
-                    <div className="blogbannerimage">
-                      <img src={blogbannerimage} alt="" />
+                <div className='blog-banner-padding' >
+                <div className="d-grid-blog-banner">
+                  <div className=" pure">
+                    <div className="blogsbannerpera">
+                      <p>News & Events</p>
                     </div>
                   </div>
+                  <div className="blogbannerimage">
+                    <img  src={blogbannerimage} alt="" />
+                  </div>
+                </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      
 
       <section className="" style={{ margin: "50px 0" }}>
         <div className="main-width">
-          <div>
+          <div className="newsevent-padding">
             <div className="under1320width">
               <div className="news-event-heading-pera">
                 <p className="news-event-heading">
@@ -58,9 +59,9 @@ const NewsEvent = () => {
 
       <section className="" style={{ margin: "50px 0" }}>
         <div className="main-width">
-          <div>
+          <div className="newsevent-padding">
             <div className="under1320width">
-              <div className="d-flex">
+              <div className="d-flex-newsevent">
                 <div className="news-and-event-box">
                   <div className="news-event-img">
                     <img src={newseventimage1} alt="" />
@@ -123,7 +124,9 @@ const NewsEvent = () => {
                     </p>
 
                     <div className="news-event-button">
+                        <a href="/NewsEventpage">
                       <button>KNOW MORE</button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -155,227 +158,155 @@ const NewsEvent = () => {
                     </p>
 
                     <div className="news-event-button">
+                        <a href="/NewsEventpage">
                       <button>KNOW MORE</button>
+                      </a>
                     </div>
                   </div>
                 </div>
+                <div className="news-and-event-box">
+                  <div className="news-event-img">
+                    <img src={newseventimage1} alt="" />
+                  </div>
+                  <div className="news-event-text-box">
+                    <p className="news-event-box-heading">
+                      The standard Lorem Ipsum passage, used since the 1500s
+                    </p>
+
+                    <div className="event-location-clander">
+                      <div className="event-icon-div">
+                        <p>
+                          <i class="fa-solid fa-calendar"></i>March 27, 2024
+                        </p>
+                      </div>
+                      <div className="event-icon-div">
+                        <p>
+                          <i class="fa-solid fa-location-dot"></i>Ahmedabad
+                        </p>
+                      </div>
+                    </div>
+
+                    <p className="news-event-box-pera">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's{" "}
+                    </p>
+
+                    <div className="news-event-button">
+                        <a href="/NewsEventpage">
+                      <button>KNOW MORE</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="news-and-event-box">
+                  <div className="news-event-img">
+                    <img src={newseventimage1} alt="" />
+                  </div>
+                  <div className="news-event-text-box">
+                    <p className="news-event-box-heading">
+                      The standard Lorem Ipsum passage, used since the 1500s
+                    </p>
+
+                    <div className="event-location-clander">
+                      <div className="event-icon-div">
+                        <p>
+                          <i class="fa-solid fa-calendar"></i>March 27, 2024
+                        </p>
+                      </div>
+                      <div className="event-icon-div">
+                        <p>
+                          <i class="fa-solid fa-location-dot"></i>Ahmedabad
+                        </p>
+                      </div>
+                    </div>
+
+                    <p className="news-event-box-pera">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's{" "}
+                    </p>
+
+                    <div className="news-event-button">
+                        <a href="/NewsEventpage">
+                      <button>KNOW MORE</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="news-and-event-box">
+                  <div className="news-event-img">
+                    <img src={newseventimage1} alt="" />
+                  </div>
+                  <div className="news-event-text-box">
+                    <p className="news-event-box-heading">
+                      The standard Lorem Ipsum passage, used since the 1500s
+                    </p>
+
+                    <div className="event-location-clander">
+                      <div className="event-icon-div">
+                        <p>
+                          <i class="fa-solid fa-calendar"></i>March 27, 2024
+                        </p>
+                      </div>
+                      <div className="event-icon-div">
+                        <p>
+                          <i class="fa-solid fa-location-dot"></i>Ahmedabad
+                        </p>
+                      </div>
+                    </div>
+
+                    <p className="news-event-box-pera">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's{" "}
+                    </p>
+
+                    <div className="news-event-button">
+                        <a href="/NewsEventpage">
+                      <button>KNOW MORE</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="news-and-event-box">
+                  <div className="news-event-img">
+                    <img src={newseventimage1} alt="" />
+                  </div>
+                  <div className="news-event-text-box">
+                    <p className="news-event-box-heading">
+                      The standard Lorem Ipsum passage, used since the 1500s
+                    </p>
+
+                    <div className="event-location-clander">
+                      <div className="event-icon-div">
+                        <p>
+                          <i class="fa-solid fa-calendar"></i>March 27, 2024
+                        </p>
+                      </div>
+                      <div className="event-icon-div">
+                        <p>
+                          <i class="fa-solid fa-location-dot"></i>Ahmedabad
+                        </p>
+                      </div>
+                    </div>
+
+                    <p className="news-event-box-pera">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's{" "}
+                    </p>
+
+                    <div className="news-event-button">
+                        <a href="/NewsEventpage">
+                      <button>KNOW MORE</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="" style={{ margin: "50px 0" }}>
-        <div className="main-width">
-          <div>
-            <div className="under1320width">
-              <div className="d-flex">
-                <div className="news-and-event-box">
-                  <div className="news-event-img">
-                    <img src={newseventimage1} alt="" />
-                  </div>
-                  <div className="news-event-text-box">
-                    <p className="news-event-box-heading">
-                      The standard Lorem Ipsum passage, used since the 1500s
-                    </p>
-
-                    <div className="event-location-clander">
-                      <div className="event-icon-div">
-                        <p>
-                          <i class="fa-solid fa-calendar"></i>March 27, 2024
-                        </p>
-                      </div>
-                      <div className="event-icon-div">
-                        <p>
-                          <i class="fa-solid fa-location-dot"></i>Ahmedabad
-                        </p>
-                      </div>
-                    </div>
-
-                    <p className="news-event-box-pera">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's{" "}
-                    </p>
-
-                    <div className="news-event-button">
-                      <button>KNOW MORE</button>
-                    </div>
-                  </div>
-                </div>
-                <div className="news-and-event-box">
-                  <div className="news-event-img">
-                    <img src={newseventimage1} alt="" />
-                  </div>
-                  <div className="news-event-text-box">
-                    <p className="news-event-box-heading">
-                      The standard Lorem Ipsum passage, used since the 1500s
-                    </p>
-
-                    <div className="event-location-clander">
-                      <div className="event-icon-div">
-                        <p>
-                          <i class="fa-solid fa-calendar"></i>March 27, 2024
-                        </p>
-                      </div>
-                      <div className="event-icon-div">
-                        <p>
-                          <i class="fa-solid fa-location-dot"></i>Ahmedabad
-                        </p>
-                      </div>
-                    </div>
-
-                    <p className="news-event-box-pera">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's{" "}
-                    </p>
-
-                    <div className="news-event-button">
-                      <button>KNOW MORE</button>
-                    </div>
-                  </div>
-                </div>
-                <div className="news-and-event-box">
-                  <div className="news-event-img">
-                    <img src={newseventimage1} alt="" />
-                  </div>
-                  <div className="news-event-text-box">
-                    <p className="news-event-box-heading">
-                      The standard Lorem Ipsum passage, used since the 1500s
-                    </p>
-
-                    <div className="event-location-clander">
-                      <div className="event-icon-div">
-                        <p>
-                          <i class="fa-solid fa-calendar"></i>March 27, 2024
-                        </p>
-                      </div>
-                      <div className="event-icon-div">
-                        <p>
-                          <i class="fa-solid fa-location-dot"></i>Ahmedabad
-                        </p>
-                      </div>
-                    </div>
-
-                    <p className="news-event-box-pera">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's{" "}
-                    </p>
-
-                    <div className="news-event-button">
-                      <button>KNOW MORE</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="" style={{ margin: "50px 0" }}>
-        <div className="main-width">
-          <div>
-            <div className="under1320width">
-              <div className="d-flex">
-                <div className="news-and-event-box">
-                  <div className="news-event-img">
-                    <img src={newseventimage1} alt="" />
-                  </div>
-                  <div className="news-event-text-box">
-                    <p className="news-event-box-heading">
-                      The standard Lorem Ipsum passage, used since the 1500s
-                    </p>
-
-                    <div className="event-location-clander">
-                      <div className="event-icon-div">
-                        <p>
-                          <i class="fa-solid fa-calendar"></i>March 27, 2024
-                        </p>
-                      </div>
-                      <div className="event-icon-div">
-                        <p>
-                          <i class="fa-solid fa-location-dot"></i>Ahmedabad
-                        </p>
-                      </div>
-                    </div>
-
-                    <p className="news-event-box-pera">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's{" "}
-                    </p>
-
-                    <div className="news-event-button">
-                      <button>KNOW MORE</button>
-                    </div>
-                  </div>
-                </div>
-                <div className="news-and-event-box">
-                  <div className="news-event-img">
-                    <img src={newseventimage1} alt="" />
-                  </div>
-                  <div className="news-event-text-box">
-                    <p className="news-event-box-heading">
-                      The standard Lorem Ipsum passage, used since the 1500s
-                    </p>
-
-                    <div className="event-location-clander">
-                      <div className="event-icon-div">
-                        <p>
-                          <i class="fa-solid fa-calendar"></i>March 27, 2024
-                        </p>
-                      </div>
-                      <div className="event-icon-div">
-                        <p>
-                          <i class="fa-solid fa-location-dot"></i>Ahmedabad
-                        </p>
-                      </div>
-                    </div>
-
-                    <p className="news-event-box-pera">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's{" "}
-                    </p>
-
-                    <div className="news-event-button">
-                      <button>KNOW MORE</button>
-                    </div>
-                  </div>
-                </div>
-                <div className="news-and-event-box">
-                  <div className="news-event-img">
-                    <img src={newseventimage1} alt="" />
-                  </div>
-                  <div className="news-event-text-box">
-                    <p className="news-event-box-heading">
-                      The standard Lorem Ipsum passage, used since the 1500s
-                    </p>
-
-                    <div className="event-location-clander">
-                      <div className="event-icon-div">
-                        <p>
-                          <i class="fa-solid fa-calendar"></i>March 27, 2024
-                        </p>
-                      </div>
-                      <div className="event-icon-div">
-                        <p>
-                          <i class="fa-solid fa-location-dot"></i>Ahmedabad
-                        </p>
-                      </div>
-                    </div>
-
-                    <p className="news-event-box-pera">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's{" "}
-                    </p>
-
-                    <div className="news-event-button">
-                      <button>KNOW MORE</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> 
+      
     </>
   );
 };

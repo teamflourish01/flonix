@@ -4,6 +4,7 @@ import "../Style/NewsEventPage.css";
 import blogbannerimage from "../images/blogbannerimage.svg";
 import newseventpageimg1 from "../images/newseventpageimg1.svg";
 import newseventpageimg2 from "../images/newseventpageimg2.svg";
+import newseventpageimg3 from "../images/newseventpageimg3.svg";
 
 
 const NewsEventpage = () => {
@@ -14,17 +15,17 @@ const NewsEventpage = () => {
           <div className="main-width">
             <div>
               <div className="under1320width">
-                <div style={{ padding: "50px 0" }}>
-                  <div className="d-flex">
-                    <div className=" pure">
-                      <div className="blogsbannerpera">
-                        <p>News & Events</p>
-                      </div>
-                    </div>
-                    <div className="blogbannerimage">
-                      <img src={blogbannerimage} alt="" />
+                <div className='blog-banner-padding' >
+                <div className="d-grid-blog-banner">
+                  <div className=" pure">
+                    <div className="blogsbannerpera">
+                      <p>News & Events</p>
                     </div>
                   </div>
+                  <div className="blogbannerimage">
+                    <img  src={blogbannerimage} alt="" />
+                  </div>
+                </div>
                 </div>
               </div>
             </div>
@@ -34,7 +35,7 @@ const NewsEventpage = () => {
 
       <section className="" style={{ margin: "50px 0" }}>
         <div className="main-width">
-          <div>
+          <div className="newsevent-padding">
             <div className="under1320width">
               <div className="news-event-heading-pera">
                 <p className="news-event-heading">
@@ -90,16 +91,28 @@ const NewsEventpage = () => {
 The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
                 </p> 
               </div>
+              <div className='news-event-page-img-3' style={{margin:"50px 0"}}>
+              <img   src={newseventpageimg3} alt="" />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="" style={{margin:"50px 0 10px 0"}}>
+      <section className="" style={{margin:"50px 0 "}}>
         <div className="main-width">
-          <div >
+          <div className="newsevent-padding">
             <div className="under1320width">
-              <div className="d-flex">
+              <div className="d-flex-newseventpage">
+                <div className='news-event-page-img-2'>
+                    <img   src={newseventpageimg2} alt="" />
+                </div>
+                <div className='news-event-page-img-2'>
+                    <img src={newseventpageimg2} alt="" />
+                </div>
+                <div className='news-event-page-img-2'>
+                    <img src={newseventpageimg2} alt="" />
+                </div>
                 <div className='news-event-page-img-2'>
                     <img src={newseventpageimg2} alt="" />
                 </div>
@@ -114,25 +127,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
           </div>
         </div>
       </section>
-      <section className="" style={{margin:"10px 0 50px 0"}}>
-        <div className="main-width">
-          <div >
-            <div className="under1320width">
-              <div className="d-flex">
-                <div className='news-event-page-img-2'>
-                    <img src={newseventpageimg2} alt="" />
-                </div>
-                <div className='news-event-page-img-2'>
-                    <img src={newseventpageimg2} alt="" />
-                </div>
-                <div className='news-event-page-img-2'>
-                    <img src={newseventpageimg2} alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </>
   )
 }

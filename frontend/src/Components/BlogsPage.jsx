@@ -20,17 +20,17 @@ const BlogsPage = () => {
           <div className="main-width">
             <div>
               <div className="under1320width">
-                <div style={{ padding: "50px 0" }}>
-                  <div className="d-flex">
-                    <div className=" pure">
-                      <div className="blogsbannerpera">
-                        <p>Blogs</p>
-                      </div>
-                    </div>
-                    <div className="blogbannerimage">
-                      <img src={blogbannerimage} alt="" />
+                <div className='blog-banner-padding' >
+                <div className="d-grid-blog-banner">
+                  <div className=" pure">
+                    <div className="blogsbannerpera">
+                      <p >Blogs</p>
                     </div>
                   </div>
+                  <div className="blogbannerimage">
+                    <img  src={blogbannerimage} alt="" />
+                  </div>
+                </div>
                 </div>
               </div>
             </div>
@@ -40,9 +40,10 @@ const BlogsPage = () => {
 
       <section className="" style={{margin:"50px 0"}}>
         <div className="main-width">
-          <div style={{ padding: "15px 0" }}>
+          
             <div className="under1320width">
-              <div className="d-flex">
+            <div className="blogpage-padding" >
+              <div className="d-flex-blogpage">
                 <div className="blogs-page-width-854">
                   <div className="blog-page-imges-1">
                     <img src={blogspageimg1} alt="" />
@@ -117,8 +118,8 @@ const BlogsPage = () => {
                 <div className="blogs-page-width-405">
                   <div className="blogs-page-catogery-width-1">
                     <div className="blogs-page-under-catogery-width">
-                      <div class="container">
-                        {/* <input checked="" class="checkbox" type="checkbox"/>  */}
+                      {/* <div class="container">
+                        
                         <div class="blogsearchbox">
                           <div class="iconContainer">
                             <svg
@@ -136,7 +137,7 @@ const BlogsPage = () => {
                             type="text"
                           />
                         </div>
-                      </div>
+                      </div> */}
                       <div>
                         <div className="search-catgories-margin">
                             <p>categories</p>

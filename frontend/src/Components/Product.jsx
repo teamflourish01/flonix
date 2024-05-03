@@ -64,11 +64,11 @@ const Product = () => {
           </div>
         </div>
       </section>
-      <section style={{ margin: "50px 0" }}>
+      <section className="product-sticky" style={{ margin: "50px 0" }}>
         <div className="main-width">
           <div>
             <div className="under1320width">
-              <div className="product-flex">
+              <div className="product-page-padding">
                 <div className="product-selecter">
                   {menuItems.map((item, index) => (
                     <div
@@ -82,12 +82,26 @@ const Product = () => {
                     </div>
                   ))}
                 </div>
-                <div className="product-card">
+                </div>
+                </div>
+                </div>
+                </div>
+                </section>
+                
+      <section style={{ margin: "50px 0" }}>
+        <div className="main-width">
+          <div>
+            <div className="under1320width">
+              <div className="product-page-padding">
+                
+                
                   <div className="card-flex">
+                    {/* <a href="/ProductDetail"> */}
                     <div className="card">
                       <img src={rectangale159} alt="rectangle159" />
                       <p>Lorem Ipsum is simply dummy text of</p>
                     </div>
+                    {/* </a> */}
                     <div className="card">
                       <img src={rectangale160} alt="rectangle160" />
                       <p>Lorem Ipsum is simply dummy text of</p>
@@ -193,7 +207,7 @@ const Product = () => {
                       <p>Lorem Ipsum is simply dummy text of</p>
                     </div>
                   </div>
-                </div>
+                
               </div>
             </div>
           </div>

@@ -12,18 +12,19 @@ const Testimonial = () => {
     const { className, style, onClick } = props;
     return (
       <IoIosArrowForward
-        style={{
-          position: "absolute",
-          top: "50%",
-          right: "1%",
-          borderRadius: "50%",
-          boxShadow: "rgba(39, 170, 243, 0.35) 0px 5px 15px",
-          width: "56px",
-          height: "56px",
-          padding: "10px",
-          zIndex: "1000",
-          cursor:"pointer"
-        }}
+      className="testo-next-arrow"
+        // style={{
+        //   position: "absolute",
+        //   top: "50%",
+        //   right: "1%",
+        //   borderRadius: "50%",
+        //   boxShadow: "rgba(39, 170, 243, 0.35) 0px 5px 15px",
+        //   width: "56px",
+        //   height: "56px",
+        //   padding: "10px",
+        //   zIndex: "1000",
+        //   cursor:"pointer"
+        // }}
         onClick={onClick}
       />
     );
@@ -33,18 +34,19 @@ const Testimonial = () => {
     const { className, style, onClick } = props;
     return (
       <IoIosArrowBack
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "1%",
-          borderRadius: "50%",
-          boxShadow: "rgba(39, 170, 243, 0.35) 0px 5px 15px",
-          width: "56px",
-          height: "56px",
-          padding: "10px",
-          zIndex: "1000",
-          cursor:"pointer"
-        }}
+      className="testo-arrow-back"
+        // style={{
+        //   position: "absolute",
+        //   top: "50%",
+        //   left: "1%",
+        //   borderRadius: "50%",
+        //   boxShadow: "rgba(39, 170, 243, 0.35) 0px 5px 15px",
+        //   width: "56px",
+        //   height: "56px",
+        //   padding: "10px",
+        //   zIndex: "1000",
+        //   cursor:"pointer"
+        // }}
         onClick={onClick}
       />
     );
@@ -59,7 +61,7 @@ const Testimonial = () => {
     prevArrow: <SamplePrevArrow />,
   };
   return (
-    <div className="slider-container" style={{padding:"20px 8px"}}  >
+    <div className="slider-container"   >
       <Slider {...settings}  >
         <div className="testimonial-width"  >
           <div className="testimonial-under-width">

@@ -16,6 +16,10 @@ import About from './Components/About';
 
 import Product from "./Components/Product";
 import ProductDetail from "./Components/Product-Details";
+import Ebrochure from "./Components/Ebrochure";
+import PrivacyPolicy from "./Components/PrivacyPolicy";
+import TermsAndCondition from "./Components/TermsAndCondition";
+import ReturnPolicy from "./Components/ReturnPolicy";
 
 
 function App() {
@@ -40,6 +44,10 @@ function App() {
         <Route path="/Product" element={<Product />} />
 
         <Route path="/Productdetail" element={<ProductDetail />} />
+        <Route path="/Ebrochure" element={<Ebrochure/>} />
+        <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>} />
+        <Route path="/TermsAndCondition" element={<TermsAndCondition/>} />
+        <Route path="/ReturnPolicy" element={<ReturnPolicy/>} />
 
       </Routes>
 
