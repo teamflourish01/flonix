@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
-import certificate1 from "../images/certificate1.svg"
+import certificate1 from "../images/certificate1.svg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../Style/Home.css";
@@ -11,7 +11,7 @@ const TechnologicalTesto = () => {
     const { className, style, onClick } = props;
     return (
       <IoIosArrowForward
-      className="arrow-forward"
+        className="arrow-forward"
         // style={{
         //   position: "absolute",
         //   top: "43%",
@@ -33,7 +33,7 @@ const TechnologicalTesto = () => {
     const { className, style, onClick } = props;
     return (
       <IoIosArrowBack
-      className="arrow-back"
+        className="arrow-back"
         // style={{
         //   position: "absolute",
         //   top: "43%",
@@ -65,94 +65,65 @@ const TechnologicalTesto = () => {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
-        {
-          breakpoint: 1025,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            infinite: true,
-            dots: true
-          }
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
         },
-        {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            initialSlide: 1
-          }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
         },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
+  const [aboutCerificate, setAboutCertificate] = useState([]);
+  const apiUrl = process.env.REACT_APP_URL;
+  useEffect(() => {
+    const getAboutCertificate = async () => {
+      try {
+        const response = await fetch(`${apiUrl}/certificate`);
+        const data = await response.json();
+        console.log(data.data);
+        setAboutCertificate(data.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    getAboutCertificate();
+  }, []);
   return (
-    <div className="slider-container"   >
-      <Slider {...settings}  >
-        
-      {/* <div className="under-width-testo">
-              <div className="d-flex"> */}
-                <div className="under-testo-single-card">
-                  <div className="certificate-img">
-                    <img src={certificate1} alt="" />
-                  </div>
-                  <div className="certificate-pera">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
-                  </div>
-                </div>
-                <div className="under-testo-single-card">
-                  <div className="certificate-img">
-                    <img src={certificate1} alt="" />
-                  </div>
-                  <div className="certificate-pera">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
-                  </div>
-                </div>
-                <div className="under-testo-single-card">
-                  <div className="certificate-img">
-                    <img src={certificate1} alt="" />
-                  </div>
-                  <div className="certificate-pera">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
-                  </div>
-                </div>
-                <div className="under-testo-single-card">
-                  <div className="certificate-img">
-                    <img src={certificate1} alt="" />
-                  </div>
-                  <div className="certificate-pera">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
-                  </div>
-                </div>
-                <div className="under-testo-single-card">
-                  <div className="certificate-img">
-                    <img src={certificate1} alt="" />
-                  </div>
-                  <div className="certificate-pera">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
-                  </div>
-                </div>
-                <div className="under-testo-single-card">
-                  <div className="certificate-img">
-                    <img src={certificate1} alt="" />
-                  </div>
-                  <div className="certificate-pera">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
-                  </div>
-                </div>
-                
-              {/* </div>
-              </div> */}
-        
-        
-        
+    <div className="slider-container">
+      <Slider {...settings}>
+        {aboutCerificate.map((item) => (
+          <div key={item._id} className="under-testo-single-card">
+            <div className="certificate-img">
+              <img
+                src={`${apiUrl}/certificates/${item?.image}`}
+                alt={item.image}
+              />
+            </div>
+            <div className="certificate-pera">
+              <p>{item?.imgdescription}</p>
+            </div>
+          </div>
+        ))}
       </Slider>
-      </div>
+    </div>
   );
 };
 

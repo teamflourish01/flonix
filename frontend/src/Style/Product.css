@@ -34,6 +34,7 @@
     position: sticky;
     top: 127px;
     background: white;
+    
 }
 .rectengle-one {
   max-width: 300px;
@@ -68,6 +69,7 @@
   /* border-radius: 10px 10px 0 0; */
   border-radius: 10px;
 }
+
 .rectengle-all p {
   font-family: PTSans-Regular;
   gap: 0px;
@@ -123,14 +125,18 @@
   /* margin-bottom: 20px; */
   border-radius: 18.08px;
 }
-.card img {
-  max-width: 421.25px;
+.card  img {
+  max-width: 320.25px;
   min-width: 150px;
   width: 100%;
   /* height: 314.51px; */
   border-radius: 18.08px 18.08px 0px 0px;
 }
-.card p {
+.card  .link-style-none{
+  text-decoration: none;
+  color: black;
+}
+.card .card-link p {
   font-size: 16.27px;
   line-height: 31.63px;
   font-family: sans-serif;
@@ -292,5 +298,35 @@
       position: sticky;
       top: 86px;
       background: white;
+  }
+}
+@media screen and (max-width:400px) {
+  .page-number {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 24px;
+    font-size: 15px;
+    text-align: center;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .current {
+    background-color: #ccc;
+  }
+  .page-arrow {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 24px;
+    font-size: 15px;
+    text-align: center;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
   }
 }

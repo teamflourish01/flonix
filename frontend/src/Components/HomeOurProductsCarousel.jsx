@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import ourproduct1 from "../images/ourproduct1.svg";
 import ourproduct2 from "../images/ourproduct2.svg";
@@ -8,7 +8,29 @@ import "slick-carousel/slick/slick-theme.css";
 import "../Style/Home.css";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-const HomeOurProductsCarousel = () => {
+import axios from 'axios';
+import { Link } from "react-router-dom";
+const HomeOurProductsCarousel = ({  ourProducts } ) => {
+  const [products, setProducts] = useState([]);
+  const apiUrl = process.env.REACT_APP_URL; 
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const productDetailPromises = ourProducts.map(slug => axios.get(`${apiUrl}/product/${slug}`));
+        const productDetails = await Promise.all(productDetailPromises);
+        const productsData = productDetails.map(detailResponse => detailResponse.data.data);
+        setProducts(productsData);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    };
+
+    fetchProducts();
+  }, [ourProducts]);
+
+
+
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -95,58 +117,33 @@ const HomeOurProductsCarousel = () => {
         }
       ]
   };
+  
   return (
     <div className="slider-container"   >
       <Slider {...settings}  >
         
       
       
-                <div className="card-3">
-                  <div className="top-product">
-                    <img className="imgs" src={ourproduct1} alt="" />
-                    <div>
-                      <p>Lorem Ipsum simply dummy text of </p>
-                      <button>INQUIRY NOW</button>
-                    </div>
-                  </div>
-                </div>
-                <div className="card-3">
-                  <div className="top-product">
-                    <img src={ourproduct2} alt="" />
-                    <p>Lorem Ipsu simply dummy text of </p>
-                    <button>INQUIRY NOW</button>
-                  </div>
-                </div>
-                <div className="card-3">
-                  <div className="top-product">
-                    <img src={ourproduct3} alt="" />
-                    <p>Lorem Ipsum simply dummy text of </p>
-                    <button>INQUIRY NOW</button>
-                  </div>
-                </div>
-                <div className="card-3">
-                  <div className="top-product">
-                    <img className="imgs" src={ourproduct1} alt="" />
-                    <div>
-                      <p>Lorem Ipsum simply dummy text of </p>
-                      <button>INQUIRY NOW</button>
-                    </div>
-                  </div>
-                </div>
-                <div className="card-3">
-                  <div className="top-product">
-                    <img src={ourproduct2} alt="" />
-                    <p>Lorem Ipsu simply dummy text of </p>
-                    <button>INQUIRY NOW</button>
-                  </div>
-                </div>
-                <div className="card-3">
-                  <div className="top-product">
-                    <img src={ourproduct3} alt="" />
-                    <p>Lorem Ipsum simply dummy text of </p>
-                    <button>INQUIRY NOW</button>
-                  </div>
-                </div>
+                
+      {products.map(product => (
+        <div className="card-3" key={product.slug}>
+          <Link to={`/product-detail/${product.slug}`} style={{textDecoration:"none"}}>
+            <div className="top-product">
+              <img className="imgs" src={`${apiUrl}/product/${product.image[0]}`} alt={product.name} />
+              <div style={{ padding: "20px 0" }}>
+                <p>{product.name}</p>
+                {/* <p>{product.description}</p> */}
+                
+              </div>
+            </div>
+          </Link>
+        </div>
+      ))}
+                
+                
+                
+                
+                
               
               
         

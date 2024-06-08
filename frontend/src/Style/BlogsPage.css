@@ -20,6 +20,25 @@ border-radius: 10px;
 /* border: 1px solid black; */
 }
 
+/* toggle latoust reverese css */
+.blog-layout {
+    display: flex;
+    flex-direction: column-reverse;
+     /* Default column layout */
+  }
+  
+  .column-reverse {
+    display: flex;
+    flex-direction: column;
+  }
+  
+/* toggle end latoust reverese css */
+
+
+
+
+
+
 .blog-page-imges-1 img{
     width: 100%;
 max-width: 849px;

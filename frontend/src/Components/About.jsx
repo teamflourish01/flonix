@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import "../Style/About.css";
 import blogbannerimage from "../images/blogbannerimage.svg";
 import aboutfourproduct from "../images/aboutfourproduct.svg";
@@ -15,6 +15,22 @@ import TechnologicalTesto from "./TechnologicalTesto";
 
 
 const About = () => {
+  const  [aboutData , setAboutData ] = useState({});
+  const apiUrl = process.env.REACT_APP_URL; 
+  useEffect(() => {
+    const getAbout = async() =>{
+      try {
+        const response = await fetch(`${apiUrl}/aboutus`)
+        const data = await response.json();
+        console.log(data.data)
+        setAboutData(data.data[0])
+
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+    getAbout();
+  },[]);
   return (
     <>
       <section>
@@ -43,32 +59,17 @@ const About = () => {
         <div className="main-width">
           <div>
             <div className="under1320width">
-              <div className="about-extra-padding">
+              <div className="all-page-padding">
+              
                 <div className="about-page-heading-pera">
                   <p className="about-page-heading">
-                    The standard Lorem Ipsum passage, used since the 1500s
+                    {aboutData.heading}
                   </p>
                   <p className="about-page-pera">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum
-                    passages, and more recently with desktop publishing software
-                    like Aldus PageMaker including versions of Lorem Ipsum.{" "}
-                    <br /> <br />
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged.
+                    {aboutData.description}
                   </p>
                 </div>
+             
               </div>
             </div>
           </div>
@@ -78,10 +79,12 @@ const About = () => {
         <div className="main-width">
           <div>
             <div className="under1320width">
-              <div className="about-extra-padding">
-                <div className="about-top-4-product">
-                  <img src={aboutfourproduct} alt="" />
+              <div className="all-page-padding">
+             
+                <div className="about-top-4-product " >
+                  <img src={`${apiUrl}/aboutus/${aboutData.banner}`} alt={aboutData.banner} />
                 </div>
+          
               </div>
             </div>
           </div>
@@ -91,44 +94,17 @@ const About = () => {
         <div className="main-width">
           <div>
             <div className="under1320width">
-              <div className="about-extra-padding">
+              <div className="all-page-padding">
+              
                 <div className="about-page-heading-pera">
                   <p className="about-page-heading">
-                    The standard Lorem Ipsum passage, used since the 1500s
+                    {aboutData.bannerheading}
                   </p>
                   <p className="about-page-pera">
-                    Contrary to popular belief, Lorem Ipsum is not simply random
-                    text. It has roots in a piece of classical Latin literature
-                    from 45 BC, making it over 2000 years old. Richard
-                    McClintock, a Latin professor at Hampden-Sydney College in
-                    Virginia, looked up one of the more obscure Latin words,
-                    consectetur, from a Lorem Ipsum passage, and going through
-                    the cites of the word in classical literature, discovered
-                    the undoubtable source. Lorem Ipsum comes from sections
-                    1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The
-                    Extremes of Good and Evil) by Cicero, written in 45 BC. This
-                    book is a treatise on the theory of ethics, very popular
-                    during the Renaissance. The first line of Lorem Ipsum,
-                    "Lorem ipsum dolor sit amet..", comes from a line in section
-                    1.10.32. <br />
-                    The standard chunk of Lorem Ipsum used since the 1500s is
-                    reproduced below for those interested. Sections 1.10.32 and
-                    1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are
-                    also reproduced in their exact original form, accompanied by
-                    English versions from the 1914 translation by H. Rackham.
-                    <br /> <br />
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum
-                    passages, and more recently with desktop publishing software
-                    like Aldus PageMaker including versions of Lorem Ipsum.
+                    {aboutData.bannerdescription}
                   </p>
                 </div>
+            
               </div>
             </div>
           </div>
@@ -138,45 +114,16 @@ const About = () => {
         <div className="main-width">
           <div style={{ padding: "84px 0" }}>
             <div className="under1320width">
-              <div className="about-extra-padding">
+              <div className="all-page-padding">
+              
                 <div className="d-grid-auality-img">
+                  {aboutData?.logoimages?.map((image, index) => (
                   <div className="about-quality-img">
-                    <img src={aboutimg1} alt="" />
+                    <img src={`${apiUrl}/aboutus/${image}`} alt="" />
                   </div>
-                  <div className="about-quality-img">
-                    <img src={aboutimg2} alt="" />
-                  </div>
-                  <div className="about-quality-img">
-                    <img src={aboutimg3} alt="" />
-                  </div>
-                  <div className="about-quality-img">
-                    <img src={aboutimg4} alt="" />
-                  </div>
-                  <div className="about-quality-img">
-                    <img src={aboutimg4} alt="" />
-                  </div>
-                  <div className="about-quality-img">
-                    <img src={aboutimg4} alt="" />
-                  </div>
-                  <div className="about-quality-img">
-                    <img src={aboutimg4} alt="" />
-                  </div>
-                  <div className="about-quality-img">
-                    <img src={aboutimg4} alt="" />
-                  </div>
-                  <div className="about-quality-img">
-                    <img src={aboutimg4} alt="" />
-                  </div>
-                  <div className="about-quality-img">
-                    <img src={aboutimg4} alt="" />
-                  </div>
-                  <div className="about-quality-img">
-                    <img src={aboutimg4} alt="" />
-                  </div>
-                  <div className="about-quality-img">
-                    <img src={aboutimg4} alt="" />
-                  </div>
+                    ))}
                 </div>
+               
               </div>
             </div>
           </div>
@@ -187,7 +134,7 @@ const About = () => {
         <div className="main-width">
           <div style={{ padding: "15px 0" }}>
             <div className="under1320width ">
-              <div className="about-extra-padding">
+              <div className="all-page-padding">
                 <p
                   className="all-heading"
                   style={{ padding: "0", margin: "0 0 50px 0" }}
@@ -343,7 +290,7 @@ const About = () => {
         <div className="main-width">
           <div style={{ padding: "15px 0" }}>
             <div className="under1320width ">
-              <div className="about-extra-padding">
+              <div className="all-page-padding">
                 <p
                   className="all-heading"
                   style={{ padding: "0", margin: "0 0 50px 0" }}
@@ -519,7 +466,7 @@ const About = () => {
         <div className="main-width">
           <div style={{ padding: "50px 0" }}>
             <div className="under1320width">
-              <div className="about-extra-padding">
+              <div className="all-page-padding">
                 <div className="d-grid-mission-box">
                   <div class="mission-box">
                     <div class="under-mission-box">
@@ -529,13 +476,7 @@ const About = () => {
                       <div class="features-info">
                         <h4 class="title">Mission</h4>
                         <p className="about-pera-heading">
-                          Lorem Ipsum is simply dummy text of the printing and
-                          typesetting industry. Lorem Ipsum has been the
-                          industry's standard dummy text ever since the 1500s,
-                          when an unknown printer took a galley of type and
-                          scrambled it to make a type specimen book. It has
-                          survived not only five centuries, but also the leap
-                          into electronic typesetting,{" "}
+                          {aboutData.mission}
                         </p>
                       </div>
                     </div>
@@ -546,15 +487,9 @@ const About = () => {
                         <img src={vision} alt="" />
                       </div>
                       <div class="features-info">
-                        <h4 class="title">Mission</h4>
+                        <h4 class="title">vision</h4>
                         <p className="about-pera-heading">
-                          Lorem Ipsum is simply dummy text of the printing and
-                          typesetting industry. Lorem Ipsum has been the
-                          industry's standard dummy text ever since the 1500s,
-                          when an unknown printer took a galley of type and
-                          scrambled it to make a type specimen book. It has
-                          survived not only five centuries, but also the leap
-                          into electronic typesetting,{" "}
+                          {aboutData.vision}
                         </p>
                       </div>
                     </div>
@@ -565,15 +500,9 @@ const About = () => {
                         <img src={goals} alt="" />
                       </div>
                       <div class="features-info">
-                        <h4 class="title">Mission</h4>
+                        <h4 class="title">goals</h4>
                         <p className="about-pera-heading">
-                          Lorem Ipsum is simply dummy text of the printing and
-                          typesetting industry. Lorem Ipsum has been the
-                          industry's standard dummy text ever since the 1500s,
-                          when an unknown printer took a galley of type and
-                          scrambled it to make a type specimen book. It has
-                          survived not only five centuries, but also the leap
-                          into electronic typesetting,{" "}
+                          {aboutData.goals}
                         </p>
                       </div>
                     </div>
@@ -588,6 +517,7 @@ const About = () => {
         <div className="main-width">
           <div>
             <div className="under1320width">
+              <div className="all-page-padding">
               <p
                 className="all-heading"
                 style={{ padding: "0", margin: "0 0 50px 0" }}
@@ -596,6 +526,7 @@ const About = () => {
               </p>
               <div className="under-widt-testo">
                 <TechnologicalTesto />
+              </div>
               </div>
             </div>
           </div>
