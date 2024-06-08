@@ -3,6 +3,71 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+.search-bar {
+  position: relative;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: none;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.search-results li:hover {
+  background-color: #f1f1f1;
+}
+
+
+.search-results li {
+  padding: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.search-results li:hover {
+  background-color: #F2FAFF;
+  color: black;
+}
+
+.search-results li.selected {
+  background-color: #F2FAFF;
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .navs-main-icon{
 display: none;
 }
@@ -40,7 +105,7 @@ max-width: 1320px;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    padding: 0 8px;
+    /* padding: 0 8px; */
 }
 .under-nav-flex {
   display: flex;
@@ -58,12 +123,14 @@ max-width: 1320px;
     width: 34px;
     cursor: pointer;    
 }
-.infoexamplemail{
+.infoexamplemail a{
   font-family: Roboto-Regular;
     font-weight: 400;
     font-size: 14px;
     line-height: 35px;
     align-items: center;
+    color: black;
+    text-decoration: none;
 }
 
 /* bgfnhgfngfhgfhn */
@@ -117,7 +184,7 @@ max-width: 1320px;
   nav{
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
@@ -128,7 +195,7 @@ max-width: 1320px;
     align-items: center;
     justify-content: space-between;
     background: white;
-    padding: 21px 8px;
+    padding: 21px 0px;
     
    
    
@@ -144,6 +211,11 @@ max-width: 1320px;
   }
   .under {
     color: black;
+  }
+  .under:hover{
+    color: #0096EA;
+    transition: transform 4.3s;
+
   }
   /* .naves .under:hover {
     color: #f9a526;
@@ -184,9 +256,7 @@ max-width: 1320px;
     align-items: center;
   }
   
-  .nav-item {
-    /* padding: 10px; */
-  }
+  
   
   .social-icon ul {
     list-style: none;
@@ -201,15 +271,7 @@ max-width: 1320px;
     align-items: center;
  
   }
-  #navbar .stme {
-    /* color: #f9a526; */
-  }
-  /* #navbar .instalinkt {
-    color: #f9a526;
-  }
-  #navbar .fblinkt {
-    color: #f9a526;
-  } */
+  
   @media screen and (max-width: 1315px) {
     .navs-main-icon{
       display: unset;
@@ -365,7 +427,7 @@ max-width: 1320px;
       align-items: center;
       justify-content: space-between;
       background: white;
-      padding: 0px 8px;
+      padding: 0px ;
       /* border: 1px solid black; */
   }
   .under-nav-flex {
@@ -412,8 +474,8 @@ max-width: 1320px;
   
   /* vfvdfvdf */
 
-  .search-bar9 {
-    /* position: relative; */
+  .search-bar {
+    
     box-sizing: border-box;
     width: fit-content;
   }
@@ -431,7 +493,7 @@ max-width: 1320px;
     background-color:white;
     transition: all 0.3s ease;
     border: 1px solid black;
-    /* padding: 10px; */
+   
   }
   
   .checkbox:focus {

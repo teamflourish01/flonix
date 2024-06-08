@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import topproduct1 from "../images/topproduct1.svg";
 import topproduct2 from "../images/topproduct2.svg";
@@ -7,7 +7,26 @@ import "slick-carousel/slick/slick-theme.css";
 import "../Style/Home.css";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-const HomeTopProductCarousel = () => {
+import axios from "axios";
+import { Link } from "react-router-dom";
+const HomeTopProductCarousel = ({topProducts}) => {
+  const [Topproducts, setTopProducts] = useState([]);
+  const apiUrl = process.env.REACT_APP_URL; 
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const productDetailPromises = topProducts.map(slug => axios.get(`${apiUrl}/product/${slug}`));
+        const productDetails = await Promise.all(productDetailPromises);
+        const productsData = productDetails.map(detailResponse => detailResponse.data.data);
+        setTopProducts(productsData);
+      } catch (error) {
+        console.error('Error fetching Top products:', error);
+      }
+    };
+
+    fetchProducts();
+  }, [topProducts]);
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -98,30 +117,20 @@ const HomeTopProductCarousel = () => {
     <div className="slider-container"   >
       <Slider {...settings}  >
         
-      
-                <div className="card-3">
+      {Topproducts.map(Topproducts => (
+                <div className="card-3" key={Topproducts.slug}>
+                  <Link to={`/product-detail/${Topproducts.slug}`} style={{textDecoration:"none"}}>
                   <div className="top-product">
-                    <img className="imgs" src={topproduct1} alt="" />
-                    <div>
-                      <p>Lorem Ipsum simply dummy text of </p>
-                      <button>INQUIRY NOW</button>
+                    <img className="imgs" src={`${apiUrl}/product/${Topproducts.image[0]}`} alt={Topproducts.name}   />
+                    <div style={{padding:"20px 0"}}>
+                      <p>{Topproducts.name} </p>
+                      
                     </div>
                   </div>
+                  </Link>
                 </div>
-                <div className="card-3">
-                  <div className="top-product">
-                    <img src={topproduct2} alt="" />
-                    <p>Lorem Ipsu simply dummy text of </p>
-                    <button>INQUIRY NOW</button>
-                  </div>
-                </div>
-                <div className="card-3">
-                  <div className="top-product">
-                    <img src={topproduct2} alt="" />
-                    <p>Lorem Ipsum simply dummy text of </p>
-                    <button>INQUIRY NOW</button>
-                  </div>
-                </div>
+                
+              ))}
               
         
         

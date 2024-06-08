@@ -9,7 +9,7 @@ const ReturnPolicy = () => {
         <div className="main-width">
           <div>
             <div className="under1320width">
-              <div className="privacy-policy-padding">
+              <div className="all-page-padding">
                 <div className='return-policy-bg'>
                     <div className='background-text-privacy-policy'>
                     <p className='privacy-policy-banner-heading'>Cancellation and Return Policy</p>
@@ -26,7 +26,7 @@ const ReturnPolicy = () => {
         <div className="main-width">
           <div>
             <div className="under1320width">
-              <div className="privacy-policy-padding">
+              <div className="all-page-padding">
                 
                     <div className='all-heading-and-pera'>
                     <p className='privacy-policy-peragraph'>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. www.flonix.com from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham. <br />

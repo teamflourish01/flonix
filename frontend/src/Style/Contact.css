@@ -1,16 +1,16 @@
 .d-grid-contact{
-    /* display: flex;
-    justify-items: center;
-    text-align: center;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px 10px; */
+    
     display: grid;
             grid-template-columns: repeat(2, 1fr);
             justify-items: flex-start;
             align-items: center;
             gap: 50px 10px;
 }
+.d-grid-contact > div:nth-child(3) {
+    grid-column: 2 / span 2; /* Start from the first column and span two columns */
+  align-self: flex-start;
+    
+  }
 .contact-page-padding{
     padding: 0;
 }
@@ -188,7 +188,7 @@ text-align: left;
         display: flex;
         /* justify-content: space-between; */
         align-items: center;
-        text-align: left;
+        /* text-align: left; */
         
 
     }
@@ -206,12 +206,14 @@ text-align: left;
         width: 30px;
         height: 30px;
     }
-    .contact-addres-location-pera p{
+    .contact-addres-location-pera p a{
         font-family: Roboto-Regular;
         font-weight: 400;
         font-size: 18px; 
         line-height: 25px;
-        padding: 0 0 0 15px;
+        padding: 0 0 0 10px;
+            color: black;
+            text-decoration: none;
     }
     
 
@@ -235,11 +237,13 @@ text-align: left;
           font-size: 24px;
           line-height: 28.13px;
         }
-        .form-address .form-pera{
+        .form-address .form-pera a{
           font-family: Roboto-Regular;
           font-weight: 400;
           font-size: 18px; 
           line-height: 21.09px; 
+          text-decoration: none;
+          color: black;
         }
         
         
@@ -325,15 +329,15 @@ text-align: left;
          border-radius: 15px;
          border: 1px solid black;
         }
-        .form-button{
+        /* .form-button{
           margin: 50px 0 0 0;
           text-align: left;
-        }
+        } */
         
         .form-button button{
           background: black;
           color: white;
-          padding: 15px 25px;
+          /* padding: 15px 25px; */
           border-radius: 365px;
           font-family:  Roboto-Bold;
           font-weight: 700;
@@ -365,13 +369,18 @@ text-align: left;
             justify-items: center;
             gap: 50px 10px;
         }
+        .d-grid-contact > div:nth-child(3) {
+            grid-column: unset;
+          align-self: flex-start;
+            
+          }
         .form-address .form-heading {
             font-family: Roboto-Medium;
             font-weight: 500;
             font-size: 20px;
             line-height: 25px;
         }
-        .form-address .form-pera {
+        .form-address .form-pera a {
             font-family: Roboto-Regular;
             font-weight: 400;
             font-size: 16px;
@@ -408,12 +417,14 @@ text-align: left;
             line-height: 27px;
             text-align: left;
         }
-        .contact-addres-location-pera p {
+        .contact-addres-location-pera p a{
             font-family: Roboto-Regular;
             font-weight: 400;
             font-size: 16px;
             line-height: 19px;
-            padding: 0 0 0 15px;
+            padding: 0 0 0 10px;
+            color: black;
+            text-decoration: none;
         }
         
     }
@@ -424,6 +435,11 @@ text-align: left;
             justify-items: normal;
             gap: 50px 10px;
         }
+        .d-grid-contact > div:nth-child(3) {
+            grid-column: unset;
+          align-self: flex-start;
+            
+          }
         .contact-page-padding{
             padding: 0 15px;
         }
@@ -476,7 +492,7 @@ text-align: left;
             font-size: 16px;
             line-height: 25px;
         }
-        .form-address .form-pera {
+        .form-address .form-pera a {
             font-family: Roboto-Regular;
             font-weight: 400;
             font-size: 14px;
@@ -513,12 +529,14 @@ text-align: left;
             line-height: 27px;
             text-align: left;
         }
-        .contact-addres-location-pera p {
+        .contact-addres-location-pera p a{
             font-family: Roboto-Regular;
             font-weight: 400;
             font-size: 14px;
             line-height: 19px;
-            padding: 0 0 0 15px;
+            padding: 0 0 0 10px;
+            color: black;
+            text-decoration: none;
         }
         
     }

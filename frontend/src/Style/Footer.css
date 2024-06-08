@@ -4,6 +4,14 @@
 .footer-space{
   padding: 119px 0;
 }
+.under-hover a {
+  color: white;
+}
+.under-hover a:hover{
+  color: #0096EA;
+  transition: transform 4.3s;
+
+}
 .d-flex-footer{
     display: flex;
     /* flex-wrap: wrap; */
@@ -95,6 +103,15 @@ padding: 15px 0 35px 0;
     line-height: 30px;
     color: white;
     
+}
+.our-product p a{
+  font-family: Roboto-Medium;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: white;
+  text-decoration: none;
+  
 }
 .part-4-width {
   width: 100%;
@@ -218,6 +235,15 @@ padding: 15px 0 17px 0;
     line-height: 30px;
     color: white;
     
+}
+.our-product p a{
+  font-family: Roboto-Medium;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: white;
+  text-decoration: none;
+  
 }
 .part-4-width {
   width: 100%;
@@ -345,6 +371,23 @@ padding: 15px 0 17px 0;
     line-height: 30px;
     color: white;
     
+}
+.our-product p{
+  font-family: Roboto-Medium;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: white;
+  
+}
+.our-product p a{
+  font-family: Roboto-Medium;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: white;
+  text-decoration: none;
+  
 }
 .part-4-width {
   width: 100%;
