@@ -35,11 +35,11 @@ function App() {
         
 
         <Route path="/Product" element={<Product />} />
-<<<<<<<<< Temporary merge branch 1
 
-=========
+
+
         <Route path="/Productdetail" element={<ProductDetail />} />
->>>>>>>>> Temporary merge branch 2
+
       </Routes>
 
       <Footer />
