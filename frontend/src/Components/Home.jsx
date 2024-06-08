@@ -27,6 +27,8 @@ import zikzakourblogvector from "../images/zikzakourblogvector.svg";
 import inquiryicone1 from "../images/inquiryicone1.svg";
 import inquiryicone2 from "../images/inquiryicone2.svg";
 import inquiryicone3 from "../images/inquiryicone3.svg";
+import Testimonial from "./Testimonial";
+
 
 
 const Home = () => {
@@ -467,7 +469,11 @@ const Home = () => {
                 >
                   Testimonials
                 </p>
-                <div className="testimonial-width">
+                <div style={{zIndex:"-999"}}>
+
+                <Testimonial/>
+                </div>
+                {/* <div className="testimonial-width">
                   <div className="testimonial-under-width">
                     <div className="testimonial-display-flex">
                       <div className="testimonial-name-heading-pera-width">
@@ -494,13 +500,13 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
         </div>
       </section>
-
+                    
       <section className="" style={{ margin: "50px 0" }}>
         <div className="main-width">
           <div>
@@ -590,7 +596,8 @@ const Home = () => {
                           <div className="blog-people-clander">
                             <div className="blog-icon-div">
                               <p>
-                                <i class="fa-solid fa-user"></i>By Flonix
+                                <i class="fa-solid fa-user"></i>
+                                By Flonix
                               </p>
                             </div>
                             <div className="blog-icon-div">
@@ -751,13 +758,7 @@ const Home = () => {
                           <label className="form-label">Your name</label>
                           <input
                           className="form-inputs"
-                            style={{
-                              width: "370px",
-                              padding: "20px",
-                              margin: "5px 0",
-                              borderRadius: "15px",
-                              border: "1px solid black",
-                            }}
+                            
                             type="text"
                           />
                         </div>
@@ -765,13 +766,7 @@ const Home = () => {
                           <label className="form-label">Email address</label>
                           <input
                           className="form-inputs"
-                            style={{
-                              width: "370px",
-                              padding: "20px",
-                              margin: "5px 0",
-                              borderRadius: "15px",
-                              border: "1px solid black",
-                            }}
+                            
                             type="text"
                           />
                         </div>
