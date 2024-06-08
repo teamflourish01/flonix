@@ -3,6 +3,85 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+.search-bar {
+  position: relative;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: none;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.search-results li:hover {
+  background-color: #f1f1f1;
+}
+
+
+.search-results li {
+  padding: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.search-results li:hover {
+  background-color: #F2FAFF;
+  color: black;
+}
+
+.search-results li.selected {
+  background-color: #F2FAFF;
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navs-main-icon{
+display: none;
+}
+.navs-d-flex{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.navs-icon img {
+  width: 34px;
+  cursor: pointer;    
+}
 .bg{
     background: #F2FAFF;
 }
@@ -14,7 +93,7 @@
 }
 .under1320width{
 max-width: 1320px;
-    min-width: 279px;
+    min-width: 250px;
     /* height: 35px; */
     /* border: 1px solid black; */
     margin: 0 auto;
@@ -26,7 +105,12 @@ max-width: 1320px;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    padding: 0 8px;
+    /* padding: 0 8px; */
+}
+.under-nav-flex {
+  display: flex;
+  gap: 40px;
+  
 }
 .under-d-flex{
   display: flex;
@@ -39,12 +123,14 @@ max-width: 1320px;
     width: 34px;
     cursor: pointer;    
 }
-.infoexamplemail{
+.infoexamplemail a{
   font-family: Roboto-Regular;
     font-weight: 400;
     font-size: 14px;
     line-height: 35px;
     align-items: center;
+    color: black;
+    text-decoration: none;
 }
 
 /* bgfnhgfngfhgfhn */
@@ -98,7 +184,7 @@ max-width: 1320px;
   nav{
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
@@ -109,7 +195,7 @@ max-width: 1320px;
     align-items: center;
     justify-content: space-between;
     background: white;
-    padding: 21px 8px;
+    padding: 21px 0px;
     
    
    
@@ -117,6 +203,7 @@ max-width: 1320px;
   }
   .nav2{
     box-shadow: rgba(39, 170, 243, 0.25) 0px 2px 8px 0px;
+    z-index: 1;
   }
   .desi-logo {
     width: 241px;
@@ -124,6 +211,11 @@ max-width: 1320px;
   }
   .under {
     color: black;
+  }
+  .under:hover{
+    color: #0096EA;
+    transition: transform 4.3s;
+
   }
   /* .naves .under:hover {
     color: #f9a526;
@@ -133,7 +225,7 @@ max-width: 1320px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
   }
   /* ul {
     margin-top: revert-layer;
@@ -164,9 +256,7 @@ max-width: 1320px;
     align-items: center;
   }
   
-  .nav-item {
-    /* padding: 10px; */
-  }
+  
   
   .social-icon ul {
     list-style: none;
@@ -181,17 +271,38 @@ max-width: 1320px;
     align-items: center;
  
   }
-  #navbar .stme {
-    /* color: #f9a526; */
+  
+  @media screen and (max-width: 1315px) {
+    .navs-main-icon{
+      display: unset;
+      }
+      .navs-d-flex{
+        display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          gap: 10px;
+          padding: 30px 0 0 15px;
+      }
+      .navs-icon img {
+        width: 34px;
+        cursor: pointer;    
+      }
+    
+    .screen-tablet-hidden{
+      display: none;
+    }
+    .under-nav-flex{
+      display: flex;
+    gap: 40px;
+    flex-direction: column;
+    }
+    .search-bar {
+      padding: 20px 15px 0 15px;
   }
-  /* #navbar .instalinkt {
-    color: #f9a526;
-  }
-  #navbar .fblinkt {
-    color: #f9a526;
-  } */
-  @media screen and (max-width: 1426px) {
-    #navbar {
+  
+  
+    /* #navbar {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -204,7 +315,38 @@ max-width: 1320px;
       background: white;
       padding: 0px 0 0 0px;
       transition: 0.3s ease-in-out;
-    }
+    } */
+    /* #navbar {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: fixed;
+      top: 114.5px;
+      right: -300px;
+      width: 300px;
+      height: 100vh;
+      background: white;
+      padding: 0px 0 0 0px;
+      transition: 0.3s ease-in-out;
+  } */
+  #navbar {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: baseline;
+    justify-content: flex-end;
+    position: fixed;
+    top: 123.5px;
+    right: -300px;
+    width: 300px;
+    /* border: 1px solid black; */
+    max-height: 1500px;
+    min-height: 300px;
+    height: 100vh;
+    background: white;
+    padding: 0px 0 0 0px;
+    transition: 0.3s ease-in-out;
+}
   
     #navbar .do {
       padding-top: 0px;
@@ -212,9 +354,15 @@ max-width: 1320px;
     #navbar.active {
       right: 0px;
     }
-    #navbar li {
+    /* #navbar li {
       margin-bottom: 25px;
-    }
+    } */
+    #navbar li {
+      list-style: none;
+      padding: 0px 15px;
+      position: relative;
+      text-align: left;
+  }
     #mobile {
       display: block;
     }
@@ -274,8 +422,20 @@ max-width: 1320px;
   
   @media screen and (max-width: 600px) {
     
-   
-    #navbar {
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: white;
+      padding: 0px ;
+      /* border: 1px solid black; */
+  }
+  .under-nav-flex {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+    /* #navbar {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -285,11 +445,26 @@ max-width: 1320px;
       right: -300px;
       width: 300px;
       height: 100vh;
-      /* background: black; */
-  
       padding: 0px 0 0 0px;
       transition: 0.3s ease-in-out;
-    }
+    } */
+    #navbar {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: baseline;
+      justify-content: flex-end;
+      position: fixed;
+      top: 83.5px;
+      right: -300px;
+      width: 250px;
+      /* border: 1px solid black; */
+      /* max-height: 1000px;
+      min-height: 300px; */
+      height: 100vh;
+      background: white;
+      padding: 0px 0 0 0px;
+      transition: 0.3s ease-in-out;
+  }
     .desi-logo {
       width: 120px;
     }
@@ -299,8 +474,8 @@ max-width: 1320px;
   
   /* vfvdfvdf */
 
-  .container {
-    /* position: relative; */
+  .search-bar {
+    
     box-sizing: border-box;
     width: fit-content;
   }
@@ -318,7 +493,7 @@ max-width: 1320px;
     background-color:white;
     transition: all 0.3s ease;
     border: 1px solid black;
-    /* padding: 10px; */
+   
   }
   
   .checkbox:focus {
@@ -375,7 +550,7 @@ max-width: 1320px;
   
   .iconContainer {
     box-sizing: border-box;
-    padding-top: 5px;
+    padding-top: 3px;
     width: fit-content;
     transition: all 0.3s ease;
   }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 
 import testimonialimg from "../images/testimonialimg.svg";
@@ -12,39 +12,42 @@ const Testimonial = () => {
     const { className, style, onClick } = props;
     return (
       <IoIosArrowForward
-        style={{
-          position: "absolute",
-          top: "50%",
-          right: "1%",
-          borderRadius: "50%",
-          boxShadow: "rgba(39, 170, 243, 0.35) 0px 5px 15px",
-          width: "56px",
-          height: "56px",
-          padding: "10px",
-          zIndex: "1000",
-          cursor:"pointer"
-        }}
+      className="testo-next-arrow"
+        // style={{
+        //   position: "absolute",
+        //   top: "50%",
+        //   right: "1%",
+        //   borderRadius: "50%",
+        //   boxShadow: "rgba(39, 170, 243, 0.35) 0px 5px 15px",
+        //   width: "56px",
+        //   height: "56px",
+        //   padding: "10px",
+        //   zIndex: "1000",
+        //   cursor:"pointer"
+        // }}
         onClick={onClick}
       />
     );
   }
 
+
   function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
       <IoIosArrowBack
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "1%",
-          borderRadius: "50%",
-          boxShadow: "rgba(39, 170, 243, 0.35) 0px 5px 15px",
-          width: "56px",
-          height: "56px",
-          padding: "10px",
-          zIndex: "1000",
-          cursor:"pointer"
-        }}
+      className="testo-arrow-back"
+        // style={{
+        //   position: "absolute",
+        //   top: "50%",
+        //   left: "1%",
+        //   borderRadius: "50%",
+        //   boxShadow: "rgba(39, 170, 243, 0.35) 0px 5px 15px",
+        //   width: "56px",
+        //   height: "56px",
+        //   padding: "10px",
+        //   zIndex: "1000",
+        //   cursor:"pointer"
+        // }}
         onClick={onClick}
       />
     );
@@ -58,10 +61,26 @@ const Testimonial = () => {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
+  const[testoData, setTestoData] = useState([]);
+  const apiUrl = process.env.REACT_APP_URL;
+  useEffect(() => {
+    const getTesto = async () => {
+      try {
+        const response = await fetch(`${apiUrl}/testimonials`);
+        const data = await response.json();
+        // Assuming `data.data` is an array of banner image URLs
+        setTestoData(data.data);
+
+      } catch (error) {
+        console.error("Error fetching banner images:", error);
+      }
+    };
+    getTesto();
+  }, []);
   return (
-    <div className="slider-container" style={{padding:"20px 8px"}}  >
+    <div className="slider-container"   >
       <Slider {...settings}  >
-        <div className="testimonial-width"  >
+        {/* <div className="testimonial-width"  >
           <div className="testimonial-under-width">
             <div className="testimonial-display-flex">
               <div className="testimonial-name-heading-pera-width">
@@ -88,119 +107,36 @@ const Testimonial = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="testimonial-width">
-          <div className="testimonial-under-width">
-            <div className="testimonial-display-flex">
-              <div className="testimonial-name-heading-pera-width">
-                <p className="testimonial-name">Kevin Kevin</p>
-                <p className="testimonial-degistion">
-                  Distributer of xyz company
-                </p>
-                <div className="testimonial-review">
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s,{" "}
+        </div> */}
+        
+        {testoData.map((testimonial, index) => (
+          
+          <div className="testimonial-width" key={index}>
+            <div className="testimonial-under-width">
+              <div className="testimonial-display-flex">
+                <div className="testimonial-name-heading-pera-width">
+                  <p className="testimonial-name">{testimonial.name}</p>
+                  <p className="testimonial-designation">
+                    {testimonial.designation}
                   </p>
+                  <div className="testimonial-review">
+                    <p>{testimonial.text}</p>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <div className="shadow-testimonial-box">
-                  <div className="testimonial-box">
-                    <div class="inner-testimonial">
-                      <img src={testimonialimg} alt="" />
+                <div>
+                  <div className="shadow-testimonial-box">
+                    <div className="testimonial-box">
+                      <div className="inner-testimonial">
+                        <img src={`${apiUrl}/testimonials/${testimonial.image}`} alt={`${testimonial.name}`} />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="testimonial-width">
-          <div className="testimonial-under-width">
-            <div className="testimonial-display-flex">
-              <div className="testimonial-name-heading-pera-width">
-                <p className="testimonial-name">Kevin Kevin</p>
-                <p className="testimonial-degistion">
-                  Distributer of xyz company
-                </p>
-                <div className="testimonial-review">
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s,{" "}
-                  </p>
-                </div>
-              </div>
-              <div>
-                <div className="shadow-testimonial-box">
-                  <div className="testimonial-box">
-                    <div class="inner-testimonial">
-                      <img src={testimonialimg} alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="testimonial-width">
-          <div className="testimonial-under-width">
-            <div className="testimonial-display-flex">
-              <div className="testimonial-name-heading-pera-width">
-                <p className="testimonial-name">Kevin Kevin</p>
-                <p className="testimonial-degistion">
-                  Distributer of xyz company
-                </p>
-                <div className="testimonial-review">
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s,{" "}
-                  </p>
-                </div>
-              </div>
-              <div>
-                <div className="shadow-testimonial-box">
-                  <div className="testimonial-box">
-                    <div class="inner-testimonial">
-                      <img src={testimonialimg} alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="testimonial-width">
-          <div className="testimonial-under-width">
-            <div className="testimonial-display-flex">
-              <div className="testimonial-name-heading-pera-width">
-                <p className="testimonial-name">Kevin Kevin</p>
-                <p className="testimonial-degistion">
-                  Distributer of xyz company
-                </p>
-                <div className="testimonial-review">
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s,{" "}
-                  </p>
-                </div>
-              </div>
-              <div>
-                <div className="shadow-testimonial-box">
-                  <div className="testimonial-box">
-                    <div class="inner-testimonial">
-                      <img src={testimonialimg} alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        ))}
+       
       </Slider>
       </div>
   );
