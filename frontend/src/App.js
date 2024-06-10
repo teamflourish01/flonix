@@ -14,6 +14,10 @@ import About from "./Components/About";
 
 import Product from "./Components/Product";
 import ProductDetail from "./Components/Product-Details";
+import Ebrochure from "./Components/Ebrochure";
+import PrivacyPolicy from "./Components/PrivacyPolicy";
+import TermsAndCondition from "./Components/TermsAndCondition";
+import ReturnPolicy from "./Components/ReturnPolicy";
 
 
 function App() {
@@ -23,23 +27,23 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
-        <Route path="/Blogs" element={<Blogs/>} />
 
- 
-        <Route path="/BlogsPage" element={<BlogsPage />} />
+        <Route path="/Blogs" element={<Blogs />} />
+        <Route path="/Blog/:slug" element={<Blog />} />
+        <Route path ="/Blogcategory/:slug" element={<Blogcategory />} />
+
         <Route path="/NewsEvent" element={<NewsEvent />} />
-        <Route path="/NewsEventpage" element={<NewsEventpage />} />
+        <Route path="/NewsEventpage/:slug" element={<NewsEventpage />} />
 
-        <Route path="/Contact" element={<Contact/>} />
-
-        
+        <Route path="/Contact" element={<Contact />} />
 
         <Route path="/Product" element={<Product />} />
+        <Route path="/product-detail/:slug" element={<ProductDetail />} />
 
-
-
-        <Route path="/Productdetail" element={<ProductDetail />} />
-
+        <Route path="/Ebrochure" element={<Ebrochure />} />
+        <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+        <Route path="/TermsAndCondition" element={<TermsAndCondition />} />
+        <Route path="/ReturnPolicy" element={<ReturnPolicy />} />
       </Routes>
 
       <Footer />
