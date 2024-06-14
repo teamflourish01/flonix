@@ -11,15 +11,19 @@ import blogrecentimg4 from "../images/blogrecentimg4.svg";
 import blogrecentimg5 from "../images/blogrecentimg5.svg";
 import blogrecentimg6 from "../images/blogrecentimg6.svg";
 import blogrecentimg7 from "../images/blogrecentimg7.svg";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Blog = () => {
   // const { id } = useParams();
   const { slug } = useParams(); // Get the slug from the URL
   const [blogData, setBlogData] = useState([]);
   const [blogCategory, setBlogCategory] = useState([]);
-  
+  const [recent, setRecent] = useState([]);
+  const navigate=useNavigate()
+
   const apiUrl = process.env.REACT_APP_URL;
+  const domain = process.env.REACT_APP_DOMAIN;
 
   // useEffect(() => {
   //   const getBlogData = async () => {
@@ -27,7 +31,6 @@ const Blog = () => {
   //       const response = await fetch(`${apiUrl}/blog/${id}`);
   //       const data = await response.json();
   //       setBlogData(data.data);
-        
 
   //     } catch (error) {
   //       console.error("Error fetching data:", error);
@@ -35,6 +38,17 @@ const Blog = () => {
   //   };
   //   getBlogData();
   // }, []);
+
+  const getRecent = async () => {
+    try {
+      let data = await fetch(`${apiUrl}/blog`);
+      data = await data.json();
+      
+      setRecent(data.data.reverse().splice(0, 3));
+    } catch (error) {
+      console.error(error);
+    }
+  };
   useEffect(() => {
     const getBlogData = async () => {
       try {
@@ -45,6 +59,7 @@ const Blog = () => {
         console.error("Error fetching blog data:", error);
       }
     };
+    
     getBlogData();
   }, [slug]); // Add slug to dependency array
 
@@ -54,19 +69,23 @@ const Blog = () => {
         const response = await fetch(`${apiUrl}/blogcategory`);
         const data = await response.json();
         setBlogCategory(data.data);
-        
-
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
+    getRecent();
+    console.log(recent,"recent");
     getBlogCategoryData();
   }, []);
 
-  
-
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{blogData?.meta_title}</title>
+        <meta name="description" content={blogData?.meta_description} />
+        <link rel="canonical" href={`${domain}/Blog/${blogData?.slug}`} />
+      </Helmet>
       <section>
         <div className="wavebgbanner">
           <div className="main-width">
@@ -113,7 +132,7 @@ const Blog = () => {
                     <div>
                       <p
                         className="blogs-page-all-pera"
-                        dangerouslySetInnerHTML={{ __html: blogData.text1 }}
+                        dangerouslySetInnerHTML={{ __html: blogData?.text1 }}
                       ></p>
                     </div>
                   </div>
@@ -163,12 +182,11 @@ const Blog = () => {
                 <div className="blogs-page-width-405">
                   <div className="blogs-page-catogery-width-1">
                     <div className="blogs-page-under-catogery-width">
-                      
                       <div>
                         <div className="search-catgories-margin">
                           <p>categories</p>
                         </div>
-                       
+
                         {/* <div className="search-status-text">
       {blogCategory.map((category, index) => (
         <Link key={index} to={`/category/${category._id}`}>
@@ -176,16 +194,16 @@ const Blog = () => {
          </Link>
       ))}
     </div> */}
-    <div className="search-status-text">
+                        <div className="search-status-text">
                           {blogCategory.map((category, index) => (
-                            <Link key={index} to={`/blogcategory/${category.slug}`}>
+                            <Link
+                              key={index}
+                              to={`/blogcategory/${category.slug}`}
+                            >
                               <p>{category.name}</p>
                             </Link>
                           ))}
                         </div>
-
-
-                        
                       </div>
                     </div>
                   </div>
@@ -196,49 +214,32 @@ const Blog = () => {
                       </div>
                       <div className="blogs-ing-texr-top-margin">
                         <div className="blogs-image-and-text">
-                          <div className="blogs-img-flex-text">
-                            <div className="recent-blog-img">
-                              <img src={blogrecentimg1} alt="" />
-                            </div>
-                            <div className="blog-text-recent-width-box">
-                              <p className="blog-recent-heading">
-                                water Purifier
-                              </p>
-                              <p className="blog-recent-pera">
-                                Lorem Ipsum is simply dummy text of the printing
-                                and typesetting industry.
-                              </p>
-                            </div>
-                          </div>
-                          <div className="blogs-img-flex-text">
-                            <div className="recent-blog-img">
-                              <img src={blogrecentimg2} alt="" />
-                            </div>
-                            <div className="blog-text-recent-width-box">
-                              <p className="blog-recent-heading">
-                                water Purifier
-                              </p>
-                              <p className="blog-recent-pera">
-                                Lorem Ipsum is simply dummy text of the printing
-                                and typesetting industry.
-                              </p>
-                            </div>
-                          </div>
-                          <div className="blogs-img-flex-text">
-                            <div className="recent-blog-img">
-                              <img src={blogrecentimg3} alt="" />
-                            </div>
-                            <div className="blog-text-recent-width-box">
-                              <p className="blog-recent-heading">
-                                water Purifier
-                              </p>
-                              <p className="blog-recent-pera">
-                                Lorem Ipsum is simply dummy text of the printing
-                                and typesetting industry.
-                              </p>
-                            </div>
-                          </div>
-                          <div className="blogs-img-flex-text">
+                          {recent?.map((e) => {
+                            return (
+                              <>
+                                <div className="blogs-img-flex-text" onClick={()=>navigate(`/blog/${e?.slug}`)}  >
+                                  <div className="recent-blog-img">
+                                    <img
+                                      src={`${apiUrl}/blog/${e?.banner_image}`}
+                                      alt=""
+                                    />
+                                  </div>
+                                  <div className="blog-text-recent-width-box">
+                                    <p className="blog-recent-heading">
+                                      {e?.name}
+                                    </p>
+                                    {e?.text1&&
+                                    
+                                    <p className="blog-recent-pera" dangerouslySetInnerHTML={{ __html: (e?.text1).slice(0,90)+"..." }}>
+                                    </p>
+                                    }
+                                  </div>
+                                </div>
+                              </>
+                            );
+                          })}
+
+                          {/* <div className="blogs-img-flex-text">
                             <div className="recent-blog-img">
                               <img src={blogrecentimg4} alt="" />
                             </div>
@@ -251,8 +252,8 @@ const Blog = () => {
                                 and typesetting industry.
                               </p>
                             </div>
-                          </div>
-                          <div className="blogs-img-flex-text">
+                          </div> */}
+                          {/* <div className="blogs-img-flex-text">
                             <div className="recent-blog-img">
                               <img src={blogrecentimg5} alt="" />
                             </div>
@@ -265,7 +266,7 @@ const Blog = () => {
                                 and typesetting industry.
                               </p>
                             </div>
-                          </div>
+                          </div> */}
                           <div className="blog-recent-last-img-1">
                             <img src={blogrecentimg6} alt="" />
                           </div>

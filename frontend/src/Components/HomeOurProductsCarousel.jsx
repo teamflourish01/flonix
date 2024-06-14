@@ -127,7 +127,7 @@ const HomeOurProductsCarousel = ({  ourProducts } ) => {
                 
       {products.map(product => (
         <div className="card-3" key={product.slug}>
-          <Link to={`/product-detail/${product.slug}`} style={{textDecoration:"none"}}>
+          <Link to={`/Product/${product.slug}`} style={{textDecoration:"none"}}>
             <div className="top-product">
               <img className="imgs" src={`${apiUrl}/product/${product.image[0]}`} alt={product.name} />
               <div style={{ padding: "20px 0" }}>

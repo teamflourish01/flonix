@@ -6,6 +6,7 @@ import "../Style/ProductDetails.css";
 import img56 from "../images/image56.svg";
 import img57 from "../images/image57.svg";
 import img58 from "../images/image58.svg";
+import { Helmet } from "react-helmet";
 
 const ProductDetail = () => {
   const { slug } = useParams(); 
@@ -16,6 +17,8 @@ const ProductDetail = () => {
   const [error, setError] = useState(null);
   const [relatedProducts, setRelatedProducts] = useState([]);
   const apiUrl = process.env.REACT_APP_URL;
+  const domain=process.env.REACT_APP_DOMAIN;
+
 
   const handleImageClick = (index) => {
     setSelectedImageIndex(index);
@@ -85,6 +88,16 @@ const ProductDetail = () => {
 
   return (
     <>
+     {/* Meta Section */}
+     <Helmet>
+        <meta charSet="utf-8" />
+        <title>{product?.meta_title||"Flonix Technology"} </title>
+        <meta name="description" content={product?.meta_description} />
+        <link
+          rel="canonical"
+          href={`${domain}/Product/${slug}`}
+        />
+      </Helmet>
       <section style={{ margin: "50px 0" }}>
         <div className="main-width">
           <div>
@@ -226,7 +239,7 @@ const ProductDetail = () => {
                   </p>
                   <div className="card-flex">
                     {relatedProducts.map((relatedProduct) => (
-                      <Link to={`/product-detail/${relatedProduct.slug}`} key={relatedProduct.slug} style={{textDecoration:"none",color:"black"}}>
+                      <Link to={`/Product/${relatedProduct.slug}`} key={relatedProduct.slug} style={{textDecoration:"none",color:"black"}}>
                         <div className="card">
                           <img src={`${apiUrl}/product/${relatedProduct.image[0]}`} alt={relatedProduct.image_alt[0]} />
                           <p>{relatedProduct.name}</p>

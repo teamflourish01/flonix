@@ -1,27 +1,41 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import "../Style/Contact.css";
 import blogbannerimage from "../images/blogbannerimage.svg";
 import inquiryicone1 from "../images/inquiryicone1.svg";
 import inquiryicone2 from "../images/inquiryicone2.svg";
 import inquiryicone3 from "../images/inquiryicone3.svg";
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
   const [outletData, setOutletData] = useState([]);
   const [contectData, setContectData] = useState([]);
-  const apiUrl = process.env.REACT_APP_URL; // Backend API URL
+  const [heading,setHeading]=useState([]);
 
+  const apiUrl = process.env.REACT_APP_URL; // Backend API URL
+  const domain = process.env.REACT_APP_DOMAIN;
+
+  const getHeading=async()=>{
+    try {
+      let data=await fetch(`${apiUrl}/contact`)
+      data=await data.json();
+      setHeading(data.data[0]?.text)
+    } catch (error) {
+      console.log(error);
+    }
+  }
   useEffect(() => {
-    const getContect = async() => {
+    const getContect = async () => {
       try {
         const response = await fetch(`${apiUrl}/contect`);
         const data = await response.json();
-        setContectData(data.data); 
+        setContectData(data.data);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     };
     getContect();
-  },[]);
+    getHeading()
+  }, []);
 
   useEffect(() => {
     // Fetch data from the backend API
@@ -31,7 +45,7 @@ const Contact = () => {
         const data = await response.json();
         setOutletData(data.data); // Assuming data.data contains the array of network data
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     };
 
@@ -39,6 +53,16 @@ const Contact = () => {
   }, []); // Empty dependency array ensures the effect runs only once on component mount
   return (
     <>
+      {/* Meta Section */}
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Contact | Flonix Technology</title>
+        <meta
+          name="description"
+          content="Get in touch with our team for expert advice and support. Whether you have questions about our products, need technical assistance, or want to discuss custom solutions, we're here to help."
+        />
+        <link rel="canonical" href={`${domain}/Contact`} />
+      </Helmet>
       <section>
         <div className="wavebgbanner">
           <div className="main-width">
@@ -74,56 +98,65 @@ const Contact = () => {
                   Inquiry Here
                 </p>
                 <div className="d-grid-contact">
-                {contectData.map((item) => (
-                  <div className="inquiry-icon-width">
-                    <div className="">
-                      <div className="inquiry-icon-flex">
-                        <div>
-                          <img
-                            style={{ width: "46px" }}
-                            src={inquiryicone1}
-                            alt=""
-                          />
+                  {contectData.map((item) => (
+                    <div className="inquiry-icon-width">
+                      <div className="">
+                        <div className="inquiry-icon-flex">
+                          <div>
+                            <img
+                              style={{ width: "46px" }}
+                              src={inquiryicone1}
+                              alt=""
+                            />
+                          </div>
+                          <div className="form-address">
+                            <p className="form-heading">Address</p>
+                            <p className="form-pera">
+                              <a
+                                href={item.officeaddress_url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {item.officeaddress}{" "}
+                              </a>
+                            </p>
+                          </div>
                         </div>
-                        <div className="form-address">
-                          <p className="form-heading">Address</p>
-                          <p className="form-pera">
-                          <a  href={item.officeaddress_url} target="_blank" rel="noopener noreferrer">
-                  {item.officeaddress} </a>
-                          </p>
+                        <div className="inquiry-icon-flex-up-down-margin">
+                          <div>
+                            <img
+                              style={{ width: "46px" }}
+                              src={inquiryicone2}
+                              alt=""
+                            />
+                          </div>
+                          <div className="form-address">
+                            <p className="form-heading">Email</p>
+                            <p className="form-pera">
+                              <a href={`mailto:${item.email}`}>{item.email}</a>
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                      <div className="inquiry-icon-flex-up-down-margin">
-                        <div>
-                          <img
-                            style={{ width: "46px" }}
-                            src={inquiryicone2}
-                            alt=""
-                          />
-                        </div>
-                        <div className="form-address">
-                          <p className="form-heading">Email</p>
-                          <p className="form-pera"><a href={`mailto:${item.email}`}>{item.email}</a></p>
-                        </div>
-                      </div>
-                      <div className="inquiry-icon-flex">
-                        <div>
-                          <img
-                            style={{ width: "46px" }}
-                            src={inquiryicone3}
-                            alt=""
-                          />
-                        </div>
-                        <div className="form-address">
-                          <p className="form-heading">Phone</p>
-                          <p className="form-pera">
-                          <a href={`tel:${item.officenumber}`}>{item.officenumber}</a>
-                          </p>
+                        <div className="inquiry-icon-flex">
+                          <div>
+                            <img
+                              style={{ width: "46px" }}
+                              src={inquiryicone3}
+                              alt=""
+                            />
+                          </div>
+                          <div className="form-address">
+                            <p className="form-heading">Phone</p>
+                            <p className="form-pera">
+                              <a href={`tel:${item.officenumber}`}>
+                                {item.officenumber}
+                              </a>
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                   ))}
+                  ))}
                   <form className="form-width">
                     <div className="">
                       <div className="form-flex">
@@ -154,7 +187,6 @@ const Contact = () => {
                         <textarea className="form-textarea" />
                       </div>
                     </div>
-                    
                   </form>
                   <div className="form-button">
                     <button
@@ -201,48 +233,49 @@ const Contact = () => {
                 Our Network
               </p>
               <p className="conatact-our-network-heading">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.{" "}
+                {heading}
               </p>
             </div>
             <div className="under1320width">
               <div>
                 <div className="d-grid-contact-oue-network">
-                {outletData.map((item) => (
-                  <div className="contact-our-network-box">
-                  
-                    <div className="contact-why-box">
-                      <p className="why-flonix-filteration-heading">
-                      {item.name}
-                      </p>
-                      <div style={{ paddingTop: "21px" }}>
-                        <div className="contact-location-and-mobile-icon-text">
-                          <div className="contact-form-icon-addres-location">
-                            <img src={inquiryicone1} alt="" />
+                  {outletData.map((item) => (
+                    <div className="contact-our-network-box">
+                      <div className="contact-why-box">
+                        <p className="why-flonix-filteration-heading">
+                          {item.name}
+                        </p>
+                        <div style={{ paddingTop: "21px" }}>
+                          <div className="contact-location-and-mobile-icon-text">
+                            <div className="contact-form-icon-addres-location">
+                              <img src={inquiryicone1} alt="" />
+                            </div>
+                            <div className="contact-addres-location-pera">
+                              <p>
+                                <a
+                                  href={item.address_url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  {item.address}
+                                </a>
+                              </p>
+                            </div>
                           </div>
-                          <div className="contact-addres-location-pera">
-                            <p>
-                            <a href={item.address_url} target="_blank" rel="noopener noreferrer">
-                  {item.address}
-                </a>
-                            </p>
-                          </div>
-                        </div>
-                        <div className="contact-location-and-mobile-icon-text create-padding">
-                          <div className="contact-form-icon-addres-location">
-                            <img src={inquiryicone3} alt="" />
-                          </div>
-                          <div className="contact-addres-location-pera">
-                            <p><a href={`tel:${item.mobile}`}>{item.mobile}</a></p>
+                          <div className="contact-location-and-mobile-icon-text create-padding">
+                            <div className="contact-form-icon-addres-location">
+                              <img src={inquiryicone3} alt="" />
+                            </div>
+                            <div className="contact-addres-location-pera">
+                              <p>
+                                <a href={`tel:${item.mobile}`}>{item.mobile}</a>
+                              </p>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                   
-                  </div>
-  ))}
+                  ))}
                 </div>
               </div>
             </div>

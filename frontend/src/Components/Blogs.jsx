@@ -6,10 +6,12 @@ import ourblogimg2 from "../images/ourblogimg2.svg";
 import ourblogimg3 from "../images/ourblogimg3.svg";
 import zikzakourblogvector from "../images/zikzakourblogvector.svg";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Blogs = () => {
   const [blogData, setBlogData] = useState([]);
   const apiUrl = process.env.REACT_APP_URL;
+  const domain = process.env.REACT_APP_DOMAIN;
 
   useEffect(() => {
     const getBlogData = async () => {
@@ -26,6 +28,15 @@ const Blogs = () => {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Blogs | Flonix Technology</title>
+        <meta
+          name="description"
+          content="Explore our comprehensive blog on the latest trends, tips, and innovations in the RO industry. From water purification technologies to maintenance guides, our blogs provide valuable insights for you. Stay informed and ensure the best water quality with expert advice from industry leaders"
+        />
+        <link rel="canonical" href={`${domain}/Blogs`} />
+      </Helmet>
       <section>
         <div className="wavebgbanner">
           <div className="main-width">
@@ -142,7 +153,8 @@ const Blogs = () => {
                             </div>
                             <div className="blog-icon-div">
                               <p>
-                                <i class="fa-solid fa-calendar"></i>{new Date(item.createdAt).toLocaleDateString()}
+                                <i class="fa-solid fa-calendar"></i>
+                                {new Date(item.createdAt).toLocaleDateString()}
                               </p>
                             </div>
                           </div>
@@ -160,18 +172,19 @@ const Blogs = () => {
                           </div> */}
                         </div>
                         <div className="blog-button">
-                            <Link style={{textDecoration:"none"}} to={`/Blog/${item.slug}`}>
+                          <Link
+                            style={{ textDecoration: "none" }}
+                            to={`/Blog/${item.slug}`}
+                          >
                             <button
-                        className="banner-inquery-button"
-                        // style={{ marginTop: "40px" }}
-                      >
-                        <span class="text">READ MORE</span>
-                        <div class="wave"></div>
-                      </button>
-                            
-                            </Link>
-                          </div>
-                        
+                              className="banner-inquery-button"
+                              // style={{ marginTop: "40px" }}
+                            >
+                              <span class="text">READ MORE</span>
+                              <div class="wave"></div>
+                            </button>
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   ))}

@@ -1,9 +1,22 @@
 import React from 'react'
 import "../Style/ReturnPolicy.css";
+import { Helmet } from 'react-helmet';
 
 const ReturnPolicy = () => {
+  const domain=process.env.REACT_APP_DOMAIN;
+
   return (
     <>
+       {/* Meta Section */}
+       <Helmet>
+        <meta charSet="utf-8" />
+        <title>Return Policy | Flonix Technology </title>
+        <meta name="description" content="" />
+        <link
+          rel="canonical"
+          href={`${domain}/ReturnPolicy`}
+        />
+      </Helmet>
     <section  className="" style={{margin:"50px 0"}}>
       <div className="">
         <div className="main-width">

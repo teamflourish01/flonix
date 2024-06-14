@@ -6,11 +6,14 @@ import newseventpageimg1 from "../images/newseventpageimg1.svg";
 import newseventpageimg2 from "../images/newseventpageimg2.svg";
 import newseventpageimg3 from "../images/newseventpageimg3.svg";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const NewsEventpage = () => {
   const { slug } = useParams();
   const [newseventData, setNewseventData] = useState([]);
   const apiUrl = process.env.REACT_APP_URL;
+  const domain=process.env.REACT_APP_DOMAIN;
+
   useEffect(() => {
     const getnewsevent = async () => {
       try {
@@ -27,6 +30,12 @@ const NewsEventpage = () => {
   }, [slug]);
   return (
     <>
+     <Helmet>
+    <meta charSet="utf-8" />
+                <title>{newseventData?.meta_title}</title>
+                <meta name='description' content={newseventData?.meta_description}/>
+                <link rel="canonical" href={`${domain}/NewsEventpage/${slug}`} />
+    </Helmet>
       <section>
         <div className="wavebgbanner">
           <div className="main-width">

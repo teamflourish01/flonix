@@ -119,7 +119,7 @@ const HomeTopProductCarousel = ({topProducts}) => {
         
       {Topproducts.map(Topproducts => (
                 <div className="card-3" key={Topproducts.slug}>
-                  <Link to={`/product-detail/${Topproducts.slug}`} style={{textDecoration:"none"}}>
+                  <Link to={`/Product/${Topproducts.slug}`} style={{textDecoration:"none"}}>
                   <div className="top-product">
                     <img className="imgs" src={`${apiUrl}/product/${Topproducts.image[0]}`} alt={Topproducts.name}   />
                     <div style={{padding:"20px 0"}}>

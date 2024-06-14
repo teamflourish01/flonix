@@ -12,11 +12,14 @@ import goals from "../images/goals.svg";
 import Vectorarrow from "../images/Vectorarrow.svg";
 import downarrowvector from "../images/downarrowvector.svg";
 import TechnologicalTesto from "./TechnologicalTesto";
+import {Helmet} from "react-helmet"
 
 
 const About = () => {
   const  [aboutData , setAboutData ] = useState({});
   const apiUrl = process.env.REACT_APP_URL; 
+  const domain=process.env.REACT_APP_DOMAIN
+
   useEffect(() => {
     const getAbout = async() =>{
       try {
@@ -33,6 +36,12 @@ const About = () => {
   },[]);
   return (
     <>
+    <Helmet>
+    <meta charSet="utf-8" />
+                <title>{aboutData?.meta_title}</title>
+                <meta name='description' content={aboutData?.meta_description}/>
+                <link rel="canonical" href={`${domain}/About`} />
+    </Helmet>
       <section>
         <div className="wavebgbanner">
           <div className="main-width">

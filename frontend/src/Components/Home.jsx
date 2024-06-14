@@ -39,6 +39,7 @@ import { useState, useEffect } from "react";
 import HomeTopProductCarousel from "./HomeTopProductCarousel";
 import HomeOurProductsCarousel from "./HomeOurProductsCarousel";
 import { Link } from "react-router-dom";
+import {Helmet} from "react-helmet"
 
 const Home = () => {
   const [bannerImages, setBannerImages] = useState([]);
@@ -50,7 +51,7 @@ const Home = () => {
   const [topProducts, setTopProducts] = useState([]);
   const [blogData, setBlogData] = useState([]);
   const apiUrl = process.env.REACT_APP_URL;
-
+  const domain=process.env.REACT_APP_DOMAIN
   useEffect(() => {
     const getBlogData = async () => {
       try {
@@ -138,6 +139,12 @@ const Home = () => {
 
   return (
     <>
+    <Helmet>
+    <meta charSet="utf-8" />
+                <title>{homeData?.meta_title}</title>
+                <meta name='description' content={homeData?.meta_description}/>
+                <link rel="canonical" href={`${domain}/`} />
+    </Helmet>
       <section style={{ overflow: "hidden" }}>
         <div className="wavebgbanner">
           <div className="main-width">
