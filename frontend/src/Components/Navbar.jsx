@@ -76,7 +76,7 @@ const Navbar = () => {
         prevIndex < searchResults.length - 1 ? prevIndex + 1 : 0
       );
     } else if (event.key === "Enter" && selectedResultIndex !== -1) {
-      window.location.href = `/product-detail/${searchResults[selectedResultIndex].slug}`;
+      window.location.href = `/Product/${searchResults[selectedResultIndex].slug}`;
     }
   };
 
@@ -222,7 +222,7 @@ const Navbar = () => {
                         searchResults.map((result, index) => (
                           <Link
                             style={{ fontSize: "16px", textDecoration: "none" }}
-                            to={`/product-detail/${result.slug}`}
+                            to={`/Product/${result.slug}`}
                             // onClick={() => handleResultClick(index)}
                           >
                             <li

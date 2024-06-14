@@ -3,11 +3,13 @@ import "../Style/NewsEvent.css";
 
 import blogbannerimage from "../images/blogbannerimage.svg";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const NewsEvent = () => {
   const [newseventData, setNewseventData] = useState([]);
   const [newsheadingData, setNewsheadingData] = useState({});
   const apiUrl = process.env.REACT_APP_URL;
+  const domain = process.env.REACT_APP_DOMAIN;
 
   useEffect(() => {
     const getnewseventheading = async () => {
@@ -39,6 +41,15 @@ const NewsEvent = () => {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{newsheadingData?.meta_title}</title>
+        <meta
+          name="description"
+          content={newsheadingData?.meta_description}
+        />
+        <link rel="canonical" href={`${domain}/NewsEvent`} />
+      </Helmet>
       <section>
         <div className="wavebgbanner">
           <div className="main-width">
@@ -115,19 +126,20 @@ const NewsEvent = () => {
                           </div>
                         </div>
 
-                        <p className="news-event-box-pera">
-                          {item.cardtext}
-                        </p>
+                        <p className="news-event-box-pera">{item.cardtext}</p>
 
                         <div className="news-event-button">
-                          <Link style={{textDecoration:"none"}} to={`/NewsEventpage/${item.slug}`}>
-                          <button
-                        className="banner-inquery-button"
-                        // style={{ marginTop: "40px" }}
-                      >
-                        <span class="text">KNOW MORE</span>
-                        <div class="wave"></div>
-                      </button>
+                          <Link
+                            style={{ textDecoration: "none" }}
+                            to={`/NewsEventpage/${item.slug}`}
+                          >
+                            <button
+                              className="banner-inquery-button"
+                              // style={{ marginTop: "40px" }}
+                            >
+                              <span class="text">KNOW MORE</span>
+                              <div class="wave"></div>
+                            </button>
                             {/* <button>KNOW MORE</button> */}
                           </Link>
                         </div>

@@ -1,10 +1,20 @@
-import React from 'react'
+import React from "react";
 import "../Style/TermsAndCondition.css";
+import { Helmet } from "react-helmet";
 
 const TermsAndCondition = () => {
+  const domain = process.env.REACT_APP_DOMAIN;
+
   return (
     <>
-    <section  className="" style={{margin:"50px 0"}}>
+      {/* Meta Section */}
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Terms & Conditions | Flonix Technology </title>
+        <meta name="description" content="" />
+        <link rel="canonical" href={`${domain}/TermsAndCondition`} />
+      </Helmet>
+      {/* <section  className="" style={{margin:"50px 0"}}>
       <div className="">
         <div className="main-width">
           <div>
@@ -20,84 +30,119 @@ const TermsAndCondition = () => {
           </div>
         </div>
       </div>
-      </section>
-      <section  className="" style={{margin:"50px 0"}}>
-      <div className="">
-        <div className="main-width">
-          <div>
-            <div className="under1320width">
-              <div className="all-page-padding">
-                    <div className='all-heading-and-pera' style={{margin:"25px 0"}}>
-                        <p className='privacy-policy-heading'>1.Introduction</p>
-                        <p className='privacy-policy-peragraph'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-                        <br />
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+      </section> */}
+      <section className="" style={{ margin: "50px 0" }}>
+        <div className="">
+          <div className="main-width">
+            <div>
+              <div className="under1320width">
+                <div className="all-page-padding">
+                  <div
+                    className="all-heading-and-pera"
+                    style={{ margin: "25px 0" }}
+                  >
+                    {/* <p className='privacy-policy-heading'>1.Introduction</p> */}
+                    <ul>
+                      <li>
+                        <p className="privacy-policy-peragraph">
+                          Welcome to Flonix Technology. By accessing or using
+                          our website located at <a href="https://flonix.in/">flonix.in</a> , you agree to be
+                          bound by these Terms and Conditions. If you disagree
+                          with any part of these terms, you may not access the
+                          Service. The Service and its original content,
+                          features, and functionality are and will remain the
+                          exclusive property of Flonix Technology and its
+                          licensors. Our trademarks and trade dress may not be
+                          used in connection with any product or service without
+                          the prior written consent of Flonix Technology.
                         </p>
-                    </div>
-                    <div className='all-heading-and-pera' style={{margin:"25px 0"}}>
-                        <p className='privacy-policy-heading'>2.User Id and Password</p>
-                        <p className='privacy-policy-peragraph'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-                        <br />
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                      </li>
+                      <li>
+                        <p className="privacy-policy-peragraph">
+                          Users of our Service agree to use it only for lawful
+                          purposes and in a way that does not infringe the
+                          rights of, restrict, or inhibit anyone else's use and
+                          enjoyment of the Service. Prohibited behavior includes
+                          harassing or causing distress or inconvenience to any
+                          other user, transmitting obscene or offensive content,
+                          or disrupting the normal flow of dialogue within our
+                          Service.
                         </p>
-                    </div>
-                    <div className='all-heading-and-pera' style={{margin:"25px 0"}}>
-                        <p className='privacy-policy-heading'>3.Content</p>
-                        <p className='privacy-policy-peragraph'>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-                        <br />
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham. <br />
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc. <br />
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham. <br />
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                      </li>
+                      <li>
+                        <p className="privacy-policy-peragraph">
+                          Our Service may contain links to third-party websites
+                          or services that are not owned or controlled by Flonix
+                          Technology. Flonix Technology has no control over and
+                          assumes no responsibility for, the content, privacy
+                          policies, or practices of any third-party websites or
+                          services. You acknowledge and agree that Flonix
+                          Technology shall not be responsible or liable,
+                          directly or indirectly, for any damage or loss caused
+                          or alleged to be caused by or in connection with the
+                          use of or reliance on any such content, goods, or
+                          services available on or through any such websites or
+                          services.
                         </p>
-                    </div>
-                    <div className='all-heading-and-pera' style={{margin:"25px 0"}}>
-                        <p className='privacy-policy-heading'>4.Your engagement with the app </p>
-                        <p className='privacy-policy-peragraph'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-                        <br />
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                      </li>
+                      <li>
+                        <p className="privacy-policy-peragraph">
+                          In no event shall Flonix Technology, nor its
+                          directors, employees, partners, agents, suppliers, or
+                          affiliates, be liable for any indirect, incidental,
+                          special, consequential, or punitive damages, including
+                          without limitation, loss of profits, data, use,
+                          goodwill, or other intangible losses, resulting from
+                          your access to or use of or inability to access or use
+                          the Service; any conduct or content of any third party
+                          on the Service; any content obtained from the Service;
+                          and unauthorized access, use, or alteration of your
+                          transmissions or content, whether based on warranty,
+                          contract, tort (including negligence), or any other
+                          legal theory, whether or not we have been informed of
+                          the possibility of such damage, and even if a remedy
+                          set forth herein is found to have failed of its
+                          essential purpose.
                         </p>
-                        <p className='privacy-policy-peragraph'><li>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections </li></p>
-                        <p className='privacy-policy-peragraph'><li>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections </li></p>
-                        <p className='privacy-policy-peragraph'><li>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections </li></p>
-                        <p className='privacy-policy-peragraph'><li>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections </li></p>
-                        <p className='privacy-policy-peragraph'><li>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections </li></p>
-                        <p className='privacy-policy-peragraph'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
-                    </div>
-                    <div className='all-heading-and-pera' style={{margin:"25px 0"}}>
-                        <p className='privacy-policy-heading'>5.intellectual property</p>
-                        <p className='privacy-policy-peragraph'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc. <br />
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                      </li>
+                      <li>
+                        <p className="privacy-policy-peragraph">
+                          Your use of the Service is at your sole risk. The
+                          Service is provided on an "AS IS" and "AS AVAILABLE"
+                          basis. The Service is provided without warranties of
+                          any kind, whether express or implied, including, but
+                          not limited to, implied warranties of merchantability,
+                          fitness for a particular purpose, non-infringement, or
+                          course of performance.
                         </p>
-                    </div>
-                    <div className='all-heading-and-pera' style={{margin:"25px 0"}}>
-                        <p className='privacy-policy-heading'>6.limitation liability</p>
-                        <p className='privacy-policy-peragraph'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). <br />
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc. <br /> <br />
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham. <br />
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham. <br />
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-
+                      </li>
+                      <li>
+                        <p className="privacy-policy-peragraph">
+                          These Terms shall be governed and construed in
+                          accordance with the laws of India without regard to
+                          its conflict of law provisions. We reserve the right,
+                          at our sole discretion, to modify or replace these
+                          Terms at any time. If a revision is material, we will
+                          provide at least 30 days' notice before any new terms
+                          taking effect. What constitutes a material change will
+                          be determined at our sole discretion.
                         </p>
-                    </div>
-                    <div className='all-heading-and-pera' style={{margin:"25px 0"}}>
-                        <p className='privacy-policy-heading'>7.other</p>
-                        <p className='privacy-policy-peragraph'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). <br />
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc. <br /> <br />
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham. <br />
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham. <br />
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-
+                      </li>
+                      <li>
+                        <p className="privacy-policy-peragraph">
+                        If you have any questions about these Terms, please contact us at <a href="mailto:flonixtech@gmail.com">flonixtech@gmail.com</a> .
                         </p>
-                    </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default TermsAndCondition
+export default TermsAndCondition;

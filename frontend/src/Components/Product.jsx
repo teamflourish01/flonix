@@ -6,6 +6,7 @@ import "../Style/Product.css";
 import blogbannerimage from "../images/blogbannerimage.svg";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const Product = () => {
   // Set default active category to "All Products"
@@ -16,6 +17,7 @@ const Product = () => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const apiUrl = process.env.REACT_APP_URL; // Backend API URL
+  const domain=process.env.REACT_APP_DOMAIN;
 
   // Fetch categories
   const fetchCategories = async () => {
@@ -79,6 +81,16 @@ const Product = () => {
 
   return (
     <>
+    {/* Meta Section */}
+    <Helmet>
+        <meta charSet="utf-8" />
+        <title>Products | Flonix Technology</title>
+        <meta name="description" content="Check out our wide range of products. Whether you are looking for a water pump or water filter Flonix technology will be your one and only choice." />
+        <link
+          rel="canonical"
+          href={`${domain}/Product`}
+        />
+      </Helmet>
       {/* Header Section */}
       <section>
         <div className="wavebgbanner">
@@ -132,7 +144,7 @@ const Product = () => {
               <div className="card-flex">
                 {productsToDisplay.map(product => (
                   <div className="card" key={product.slug}>
-                    <Link className="link-style-none" to={`/product-detail/${product.slug}`}>
+                    <Link className="link-style-none" to={`/Product/${product.slug}`}>
                       <img src={`${apiUrl}/product/${product?.image[0]}`} alt={product.image_alt[0]} />
                       <p>{product.name}</p>
                     </Link>

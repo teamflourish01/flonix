@@ -3,11 +3,13 @@ import "../Style/Blogs.css";
 import blogbannerimage from "../images/blogbannerimage.svg";
 import zikzakourblogvector from "../images/zikzakourblogvector.svg";
 import { Link, useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Blogcategory = () => {
   const { slug } = useParams();
   const [blogCategory, setBlogCategory] = useState(null);
   const apiUrl = process.env.REACT_APP_URL;
+  const domain=process.env.REACT_APP_DOMAIN;
 
   useEffect(() => {
     const getBlogData = async () => {
@@ -29,6 +31,12 @@ const Blogcategory = () => {
 
   return (
     <>
+     <Helmet>
+    <meta charSet="utf-8" />
+                <title>{blogCategory?.name} | Flonix Technology</title>
+                <meta name='description' content={blogCategory?.meta_description}/>
+                <link rel="canonical" href={`${domain}/Blogcategory/${blogCategory?.slug}`} />
+    </Helmet>
       <section>
         <div className="wavebgbanner">
           <div className="main-width">
