@@ -51,7 +51,7 @@ const PrivacyPolicy = () => {
                       is collected and recorded by Flonix Technology and how we
                       use it. If you have additional questions or require more
                       information about our Privacy Policy, do not hesitate to
-                      contact us through email at flonixtech@gmail.com
+                      contact us through email at <a href="mailto:flonixtech@gmail.com">flonixtech@gmail.com</a>
                     </p>
                   </div>
                   <div
