@@ -5,24 +5,35 @@ import inquiryicone1 from "../images/inquiryicone1.svg";
 import inquiryicone2 from "../images/inquiryicone2.svg";
 import inquiryicone3 from "../images/inquiryicone3.svg";
 import { Helmet } from "react-helmet";
+import { Text, useToast } from "@chakra-ui/react";
+import axios from "axios";
+import { useForm } from "react-hook-form";
 
 const Contact = () => {
   const [outletData, setOutletData] = useState([]);
   const [contectData, setContectData] = useState([]);
-  const [heading,setHeading]=useState([]);
+  const [heading, setHeading] = useState([]);
+  const toast = useToast();
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
 
   const apiUrl = process.env.REACT_APP_URL; // Backend API URL
   const domain = process.env.REACT_APP_DOMAIN;
 
-  const getHeading=async()=>{
+  const getHeading = async () => {
     try {
-      let data=await fetch(`${apiUrl}/contact`)
-      data=await data.json();
-      setHeading(data.data[0]?.text)
+      let data = await fetch(`${apiUrl}/contact`);
+      data = await data.json();
+      setHeading(data.data[0]?.text);
     } catch (error) {
       console.log(error);
     }
-  }
+  };
   useEffect(() => {
     const getContect = async () => {
       try {
@@ -34,7 +45,7 @@ const Contact = () => {
       }
     };
     getContect();
-    getHeading()
+    getHeading();
   }, []);
 
   useEffect(() => {
@@ -51,6 +62,36 @@ const Contact = () => {
 
     getOulet();
   }, []); // Empty dependency array ensures the effect runs only once on component mount
+
+  // whatsApp Api Logic
+
+  const onSubmit = async (data) => {
+    try {
+      const response = await axios.post(`${apiUrl}/inquiry/send`, data);
+      //alert(response.data);
+      toast({
+        title: "Mesaage Sent Successfuly",
+        description: response.data,
+        status: "success",
+        position: "top",
+        duration: 7000,
+        isClosable: true,
+      });
+      reset();
+    } catch (error) {
+      console.error("There was an error sending the message!", error);
+      //alert("Failed to send message.");
+      toast({
+        title: "Mesaage Not Sent ",
+        description: error.data,
+        status: "error",
+        position: "top",
+        duration: 7000,
+        isClosable: true,
+      });
+    }
+  };
+
   return (
     <>
       {/* Meta Section */}
@@ -157,26 +198,92 @@ const Contact = () => {
                       </div>
                     </div>
                   ))}
-                  <form className="form-width">
+                  <form
+                    className="form-width"
+                    onSubmit={handleSubmit(onSubmit)}
+                  >
                     <div className="">
                       <div className="form-flex">
                         <div className="form-label-input">
                           <label className="form-label">Your name</label>
-                          <input className="form-inputs" type="text" />
+                          <input
+                            className="form-inputs"
+                            type="text"
+                            id="name"
+                            {...register("name", { required: true })}
+                          />
+                          {errors.name && (
+                            <Text color="red.500" textAlign="left">
+                              Name is required.
+                            </Text>
+                          )}
                         </div>
                         <div className="form-label-input">
                           <label className="form-label">Email address</label>
-                          <input className="form-inputs" type="text" />
+                          <input
+                            className="form-inputs"
+                            type="email"
+                            id="email"
+                            {...register("email", {
+                              required: true,
+                              pattern:
+                                /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                            })}
+                          />
+                          {errors.email && errors.email.type === "required" && (
+                            <Text color="red.500" textAlign="left">
+                              Email is required.
+                            </Text>
+                          )}
+                          {errors.email && errors.email.type === "pattern" && (
+                            <Text color="red.500" textAlign="left">
+                              Invalid email format.
+                            </Text>
+                          )}
                         </div>
                       </div>
                       <div className="form-flex-up-down-margin">
                         <div className="form-label-input">
                           <label className="form-label">City</label>
-                          <input className="form-inputs" type="text" />
+                          <input
+                            className="form-inputs"
+                            type="text"
+                            id="city"
+                            {...register("city", { required: true })}
+                          />
+                          {errors.city && (
+                            <Text color="red.500" textAlign="left">
+                              City is required.
+                            </Text>
+                          )}
                         </div>
                         <div className="form-label-input">
                           <label className="form-label">Mobile number</label>
-                          <input className="form-inputs" type="text" />
+                          <input
+                            className="form-inputs"
+                            type="string"
+                            id="phone"
+                            {...register("phone", {
+                              required: true,
+                              maxLength: 10,
+                            })}
+                          />
+                          {errors.phone && errors.phone.type === "required" && (
+                            <Text color="red.500" textAlign="left">
+                              Mobile number is required.
+                            </Text>
+                          )}
+                          {errors.phone &&
+                            errors.phone.type === "maxLength" && (
+                              <Text color="red.500" textAlign="left">
+                                Mobile number cannot exceed 10 digits.
+                              </Text>
+                            )}
+                          {errors.phone && errors.phone.type === "pattern" && (
+                            <Text color="red.500" textAlign="left">
+                              Mobile number must be exactly 10 digits.
+                            </Text>
+                          )}
                         </div>
                       </div>
                       <div
@@ -184,19 +291,30 @@ const Contact = () => {
                         style={{ textAlign: "left" }}
                       >
                         <label className="form-label">Message</label>
-                        <textarea className="form-textarea" />
+                        <textarea
+                          className="form-textarea"
+                          id="message"
+                          {...register("message", { required: true })}
+                        />
+                        {errors.message && (
+                          <Text color="red.500" textAlign="left">
+                            Message is required.
+                          </Text>
+                        )}
                       </div>
                     </div>
+
+                    <div className="form-button">
+                      <button
+                        className="banner-inquery-button"
+                        type="submit"
+                        // style={{ marginTop: "40px" }}
+                      >
+                        <span class="text">SUBMIT NOW</span>
+                        <div class="wave"></div>
+                      </button>
+                    </div>
                   </form>
-                  <div className="form-button">
-                    <button
-                      className="banner-inquery-button"
-                      // style={{ marginTop: "40px" }}
-                    >
-                      <span class="text">SUBMIT NOW</span>
-                      <div class="wave"></div>
-                    </button>
-                  </div>
                   {/* <div className="form-button">
                       <button>SUBMIT NOW</button>
                     </div> */}
@@ -232,9 +350,7 @@ const Contact = () => {
               <p className="all-heading" style={{ padding: "0" }}>
                 Our Network
               </p>
-              <p className="conatact-our-network-heading">
-                {heading}
-              </p>
+              <p className="conatact-our-network-heading">{heading}</p>
             </div>
             <div className="under1320width">
               <div>
