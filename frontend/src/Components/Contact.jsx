@@ -303,18 +303,18 @@ const Contact = () => {
                         )}
                       </div>
                     </div>
-
+                    </form>
                     <div className="form-button">
                       <button
                         className="banner-inquery-button"
-                        type="submit"
+                        onClick={handleSubmit(onSubmit)}
                         // style={{ marginTop: "40px" }}
                       >
                         <span class="text">SUBMIT NOW</span>
                         <div class="wave"></div>
                       </button>
                     </div>
-                  </form>
+                  
                   {/* <div className="form-button">
                       <button>SUBMIT NOW</button>
                     </div> */}

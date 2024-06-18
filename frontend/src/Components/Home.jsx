@@ -39,7 +39,7 @@ import { useState, useEffect } from "react";
 import HomeTopProductCarousel from "./HomeTopProductCarousel";
 import HomeOurProductsCarousel from "./HomeOurProductsCarousel";
 import { Link } from "react-router-dom";
-import {Helmet} from "react-helmet"
+import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { Text, useToast } from "@chakra-ui/react";
@@ -53,7 +53,7 @@ const Home = () => {
   const [topProducts, setTopProducts] = useState([]);
   const [blogData, setBlogData] = useState([]);
   const toast = useToast();
- 
+
   const {
     register,
     handleSubmit,
@@ -62,7 +62,7 @@ const Home = () => {
   } = useForm();
 
   const apiUrl = process.env.REACT_APP_URL;
-  const domain=process.env.REACT_APP_DOMAIN
+  const domain = process.env.REACT_APP_DOMAIN;
   useEffect(() => {
     const getBlogData = async () => {
       try {
@@ -148,42 +148,42 @@ const Home = () => {
     };
   }, [bannerImages.length]);
 
-// whatsApp Api Logic
-const onSubmit = async (data) => {
-  try {
-    const response = await axios.post(`${apiUrl}/inquiry/send`, data);
-    //alert(response.data);
-    toast({
-      title: "Mesaage Sent Successfuly",
-      description: response.data,
-      status: "success",
-      position: "top",
-      duration: 7000,
-      isClosable: true,
-    });
-    reset();
-  } catch (error) {
-    console.error("There was an error sending the message!", error);
-    //alert("Failed to send message.");
-    toast({
-      title: "Mesaage Not Sent ",
-      description: error.data,
-      status: "error",
-      position: "top",
-      duration: 7000,
-      isClosable: true,
-    });
-  }
-};
+  // whatsApp Api Logic
+  const onSubmit = async (data) => {
+    try {
+      const response = await axios.post(`${apiUrl}/inquiry/send`, data);
+      //alert(response.data);
+      toast({
+        title: "Mesaage Sent Successfuly",
+        description: response.data,
+        status: "success",
+        position: "top",
+        duration: 7000,
+        isClosable: true,
+      });
+      reset();
+    } catch (error) {
+      console.error("There was an error sending the message!", error);
+      //alert("Failed to send message.");
+      toast({
+        title: "Mesaage Not Sent ",
+        description: error.data,
+        status: "error",
+        position: "top",
+        duration: 7000,
+        isClosable: true,
+      });
+    }
+  };
 
   return (
     <>
-    <Helmet>
-    <meta charSet="utf-8" />
-                <title>{homeData?.meta_title}</title>
-                <meta name='description' content={homeData?.meta_description}/>
-                <link rel="canonical" href={`${domain}/`} />
-    </Helmet>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{homeData?.meta_title}</title>
+        <meta name="description" content={homeData?.meta_description} />
+        <link rel="canonical" href={`${domain}/`} />
+      </Helmet>
       <section style={{ overflow: "hidden" }}>
         <div className="wavebgbanner">
           <div className="main-width">
@@ -202,14 +202,14 @@ const onSubmit = async (data) => {
                       <p className="drinking-water">
                         {homeData?.banner_heading}
                       </p>
-                      <a href="#inquiry" style={{textDecoration:"none"}}>
-                      <button
-                        className="banner-inquery-button"
-                        style={{ marginTop: "40px" }}
-                      >
-                        <span class="text">INQUIRY NOW</span>
-                        <div class="wave"></div>
-                      </button>
+                      <a href="#inquiry" style={{ textDecoration: "none" }}>
+                        <button
+                          className="banner-inquery-button"
+                          style={{ marginTop: "40px" }}
+                        >
+                          <span class="text">INQUIRY NOW</span>
+                          <div class="wave"></div>
+                        </button>
                       </a>
                     </div>
                   </div>
@@ -252,24 +252,24 @@ const onSubmit = async (data) => {
                           ))}
                       </div>
                     </div>
-                    <Link to={`/About`} style={{textDecoration:"none"}}>
-                    <button className="buttonclass">
-                      <p>Read More</p>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="4"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                        ></path>
-                      </svg>
-                    </button>
+                    <Link to={`/About`} style={{ textDecoration: "none" }}>
+                      <button className="buttonclass">
+                        <p>Read More</p>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-6 w-6"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="4"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          ></path>
+                        </svg>
+                      </button>
                     </Link>
                   </div>
                   <div className="aboutimage">
@@ -516,14 +516,14 @@ const onSubmit = async (data) => {
                   <button>MORE PRODUCTS</button>
                 </div> */}
                 <div className="more-product-button">
-                <Link style={{textDecoration:"none"}} to={`/product`}>
-                  <button
-                    className="banner-inquery-button"
-                    style={{ marginTop: "40px" }}
-                  >
-                    <span class="text">MORE PRODUCTS</span>
-                    <div class="wave"></div>
-                  </button>
+                  <Link style={{ textDecoration: "none" }} to={`/product`}>
+                    <button
+                      className="banner-inquery-button"
+                      style={{ marginTop: "40px" }}
+                    >
+                      <span class="text">MORE PRODUCTS</span>
+                      <div class="wave"></div>
+                    </button>
                   </Link>
                 </div>
               </div>
@@ -669,7 +669,7 @@ const onSubmit = async (data) => {
         </div>
       </section>
 
-      <section className="bg" style={{ margin: "50px 0 0 0 " }}  id="inquiry">
+      <section className="bg" style={{ margin: "50px 0 0 0 " }} id="inquiry">
         <div className="main-width">
           <div style={{ padding: "50px 0" }}>
             <div className="under1320width">
@@ -845,18 +845,18 @@ const onSubmit = async (data) => {
                         )}
                       </div>
                     </div>
-
-                    <div className="form-button">
-                      <button
-                        className="banner-inquery-button"
-                        type="submit"
-                        // style={{ marginTop: "40px" }}
-                      >
-                        <span class="text">SUBMIT NOW</span>
-                        <div class="wave"></div>
-                      </button>
-                    </div>
                   </form>
+                  <div className="form-button">
+                    <button
+                      className="banner-inquery-button"
+                      onClick={handleSubmit(onSubmit)}
+                      // style={{ marginTop: "40px" }}
+                    >
+                      <span class="text">SUBMIT NOW</span>
+                      <div class="wave"></div>
+                    </button>
+                  </div>
+
                   {/* <div className="form-button">
                     <button>SUBMIT NOW</button>
                   </div> */}
