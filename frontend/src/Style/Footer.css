@@ -12,6 +12,11 @@
   transition: transform 4.3s;
 
 }
+.under-hover:hover{
+  color: #0096EA;
+  transition: transform 4.3s;
+
+}
 .d-flex-footer{
     display: flex;
     /* flex-wrap: wrap; */

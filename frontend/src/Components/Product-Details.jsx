@@ -37,7 +37,7 @@ const ProductDetail = () => {
       heading: "Performance",
       data: product?.performance || {},
     },
-  ];
+  ].filter(faq => Object.keys(faq.data).length > 0);
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -153,48 +153,51 @@ const ProductDetail = () => {
                         <button className="inqrybtn">INQUIRY NOW</button>
                       </div>
                       </div>
-                    {/* <div className="product-detail">
-                      <div className="header">
-                        <h2>{product.name}</h2>
-                        <p className="text" style={{ color: "black" }}>
-                          {product.description}
-                        </p>
-                      </div>
-                      <div className="keyfeature">
-                        <h2>Key Features</h2>
-                        <ul className="tikicone">
-                          {product.key_features.map((feature, index) => (
-                            <li key={index}>{feature}</li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className="btndiv">
-                        <button className="inqrybtn">INQUIRY NOW</button>
-                      </div>
-                    </div> */}
-                    <div className="threeicon">
-                      <div className="iconediv">
-                        <div className="firsticone">
-                          <div className="iconeimages">
-                            <img src={img56} alt="Vacuum Tested" />
+                      {product.mark && product.mark_text && product.mark.length > 0 && product.mark_text.length > 0 && (
+                      <div className="threeicon">
+                          <div className="iconediv" >
+                          {product.mark.map((mark, index) => (
+                            <div className="firsticone" key={index}>
+                              <div className="iconeimages">
+                                <img src={`${apiUrl}/product/${mark}`} alt={product.mark_text[index]} />
+                              </div>
+                              <p>{product.mark_text[index]}</p>
+                            </div>
+                             ))}
                           </div>
-                          <p>Vacuum Tested</p>
-                        </div>
-                        <div className="secondicone">
-                          <div className="iconeimages">
-                            <img src={img58} alt="Attractive Design Concept" />
-                          </div>
-                          <p>Attractive Design Concept</p>
-                        </div>
-                        <div className="thirdicone">
-                          <div className="iconeimages">
-                            <img src={img57} alt="Leakage Proof" />
-                          </div>
-                          <p>Leakage Proof</p>
-                        </div>
                       </div>
-                    </div>
-                    <div className="faq-container">
+                    )}
+                    {faqs.length > 0 && (
+                      <div className="faq-container">
+                        {faqs.map((faq, index) => (
+                          <div key={index} className="faq-section">
+                            <div
+                              className="faq-question"
+                              onClick={() => handleClick(index)}
+                              role="button"
+                              aria-expanded={openFAQ === index}
+                            >
+                              {faq.heading}
+                              <span className={`arrow-icon ${openFAQ === index ? "open" : ""}`}>
+                                <i className="fa-solid fa-angle-down"></i>
+                              </span>
+                            </div>
+                            {openFAQ === index && faq.data && (
+                              <div className="faq-answer">
+                                {Object.entries(faq.data).map(([key, value]) => (
+                                  <div key={key} className="faq-answer-space">
+                                    <li>{key}:</li>
+                                    <p>{value}</p>
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  
+                    {/* <div className="faq-container">
                       {faqs.map((faq, index) => (
                         <div key={index} className="faq-section">
                           <div
@@ -220,7 +223,7 @@ const ProductDetail = () => {
                           )}
                         </div>
                       ))}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -228,6 +231,7 @@ const ProductDetail = () => {
           </div>
         </div>
       </section>
+      {relatedProducts.length > 0 && (
       <section className="" style={{ margin: "50px 0" }}>
         <div className="main-width">
           <div>
@@ -253,6 +257,7 @@ const ProductDetail = () => {
           </div>
         </div>
       </section>
+      )}
     </>
   );
 };

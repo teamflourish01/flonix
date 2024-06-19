@@ -44,7 +44,7 @@ const Blog = () => {
       let data = await fetch(`${apiUrl}/blog`);
       data = await data.json();
       
-      setRecent(data.data.reverse().splice(0, 3));
+      setRecent(data.data.reverse().splice(0, 5));
     } catch (error) {
       console.error(error);
     }
@@ -267,12 +267,12 @@ const Blog = () => {
                               </p>
                             </div>
                           </div> */}
-                          <div className="blog-recent-last-img-1">
+                          {/* <div className="blog-recent-last-img-1">
                             <img src={blogrecentimg6} alt="" />
                           </div>
                           <div className="blog-recent-last-img-1">
                             <img src={blogrecentimg7} alt="" />
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                     </div>

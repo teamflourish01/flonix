@@ -28,6 +28,7 @@
   min-width: 250px;
   width: 100%;
   /* height: 552px; */
+  height: 600px;
   border-radius: 10px;
   /* border: 1px solid black; */
   box-shadow: rgba(39, 170, 243, 0.25) 0px 2px 8px 0px;
@@ -40,7 +41,7 @@
 .news-event-img img {
   max-width: 420px;
   min-width: 250px;
-  /* height: 252px; */
+  height: 252px;
   width: 100%;
   /* border: 1px solid black; */
   border: 10px 10px 0 0;
@@ -60,15 +61,17 @@
   font-size: 18px;
   line-height: 30px;
   text-align: justify;
+  height: 100px;
 }
 
 .event-location-clander {
   display: flex;
   margin: 15px 0;
-  text-align: left;
+  /* text-align: left; */
+  justify-content: space-between;
 }
 .event-icon-div {
-  width: 200px;
+  /* width: 200px; */
 }
 .event-icon-div p {
   font-family: Roboto-Regular;

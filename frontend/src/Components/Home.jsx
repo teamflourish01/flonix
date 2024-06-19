@@ -179,11 +179,20 @@ const Home = () => {
                     data-aos="fade-left"
                     data-aos-duration="2000"
                   >
-                    <img
+                     {currentIndex >= 0 && currentIndex < bannerImages.length && (
+                <div className="bannerimage" data-aos="fade-left" data-aos-duration="2000">
+                  <img
+                    className={`image ${!isFading ? "fade-in" : ""}`}
+                    src={`${apiUrl}/home/${bannerImages[currentIndex]}`}
+                    alt={bannerImageAlts[currentIndex]}
+                  />
+                </div>
+              )}
+                    {/* <img
                       className={`image ${!isFading ? "fade-in" : ""}`}
                       src={`${apiUrl}/home/${bannerImages[currentIndex]}`}
                       alt={`${bannerImageAlts[currentIndex]}`}
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>
@@ -509,13 +518,6 @@ const Home = () => {
                 </div>
 
                 <div className="d-flex-circle-box">
-                  {/* <div className="shadow-circle-box">
-                    <div className="circle-box">
-                      <div class="inner-circle">
-                        <img src={ourdistributer1} alt="" />
-                      </div>
-                    </div>
-                  </div> */}
                   {homeData.our_distributor_logo &&
                     homeData.our_distributor_logo.map((logo, index) => (
                       <div className="shadow-circle-box" key={index}>
@@ -597,8 +599,8 @@ const Home = () => {
                               </div>
                               <div className="blog-icon-div">
                                 <p>
-                                  <i className="fa-solid fa-calendar"></i>March
-                                  27, 2024
+                                  <i className="fa-solid fa-calendar"></i>
+                                  {new Date(item.createdAt).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' })}
                                 </p>
                               </div>
                             </div>

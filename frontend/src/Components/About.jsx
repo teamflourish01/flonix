@@ -13,6 +13,7 @@ import Vectorarrow from "../images/Vectorarrow.svg";
 import downarrowvector from "../images/downarrowvector.svg";
 import TechnologicalTesto from "./TechnologicalTesto";
 import {Helmet} from "react-helmet"
+import { useLocation } from 'react-router-dom';
 
 
 const About = () => {
@@ -34,6 +35,16 @@ const About = () => {
     }
     getAbout();
   },[]);
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.replace('#', ''));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [hash]);
   return (
     <>
     <Helmet>
@@ -508,9 +519,9 @@ const About = () => {
                       <div class="about-mission-box-icon">
                         <img src={goals} alt="" />
                       </div>
-                      <div class="features-info">
+                      <div class="features-info" >
                         <h4 class="title">goals</h4>
-                        <p className="about-pera-heading">
+                        <p className="about-pera-heading" >
                           {aboutData.goals}
                         </p>
                       </div>
@@ -521,11 +532,11 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
-      <section className="" style={{ margin: "50px 0 70px 0" }}>
+      </section >
+      <section className="" style={{ margin: "50px 0 70px 0" }} >
         <div className="main-width">
           <div>
-            <div className="under1320width">
+            <div className="under1320width" id="certificate">
               <div className="all-page-padding">
               <p
                 className="all-heading"

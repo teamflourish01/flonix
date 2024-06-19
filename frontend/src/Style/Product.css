@@ -119,7 +119,7 @@
   /* max-width: 421.25px;
   min-width: 250px;
   width: 100%; */
-  /* height: 398.56px; */
+  height: 398.56px;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   /* margin-bottom: 20px; */
@@ -129,7 +129,7 @@
   max-width: 320.25px;
   min-width: 150px;
   width: 100%;
-  /* height: 314.51px; */
+  height: 314.51px;
   border-radius: 18.08px 18.08px 0px 0px;
 }
 .card  .link-style-none{

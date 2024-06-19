@@ -572,12 +572,19 @@ img.vert-move {
 
 /* section-7 */
 .d-flex-circle-box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
   align-items: center;
+  align-content: center;
+  justify-content: space-between;
   gap: 40px 40px;
 }
+
+
+ 
+
+
 .our-distributor-main-heading {
   max-width: 639px;
   width: 100%;
@@ -742,6 +749,7 @@ img.vert-move {
   min-width: 250px;
   width: 100%;
   /* height: 661px; */
+  /* height: 600px; */
   gap: 90px;
   /* border: 1px solid black; */
   border-radius: 15px;
@@ -751,7 +759,7 @@ img.vert-move {
   max-width: 380px;
   min-width: 250px;
   width: 100%;
-  /* height: 249px; */
+  height: 249px;
   border-radius: 15px 15px 0 0;
 }
 .blog-box-contents {
@@ -1243,10 +1251,12 @@ gap: 59px;
   }
 
   .d-flex-circle-box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
     gap: 40px 40px;
   }
   .hexagon-box-pera p {
@@ -1516,8 +1526,26 @@ a .wave::after {
   left: 30%;
   transform: translate(-50%, -50%);
 }
+.d-flex-circle-box {
+  display: grid;
+grid-template-columns: repeat(2, 1fr);
+justify-items: center;
+align-items: center;
+align-content: center;
+justify-content: space-between;
+  gap: 40px 40px;
+}
 }
 @media screen and (max-width: 560px){
+  .d-flex-circle-box {
+    display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+    gap: 40px 40px;
+  }
   .water-purefire img {
     /* max-width: 515.46px;
     min-width: 250px; */

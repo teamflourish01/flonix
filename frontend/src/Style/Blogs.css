@@ -25,7 +25,9 @@
     font-family: PlayfairDisplay-Bold;
     font-weight: 700;
     font-size: 74px;
-    line-height: 35px;
+    /* line-height: 35px; */
+    line-height: 70px;
+
     text-align: left;
 }
 .blogbannerimage{
