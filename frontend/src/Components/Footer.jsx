@@ -5,6 +5,7 @@ import whatsapp from "../images/whatsapp.svg";
 import fb from "../images/fb.svg";
 import insta from "../images/insta.svg";
 import youtube from "../images/youtube.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [contectData, setContectData] = useState([]);
@@ -62,11 +63,16 @@ const Footer = () => {
                     <hr style={{width:"31px", border:"1px solid #0096EA",margin:"5px 0 0 0"}}/>
                     </div>
                     <div className="links-policy">
-                    
+                    <Link style={{textDecoration:"none"}} className="" to="/Product">
                     <p className="under-hover">Products</p>
+                    </Link>
+                    <Link  style={{textDecoration:"none"}} className="" to="/About">
                     <p className="under-hover">About Us</p>
+                    </Link>
+                    <Link  style={{textDecoration:"none"}} className="" to="/about#certificate">
                     <p className="under-hover">Certificate</p>
-                    <p className="under-hover">Career</p>
+                    </Link>
+                    {/* <p className="under-hover">Career</p> */}
                     </div>
                   </div>
                   <div className="part-3-width">
@@ -75,9 +81,9 @@ const Footer = () => {
                     <hr style={{width:"31px", border:"1px solid #0096EA",margin:"5px 0 0 0"}}/>
                     </div>
                     <div className="our-product">
-                    <p className="under-hover"><a style={{textDecoration:"none"}} href="/PrivacyPolicy">Privacy Policy </a></p>
-                    <p className="under-hover"> <a style={{textDecoration:"none"}}  href="/ReturnPolicy"> Return Policy </a> </p>
-                    <p className="under-hover"> <a style={{textDecoration:"none"}}  href="/TermsAndCondition">Terms & Conditions </a></p>
+                    <p className="under-hover"><Link style={{textDecoration:"none"}} to="/PrivacyPolicy">Privacy Policy </Link></p>
+                    {/* <p className="under-hover"> <a style={{textDecoration:"none"}}  href="/ReturnPolicy"> Return Policy </a> </p> */}
+                    <p className="under-hover"> <Link style={{textDecoration:"none"}}  to="/TermsAndCondition">Terms & Conditions </Link></p>
                     </div>
                   </div>
                   <div className="part-4-width">

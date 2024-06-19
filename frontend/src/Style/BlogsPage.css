@@ -234,7 +234,7 @@ margin-bottom: 35px;
     font-family: Roboto-Medium;
     font-weight: 500;
     font-size: 16px;
-    line-height: 15px;
+    /* line-height: 15px; */
     text-align: left;
 
    
@@ -245,7 +245,7 @@ margin-bottom: 35px;
     font-family: Roboto-Regular;
     font-weight: 400;
     font-size: 16px; 
-    line-height: 25px; 
+    /* line-height: 25px;  */
     text-align: left;
     padding-top: 7px;
     
@@ -389,7 +389,7 @@ margin-bottom: 35px;
         font-family: Roboto-Medium;
         font-weight: 500;
         font-size: 20px;
-        line-height: 15px;
+        /* line-height: 15px; */
         text-align: left;
     }
     .blog-text-recent-width-box .blog-recent-pera {
@@ -397,7 +397,7 @@ margin-bottom: 35px;
         font-family: Roboto-Regular;
         font-weight: 400;
         font-size: 16px;
-        line-height: 25px;
+        /* line-height: 25px; */
         text-align: left;
         padding-top: 7px;
     }
@@ -541,7 +541,7 @@ margin-bottom: 35px;
         font-family: Roboto-Medium;
         font-weight: 500;
         font-size: 16px;
-        line-height: 9px;
+        /* line-height: 9px; */
         text-align: left;
     }
     .blog-text-recent-width-box .blog-recent-pera {
@@ -549,7 +549,7 @@ margin-bottom: 35px;
         font-family: Roboto-Regular;
         font-weight: 400;
         font-size: 12px;
-        line-height: 15px;
+        /* line-height: 15px; */
         text-align: left;
         padding-top: 7px;
     }

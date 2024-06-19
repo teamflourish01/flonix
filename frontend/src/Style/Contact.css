@@ -306,6 +306,9 @@ text-align: left;
           min-width:100px ;
           border-radius: 15px;
           padding: 20px;
+          font-size: 18px;
+          font-family: Roboto-Regular;
+          font-weight: 400;
         }
         .form-label-textarea{
             max-width: 964px;

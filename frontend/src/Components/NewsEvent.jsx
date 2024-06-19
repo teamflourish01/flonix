@@ -115,7 +115,8 @@ const NewsEvent = () => {
                           <div className="event-icon-div">
                             <p>
                               <i className="fa-solid fa-calendar"></i>
-                              {new Date(item.date).toLocaleDateString()}
+                              {/* {new Date(item.date).toLocaleDateString()} */}
+                              {new Date(item.date).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' })}
                             </p>
                           </div>
                           <div className="event-icon-div">
@@ -126,7 +127,8 @@ const NewsEvent = () => {
                           </div>
                         </div>
 
-                        <p className="news-event-box-pera">{item.cardtext}</p>
+                        <p className="news-event-box-pera">{(item.cardtext).substring(0, 100)}...</p>
+                        {/* {(e?.description).substring(0, 100)}... */}
 
                         <div className="news-event-button">
                           <Link

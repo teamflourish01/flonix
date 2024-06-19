@@ -107,7 +107,7 @@ const TechnologicalTesto = () => {
     getAboutCertificate();
   }, []);
   return (
-    <div className="slider-container">
+    <div className="slider-container" >
       <Slider {...settings}>
         {aboutCerificate.map((item) => (
           <div key={item._id} className="under-testo-single-card">

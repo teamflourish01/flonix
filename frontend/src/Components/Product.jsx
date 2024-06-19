@@ -7,6 +7,7 @@ import blogbannerimage from "../images/blogbannerimage.svg";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import productbannerimage from '../images/productbannerimage.png';
 
 const Product = () => {
   // Set default active category to "All Products"
@@ -78,6 +79,9 @@ const Product = () => {
       setCurrentPage(page);
     }
   }
+  const capitalizeWords = (str) => {
+    return str.toLowerCase().replace(/\b\w/g, char => char.toUpperCase());
+  };
 
   return (
     <>
@@ -105,7 +109,7 @@ const Product = () => {
                       </div>
                     </div>
                     <div className="blogbannerimage">
-                      <img src={blogbannerimage} alt="Product Banner" />
+                      <img src={productbannerimage} alt="Product Banner" />
                     </div>
                   </div>
                 </div>
@@ -127,7 +131,7 @@ const Product = () => {
                     className={`rectengle-all ${activeCategory === category.name ? "active" : ""}`}
                     onClick={() => setActiveCategory(category.name)}
                   >
-                    <p>{category.name}</p>
+                    <p>{capitalizeWords(category.name)}</p>
                   </div>
                 ))}
               </div>
@@ -146,7 +150,7 @@ const Product = () => {
                   <div className="card" key={product.slug}>
                     <Link className="link-style-none" to={`/Product/${product.slug}`}>
                       <img src={`${apiUrl}/product/${product?.image[0]}`} alt={product.image_alt[0]} />
-                      <p>{product.name}</p>
+                      <p>{capitalizeWords(product.name)}</p>
                     </Link>
                   </div>
                 ))}

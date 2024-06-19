@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../Style/Blogs.css";
-import blogbannerimage from "../images/blogbannerimage.svg";
+import blogmainbannerimage from "../images/blogmainbannerimage.png";
 import ourblogimg1 from "../images/ourblogimg1.svg";
 import ourblogimg2 from "../images/ourblogimg2.svg";
 import ourblogimg3 from "../images/ourblogimg3.svg";
@@ -50,7 +50,7 @@ const Blogs = () => {
                       </div>
                     </div>
                     <div className="blogbannerimage">
-                      <img src={blogbannerimage} alt="" />
+                      <img src={blogmainbannerimage} alt="" />
                     </div>
                   </div>
                 </div>
@@ -154,7 +154,8 @@ const Blogs = () => {
                             <div className="blog-icon-div">
                               <p>
                                 <i class="fa-solid fa-calendar"></i>
-                                {new Date(item.createdAt).toLocaleDateString()}
+                                {/* {new Date(item.createdAt).toLocaleDateString()} */}
+                                {new Date(item.createdAt).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' })}
                               </p>
                             </div>
                           </div>
