@@ -150,7 +150,15 @@ const ProductDetail = () => {
                         </ul>
                       </div>
                       <div className="btndiv">
-                        <button className="inqrybtn">INQUIRY NOW</button>
+                        <Link to="/contact/#inquirys" style={{ textDecoration: "none" }}>
+                        <button
+                          className="banner-inquery-button"
+                          style={{ marginTop: "40px" }}
+                        >
+                          <span class="text">INQUIRY NOW</span>
+                          <div class="wave"></div>
+                        </button>
+                      </Link>
                       </div>
                       </div>
                       {product.mark && product.mark_text && product.mark.length > 0 && product.mark_text.length > 0 && (
