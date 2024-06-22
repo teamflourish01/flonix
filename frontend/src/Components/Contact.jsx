@@ -83,7 +83,7 @@ const Contact = () => {
       //alert("Failed to send message.");
       toast({
         title: "Mesaage Not Sent ",
-        description: error.data,
+        description: error.response ?error.response.data:"Unknown error",
         status: "error",
         position: "top",
         duration: 7000,
