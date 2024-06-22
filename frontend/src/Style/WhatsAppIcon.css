@@ -1,0 +1,16 @@
+
+.whatsapp-icon {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000; /* Ensure it is above other elements */
+    /* background-color: #25D366; */
+    /* color: white; */
+    /* border-radius: 50%; */
+    padding: 10px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); */
+}
+
+/* .whatsapp-icon a {
+    color: white;
+} */

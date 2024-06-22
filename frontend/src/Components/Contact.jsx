@@ -127,7 +127,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="" style={{ margin: "50px 0 " }}>
+      <section className="" style={{ margin: "50px 0 " }} >
         <div className="main-width">
           <div style={{ padding: "50px 0" }}>
             <div className="under1320width">
@@ -135,6 +135,7 @@ const Contact = () => {
                 <p
                   className="all-heading"
                   style={{ padding: "0", margin: "0 0 50px 0" }}
+                  id="inquirys"
                 >
                   Inquiry Here
                 </p>

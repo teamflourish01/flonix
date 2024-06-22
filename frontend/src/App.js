@@ -18,6 +18,7 @@ import Ebrochure from "./Components/Ebrochure";
 import PrivacyPolicy from "./Components/PrivacyPolicy";
 import TermsAndCondition from "./Components/TermsAndCondition";
 import ReturnPolicy from "./Components/ReturnPolicy";
+import WhatsAppIcon from "./Components/WhatsAppIcon";
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
       </Routes>
 
       <Footer />
+     <WhatsAppIcon/>
     </div>
   );
 }
