@@ -24,9 +24,18 @@
 .blogsbannerpera p{
     font-family: PlayfairDisplay-Bold;
     font-weight: 700;
-    font-size: 74px;
+    font-size: 65px;
     /* line-height: 35px; */
     line-height: 70px;
+
+    text-align: left;
+}
+.blogsbannerpera .drinking-waters{
+    font-family: PlayfairDisplay-Bold;
+    font-weight: 700;
+    font-size: 42px;
+    /* line-height: 35px; */
+    line-height: 60px;
 
     text-align: left;
 }

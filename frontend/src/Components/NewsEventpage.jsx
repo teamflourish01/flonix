@@ -45,7 +45,7 @@ const NewsEventpage = () => {
                   <div className="d-grid-blog-banner">
                     <div className=" pure">
                       <div className="blogsbannerpera">
-                        <p>{newseventData?.cardheading}</p>
+                        <p className="drinking-waters">{newseventData?.cardheading}</p>
                       </div>
                     </div>
                     <div className="blogbannerimage">

@@ -11,6 +11,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 const HomeTopProductCarousel = ({topProducts}) => {
   const [Topproducts, setTopProducts] = useState([]);
+  const [clicked, setClicked] = useState(false);
   const apiUrl = process.env.REACT_APP_URL; 
 
   useEffect(() => {
@@ -114,7 +115,10 @@ const HomeTopProductCarousel = ({topProducts}) => {
       ]
   };
   return (
-    <div className="slider-container"   >
+    <div className="slider-container"   onClick={() => {
+      setClicked(!clicked);
+      window.scrollTo(0, 0);
+    }}>
       <Slider {...settings}  >
         
       {Topproducts.map(Topproducts => (

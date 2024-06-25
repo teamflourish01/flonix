@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [contectData, setContectData] = useState([]);
+  const [clicked, setClicked] = useState(false);
   const apiUrl = process.env.REACT_APP_URL; // Backend API URL
 
   useEffect(() => {
@@ -63,10 +64,16 @@ const Footer = () => {
                     <hr style={{width:"31px", border:"1px solid #0096EA",margin:"5px 0 0 0"}}/>
                     </div>
                     <div className="links-policy">
-                    <Link style={{textDecoration:"none"}} className="" to="/Product">
+                    <Link style={{textDecoration:"none"}} className="" to="/Product" onClick={() => {
+                              setClicked(!clicked);
+                              window.scrollTo(0, 0);
+                            }}>
                     <p className="under-hover">Products</p>
                     </Link>
-                    <Link  style={{textDecoration:"none"}} className="" to="/About">
+                    <Link  style={{textDecoration:"none"}} className="" to="/About" onClick={() => {
+                              setClicked(!clicked);
+                              window.scrollTo(0, 0);
+                            }}>
                     <p className="under-hover">About Us</p>
                     </Link>
                     <Link  style={{textDecoration:"none"}} className="" to="/about#certificate">

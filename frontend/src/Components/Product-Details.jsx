@@ -153,7 +153,7 @@ const ProductDetail = () => {
                         <Link to="/contact/#inquirys" style={{ textDecoration: "none" }}>
                         <button
                           className="banner-inquery-button"
-                          style={{ marginTop: "40px" }}
+                          style={{ marginTop: "40px", zIndex:"-999" }}
                         >
                           <span class="text">INQUIRY NOW</span>
                           <div class="wave"></div>
