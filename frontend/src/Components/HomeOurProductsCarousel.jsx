@@ -11,6 +11,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import axios from 'axios';
 import { Link } from "react-router-dom";
 const HomeOurProductsCarousel = ({  ourProducts } ) => {
+  const [clicked, setClicked] = useState(false);
   const [products, setProducts] = useState([]);
   const apiUrl = process.env.REACT_APP_URL; 
 
@@ -117,9 +118,14 @@ const HomeOurProductsCarousel = ({  ourProducts } ) => {
         }
       ]
   };
-  
+  // const handleclick = () => {
+  //   setClicked(!clicked);
+  // };
   return (
-    <div className="slider-container"   >
+    <div className="slider-container"   onClick={() => {
+      setClicked(!clicked);
+      window.scrollTo(0, 0);
+    }}>
       <Slider {...settings}  >
         
       
