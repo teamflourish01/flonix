@@ -16,6 +16,7 @@ const ProductDetail = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [relatedProducts, setRelatedProducts] = useState([]);
+  const [clicked, setClicked] = useState(false);
   const apiUrl = process.env.REACT_APP_URL;
   const domain=process.env.REACT_APP_DOMAIN;
 
@@ -251,7 +252,10 @@ const ProductDetail = () => {
                   </p>
                   <div className="card-flex">
                     {relatedProducts.map((relatedProduct) => (
-                      <Link to={`/Product/${relatedProduct.slug}`} key={relatedProduct.slug} style={{textDecoration:"none",color:"black"}}>
+                      <Link to={`/Product/${relatedProduct.slug}`} key={relatedProduct.slug} style={{textDecoration:"none",color:"black"}} onClick={() => {
+                        setClicked(!clicked);
+                        window.scrollTo(0, 0);
+                      }}>
                         <div className="card">
                           <img src={`${apiUrl}/product/${relatedProduct.image[0]}`} alt={relatedProduct.image_alt[0]} />
                           <p>{relatedProduct.name}</p>

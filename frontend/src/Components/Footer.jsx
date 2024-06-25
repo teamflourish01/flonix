@@ -88,9 +88,15 @@ const Footer = () => {
                     <hr style={{width:"31px", border:"1px solid #0096EA",margin:"5px 0 0 0"}}/>
                     </div>
                     <div className="our-product">
-                    <p className="under-hover"><Link style={{textDecoration:"none"}} to="/PrivacyPolicy">Privacy Policy </Link></p>
+                    <p className="under-hover"><Link style={{textDecoration:"none"}} to="/PrivacyPolicy" onClick={() => {
+                              setClicked(!clicked);
+                              window.scrollTo(0, 0);
+                            }}>Privacy Policy </Link></p>
                     {/* <p className="under-hover"> <a style={{textDecoration:"none"}}  href="/ReturnPolicy"> Return Policy </a> </p> */}
-                    <p className="under-hover"> <Link style={{textDecoration:"none"}}  to="/TermsAndCondition">Terms & Conditions </Link></p>
+                    <p className="under-hover"> <Link style={{textDecoration:"none" }}  to="/TermsAndCondition" onClick={() => {
+                              setClicked(!clicked);
+                              window.scrollTo(0, 0);
+                            }}>Terms & Conditions </Link></p>
                     </div>
                   </div>
                   <div className="part-4-width">
