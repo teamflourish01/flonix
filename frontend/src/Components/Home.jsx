@@ -287,7 +287,7 @@ const Home = () => {
                       title="YouTube video player"
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
+                      allowFullScreen
                     ></iframe>
                   </div>
                 </div>
@@ -304,7 +304,7 @@ const Home = () => {
               <div className="all-page-padding">
                 <p className="all-heading">Top Product</p>
                 <div>
-                  <HomeTopProductCarousel topProducts={topProducts} />
+                  <HomeTopProductCarousel  topProducts={topProducts} />
                 </div>
               </div>
             </div>
@@ -312,7 +312,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg" style={{ margin: " 70px 0 40px 0" }}>
+      <section className="bg" style={{ margin: " 50px 0 50px 0" }}>
         <div className="border-1"></div>
         <div className="main-width" style={{ padding: "0 0 10px 0" }}>
           <div className="under1213width">
@@ -465,7 +465,7 @@ const Home = () => {
               <div style={{ margin: " 50px 0" }}>
                 <p
                   className="all-heading"
-                  style={{ padding: "0", margin: " 50px 0" }}
+                  style={{ padding: "0", margin: " 50px 0 25px 0" }}
                 >
                   Trust Factor
                 </p>
@@ -524,7 +524,7 @@ const Home = () => {
                 {/* <div className="our-product-button">
                   <button>MORE PRODUCTS</button>
                 </div> */}
-                <div className="more-product-button">
+                <div className="more-product-button" onClick={()=>window.scrollTo(0,window.innerHeight)}>
                   <Link style={{ textDecoration: "none" }} to={`/product`}>
                     <button
                       className="banner-inquery-button"
@@ -548,7 +548,7 @@ const Home = () => {
               <div className="all-page-padding">
                 <p
                   className="all-heading"
-                  style={{ padding: "0", margin: "0 0 50px 0" }}
+                  style={{ padding: "0", margin: "0 0 25px 0" }}
                 >
                   Our Distributor
                 </p>
@@ -580,15 +580,15 @@ const Home = () => {
       <section className="" style={{ margin: "50px 0" }}>
         <div className="main-width">
           <div>
-            <div className="under1320width">
+            <div className="under1120width">
               <div className="all-page-padding">
                 <p
                   className="all-heading"
-                  style={{ padding: "0", margin: "0 0 50px 0" }}
+                  style={{ padding: "0", margin: "0 0 25px 0" }}
                 >
                   Testimonials
                 </p>
-                <div style={{ zIndex: "-999" }}>
+                <div style={{ zIndex: "-999"}}>
                   <Testimonial />
                 </div>
               </div>
@@ -605,7 +605,7 @@ const Home = () => {
               <div>
                 <p
                   className="all-heading"
-                  style={{ padding: "0", margin: "0 0 50px 0" }}
+                  style={{ padding: "0", margin: "0 0 25px 0" }}
                 >
                   Our Blogs
                 </p>
@@ -644,10 +644,10 @@ const Home = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="blog-button">
+                          <div className="blog-button" onClick={()=>window.scrollTo(0,0)}>
                             <Link
                               style={{ textDecoration: "none" }}
-                              to={`/BlogsPage/${item.slug}`}
+                              to={`/Blog/${item.slug}`}
                             >
                               <button
                                 className="banner-inquery-button"

@@ -8,6 +8,7 @@ const Ebrochure = () => {
   const [ebrochureData, setEbrochureData] = useState([]);
   const apiUrl = process.env.REACT_APP_URL; // Backend API URL
   const domain = process.env.REACT_APP_DOMAIN;
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const getEbrochure = async () => {
@@ -23,6 +24,7 @@ const Ebrochure = () => {
   }, []);
   const handleDownload = async (fileUrl, fileName) => {
     try {
+      setIsLoading(true);
       const response = await fetch(fileUrl);
       const blob = await response.blob();
 
@@ -38,6 +40,8 @@ const Ebrochure = () => {
       window.open(url, "_blank");
     } catch (error) {
       console.error("Error downloading file:", error);
+    } finally {
+      setIsLoading(false);
     }
   };
   return (
@@ -101,8 +105,9 @@ const Ebrochure = () => {
                                 item.doc
                               )
                             }
+                            disabled={isLoading}
                           >
-                            Download
+                            {isLoading ? "Loading..." : "Download"}
                           </button>
                         </div>
                       </div>

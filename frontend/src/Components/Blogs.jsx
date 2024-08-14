@@ -18,7 +18,11 @@ const Blogs = () => {
       try {
         const response = await fetch(`${apiUrl}/blog`);
         const data = await response.json();
-        setBlogData(data.data);
+
+        const reversedData = data.data.reverse();
+        // setBlogData(data.data);
+        setBlogData(reversedData );
+
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -172,7 +176,7 @@ const Blogs = () => {
                             </div>
                           </div> */}
                         </div>
-                        <div className="blog-button">
+                        <div className="blog-button" onClick={()=>window.scrollTo(0,0)}>
                           <Link
                             style={{ textDecoration: "none" }}
                             to={`/Blog/${item.slug}`}

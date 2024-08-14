@@ -245,11 +245,11 @@ const ProductDetail = () => {
           <div>
             <div className="under1320width">
               <div className="all-page-padding">
-                <div className="relatedproducts">
+                <div className="relatedproducts" >
                   <p className="all-heading" style={{ padding: "0", margin: " 0 0 50px 0" }}>
                     Related Products
                   </p>
-                  <div className="card-flex">
+                  <div className="card-flex" onClick={()=>window.scrollTo(0,0)}>
                     {relatedProducts.map((relatedProduct) => (
                       <Link to={`/Product/${relatedProduct.slug}`} key={relatedProduct.slug} style={{textDecoration:"none",color:"black"}}>
                         <div className="card">

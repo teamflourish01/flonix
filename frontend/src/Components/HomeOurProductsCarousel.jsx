@@ -126,7 +126,7 @@ const HomeOurProductsCarousel = ({  ourProducts } ) => {
       
                 
       {products.map(product => (
-        <div className="card-3" key={product.slug}>
+        <div className="card-3" key={product.slug} onClick={()=>window.scrollTo(0,0)}>
           <Link to={`/Product/${product.slug}`} style={{textDecoration:"none"}}>
             <div className="top-product">
               <img className="imgs" src={`${apiUrl}/product/${product.image[0]}`} alt={product.name} />
