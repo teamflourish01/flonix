@@ -14,6 +14,7 @@ const Product = () => {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const [clicked, setClicked] = useState(false);
   const apiUrl = process.env.REACT_APP_URL; // Backend API URL
   const domain = process.env.REACT_APP_DOMAIN;
 
@@ -147,6 +148,7 @@ const Product = () => {
           <div className="under1320width">
             <div className="all-page-padding">
               <div className="card-flex">
+
                 {productsToDisplay.map((product) => (
                   <div
                     className="card"
@@ -161,6 +163,7 @@ const Product = () => {
                         src={`${apiUrl}/product/${product?.image[0]}`}
                         alt={product.image_alt[0]}
                       />
+
                       <p>{capitalizeWords(product.name)}</p>
                     </Link>
                   </div>

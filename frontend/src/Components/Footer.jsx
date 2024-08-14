@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [contectData, setContectData] = useState([]);
+  const [clicked, setClicked] = useState(false);
   const apiUrl = process.env.REACT_APP_URL; // Backend API URL
 
   useEffect(() => {
@@ -95,6 +96,7 @@ const Footer = () => {
                       />
                     </div>
                     <div className="links-policy">
+
                       <Link
                         style={{ textDecoration: "none" }}
                         className=""
@@ -119,6 +121,7 @@ const Footer = () => {
                         <p className="under-hover">Certificate</p>
                       </Link>
                       {/* <p className="under-hover">Career</p> */}
+
                     </div>
                   </div>
                   <div className="part-3-width">
@@ -133,6 +136,7 @@ const Footer = () => {
                       />
                     </div>
                     <div className="our-product">
+
                       <p className="under-hover">
                         <Link
                           style={{ textDecoration: "none" }}
@@ -153,6 +157,7 @@ const Footer = () => {
                           Terms & Conditions{" "}
                         </Link>
                       </p>
+
                     </div>
                   </div>
                   <div className="part-4-width">

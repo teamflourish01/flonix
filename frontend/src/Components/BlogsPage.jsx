@@ -95,7 +95,7 @@ const Blog = () => {
                   <div className="d-grid-blog-banner">
                     <div className=" pure">
                       <div className="blogsbannerpera">
-                        <p>{blogData.name}</p>
+                        <p className="drinking-waters">{blogData.name}</p>
                       </div>
                     </div>
                     <div className="blogbannerimage">

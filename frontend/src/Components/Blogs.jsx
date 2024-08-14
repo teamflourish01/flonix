@@ -10,8 +10,10 @@ import { Helmet } from "react-helmet";
 
 const Blogs = () => {
   const [blogData, setBlogData] = useState([]);
+  const [clicked, setClicked] = useState(false);
   const apiUrl = process.env.REACT_APP_URL;
   const domain = process.env.REACT_APP_DOMAIN;
+  
 
   useEffect(() => {
     const getBlogData = async () => {
@@ -180,6 +182,10 @@ const Blogs = () => {
                           <Link
                             style={{ textDecoration: "none" }}
                             to={`/Blog/${item.slug}`}
+                            onClick={() => {
+                              setClicked(!clicked);
+                              window.scrollTo(0, 0);
+                            }}
                           >
                             <button
                               className="banner-inquery-button"

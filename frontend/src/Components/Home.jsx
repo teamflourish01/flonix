@@ -52,6 +52,7 @@ const Home = () => {
   const [ourProducts, setOurProducts] = useState([]);
   const [topProducts, setTopProducts] = useState([]);
   const [blogData, setBlogData] = useState([]);
+  const [clicked, setClicked] = useState(false);
   const toast = useToast();
 
   const {
@@ -199,7 +200,7 @@ const Home = () => {
                       <p className="under-impo">
                         ~ Understand the importance of life
                       </p>
-                      <p className="drinking-water">
+                      <p className="drinking-waters">
                         {homeData?.banner_heading}
                       </p>
                       <a href="#inquiry" style={{ textDecoration: "none" }}>
@@ -261,8 +262,11 @@ const Home = () => {
                           ))}
                       </div>
                     </div>
-                    <Link to={`/About`} style={{ textDecoration: "none" }}>
-                      <button className="buttonclass">
+                    <Link to={`/About`} style={{ textDecoration: "none" }} onClick={() => {
+      setClicked(!clicked);
+      window.scrollTo(0, 0);
+    }}>
+                      <button className="buttonclass" >
                         <p>Read More</p>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -524,8 +528,10 @@ const Home = () => {
                 {/* <div className="our-product-button">
                   <button>MORE PRODUCTS</button>
                 </div> */}
+
                 <div className="more-product-button" onClick={()=>window.scrollTo(0,window.innerHeight)}>
                   <Link style={{ textDecoration: "none" }} to={`/product`}>
+
                     <button
                       className="banner-inquery-button"
                       style={{ marginTop: "40px" }}
@@ -648,6 +654,7 @@ const Home = () => {
                             <Link
                               style={{ textDecoration: "none" }}
                               to={`/Blog/${item.slug}`}
+
                             >
                               <button
                                 className="banner-inquery-button"
