@@ -184,7 +184,7 @@ const Blog = () => {
                     <div className="blogs-page-under-catogery-width">
                       <div>
                         <div className="search-catgories-margin">
-                          <p>categories</p>
+                          <p>Categories</p>
                         </div>
 
                         {/* <div className="search-status-text">
@@ -194,7 +194,7 @@ const Blog = () => {
          </Link>
       ))}
     </div> */}
-                        <div className="search-status-text">
+                        <div className="search-status-text" onClick={()=>window.scrollTo(0,window.innerHeight)}>
                           {blogCategory.map((category, index) => (
                             <Link
                               key={index}
@@ -213,7 +213,7 @@ const Blog = () => {
                         <p>Recent Blogs</p>
                       </div>
                       <div className="blogs-ing-texr-top-margin">
-                        <div className="blogs-image-and-text">
+                        <div className="blogs-image-and-text" onClick={()=>window.scrollTo(0,0)}>
                           {recent?.map((e) => {
                             return (
                               <>

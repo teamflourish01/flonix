@@ -132,7 +132,7 @@ const About = () => {
       </section>
       <section className="bg" style={{ margin: "50px 0" }}>
         <div className="main-width">
-          <div style={{ padding: "84px 0" }}>
+          <div style={{ padding: "50px 0" }}>
             <div className="under1320width">
               <div className="all-page-padding">
               
@@ -152,7 +152,7 @@ const About = () => {
 
       <section className="display-none-769" style={{ margin: "50px 0" }}>
         <div className="main-width">
-          <div style={{ padding: "15px 0" }}>
+          <div style={{ padding: "5px 0 10px 0" }}>
             <div className="under1320width ">
               <div className="all-page-padding">
                 <p
@@ -533,7 +533,7 @@ const About = () => {
           </div>
         </div>
       </section >
-      <section className="" style={{ margin: "50px 0 70px 0" }} >
+      <section className="" style={{ margin: "50px 0 50px 0" }} >
         <div className="main-width">
           <div>
             <div className="under1320width" id="certificate">

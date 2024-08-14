@@ -122,7 +122,7 @@ const HomeTopProductCarousel = ({topProducts}) => {
       <Slider {...settings}  >
         
       {Topproducts.map(Topproducts => (
-                <div className="card-3" key={Topproducts.slug}>
+                <div className="card-3" key={Topproducts.slug} onClick={()=>window.scrollTo(0,0)}>
                   <Link to={`/Product/${Topproducts.slug}`} style={{textDecoration:"none"}}>
                   <div className="top-product">
                     <img className="imgs" src={`${apiUrl}/product/${Topproducts.image[0]}`} alt={Topproducts.name}   />

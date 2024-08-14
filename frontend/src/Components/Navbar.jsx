@@ -24,6 +24,8 @@ const Navbar = () => {
         const response = await fetch(`${apiUrl}/contect`);
         const data = await response.json();
         setContectData(data.data);
+        console.log("Contect-detail msg",contectData);
+        
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -132,9 +134,9 @@ const Navbar = () => {
         <div className=" under1320width">
           <div className="all-page-padding">
             <div className="nav">
-              <a href="/">
+              <Link to="/" onClick={()=>window.scrollTo(0,0)}>
                 <img className="desi-logo" src={flonixlogoblack} alt="" />
-              </a>
+              </Link>
 
               <div>
                 <ul

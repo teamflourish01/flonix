@@ -28,10 +28,10 @@
   /* border: 1px solid black; */
 }
 .pure .health .under-impo {
-  font-family: Roboto-Regular;
+  font-family: Roboto-Bold;
   font-weight: 400;
   font-size: 18px;
-  line-height: 80px;
+  line-height: 55px;
   text-align: left;
   /* border: 1px solid black; */
 }
@@ -39,8 +39,8 @@
 .pure .health .drinking-water {
   font-family: PlayfairDisplay-Bold;
   font-weight: 700;
-  font-size: 74px;
-  line-height: 80px;
+  font-size: 48px;
+  /* line-height: 58px; */
   text-align: left;
   /* border: 1px solid black; */
 }
@@ -86,7 +86,7 @@
   text-align: center;
   cursor: pointer;
 }
-.more-product-button{
+.more-product-button {
   text-align: -webkit-center;
   padding: 0 0 25px 0;
 }
@@ -98,7 +98,6 @@
   left: 0;
   top: -83px;
   transition: 2.4s;
- 
 }
 
 .wave::before,
@@ -110,7 +109,6 @@ a .wave::after {
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
- 
 }
 
 .wave::before {
@@ -124,7 +122,6 @@ a .wave::after {
   background-color: black;
   animation: wave 10s linear infinite;
 }
-
 
 @keyframes wave {
   0% {
@@ -188,11 +185,11 @@ font-family:  Roboto-Bold;
 .all-heading {
   font-family: Roboto-Bold;
   font-weight: 700;
-  font-size: 50px;
-  line-height: 58.59px;
+  font-size: 48px;
+  /* line-height: 58.59px; */
   text-align: center;
   color: black;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
   /* border: 1px solid black; */
 }
 .filter-flonix {
@@ -205,23 +202,23 @@ font-family:  Roboto-Bold;
 .about-choosing .filter-flonix .filter-heading {
   font-family: Roboto-Bold;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 40px;
   line-height: 59px;
   text-align: left;
   color: black;
 }
 .about-choosing .filter-flonix .filter-peragraph {
-  font-family: Roboto-Medium;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 30px;
-  text-align: left;
-  color: black;
-  padding: 20px 0;
-}
-.benifts li {
   font-family: Roboto-Regular;
   font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: justify;
+  color: black;
+  padding: 10px 0 5px 0;
+}
+.benifts li {
+  font-family: Roboto-Medium;
+  font-weight: 500;
   font-size: 18px;
   line-height: 35px;
   text-align: left;
@@ -273,8 +270,6 @@ font-family:  Roboto-Bold;
   z-index: -999;
 }
 
-
-
 .buttonclass:hover svg {
   transform: translateX(4px);
   color: var(--hovered-color);
@@ -295,7 +290,7 @@ font-family:  Roboto-Bold;
   z-index: -999;
 } */
 
-.aboutimage  {
+.aboutimage {
   max-width: 598px;
   min-width: 200px;
   width: 100%;
@@ -341,6 +336,7 @@ font-family:  Roboto-Bold;
   font-size: 20px;
   color: black;
   /* line-height: 40px; */
+  height: 40px;
 }
 
 /* .top-product button {
@@ -404,7 +400,7 @@ font-family:  Roboto-Bold;
   /* border: 1px solid black; */
   /* width: 325px; */
   max-width: 325px;
-  min-width: 250px;
+  min-width: 200px;
   width: 100%;
 }
 
@@ -588,15 +584,11 @@ img.vert-move {
   gap: 40px 40px;
 }
 
-
- 
-
-
 .our-distributor-main-heading {
   max-width: 639px;
   width: 100%;
   min-width: 250px;
-  margin: 40px auto;
+  margin: 20px auto;
 }
 
 .our-distributor-main-heading p {
@@ -631,10 +623,16 @@ img.vert-move {
 }
 
 /* section-8 */
+.under1120width {
+  max-width: 1120px;
+  min-width: 200px;
+  width: 100%;
+  margin: 0 auto;
+}
 .testo-next-arrow {
   position: absolute;
   top: 50%;
-  right: 1%;
+  right: -5%;
   border-radius: 50%;
   box-shadow: rgba(39, 170, 243, 0.35) 0px 5px 15px;
   width: 56px;
@@ -646,7 +644,7 @@ img.vert-move {
 .testo-arrow-back {
   position: absolute;
   top: 50%;
-  left: 1%;
+  left: -5%;
   border-radius: 50%;
   box-shadow: rgba(39, 170, 243, 0.35) 0px 5px 15px;
   width: 56px;
@@ -664,13 +662,16 @@ img.vert-move {
   min-width: 250px;
   width: 100%;
   /* border: 1px solid black; */
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 90px 0;
   background: white;
-  filter: drop-shadow(0px 2px 10px rgba(39, 170, 243, 0.25));
+  /* filter: drop-shadow(0px 2px 10px rgba(39, 170, 243, 0.25)); */
+  box-shadow: 0px 0px 28.8px 5px #cdedf940;
+
   border-radius: 15px;
   position: relative;
   z-index: -999;
+  /* height: 438px; */
 }
 .testimonial-under-width {
   max-width: 945.45px;
@@ -680,6 +681,8 @@ img.vert-move {
   /* border: 1px solid black; */
   margin: 0px auto;
   z-index: -999;
+  /* top: 22%; */
+  /* position: relative; */
 }
 .testimonial-display-flex {
   display: flex;
@@ -702,12 +705,12 @@ img.vert-move {
   font-size: 24px;
   line-height: 28.13px;
 }
-.testimonial-degistion {
+.testimonial-designation {
   font-family: Roboto-Regular;
   font-weight: 400;
   font-size: 18px;
   line-height: 21.09px;
-  margin: 35px 0;
+  margin: 25px 0;
 }
 .testimonial-review {
   background: #f2faff;
@@ -768,6 +771,7 @@ img.vert-move {
   width: 100%;
   height: 249px;
   border-radius: 15px 15px 0 0;
+  /* object-fit: cover; */
 }
 .blog-box-contents {
   max-width: 315px;
@@ -781,8 +785,10 @@ img.vert-move {
 .blog-under-box .blog-heading {
   font-family: Roboto-Medium;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 28.13px;
+
+  font-size: 20px;
+  /* line-height: 28.13px; */
+
 }
 .blog-under-box .blog-service {
   font-family: Roboto-Medium;
@@ -843,7 +849,6 @@ img.vert-move {
   border-radius: 356px;
   cursor: pointer;
 }
-
 
 /* section-10 */
 
@@ -950,6 +955,34 @@ gap: 59px;
   border: none;
 } */
 
+@media screen and (max-width: 1230px) {
+  .testo-next-arrow {
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    border-radius: 50%;
+    box-shadow: rgba(39, 170, 243, 0.35) 0px 5px 15px;
+    width: 56px;
+    height: 56px;
+    padding: 10px;
+    z-index: 1000;
+    cursor: pointer;
+    display: none;
+  }
+  .testo-arrow-back {
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    border-radius: 50%;
+    box-shadow: rgba(39, 170, 243, 0.35) 0px 5px 15px;
+    width: 56px;
+    height: 56px;
+    padding: 10px;
+    z-index: 1000;
+    cursor: pointer;
+    display: none;
+  }
+}
 @media screen and (max-width: 1024px) {
   .all-page-padding {
     padding: 0 30px;
@@ -973,16 +1006,16 @@ gap: 59px;
     /* padding-top: 10px; */
   }
   .pure .health .under-impo {
-    font-family: Roboto-Regular;
+    font-family: Roboto-Bold;
     font-weight: 400;
     font-size: 16px;
-    line-height: 80px;
+    line-height: 55px;
     text-align: left;
     /* border: 1px solid black; */
   }
   .pure .health .drinking-water {
     font-family: PlayfairDisplay-Bold;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 60px;
     text-align: left;
@@ -1001,10 +1034,10 @@ gap: 59px;
     font-family: Roboto-Bold;
     font-weight: 700;
     font-size: 30px;
-    line-height: 35px;
+    /* line-height: 35px; */
     text-align: center;
     color: black;
-    padding-bottom: 50px;
+    padding-bottom: 25px;
     /* border: 1px solid black; */
   }
   .d-grid-homa-bout {
@@ -1023,7 +1056,7 @@ gap: 59px;
     min-width: 200px;
     width: 100%;
   }
-  .aboutimage  {
+  .aboutimage {
     max-width: 964px;
     min-width: 200px;
     width: 100%;
@@ -1048,17 +1081,17 @@ gap: 59px;
     color: black;
   }
   .about-choosing .filter-flonix .filter-peragraph {
-    font-family: Roboto-Medium;
-    font-weight: 500;
-    font-size: 20px;
+    font-family: Roboto-Regular;
+    font-weight: 400;
+    font-size: 18px;
     line-height: 30px;
-    text-align: left;
+    text-align: justify;
     color: black;
     padding: 20px 0;
   }
   .benifts li {
-    font-family: Roboto-Regular;
-    font-weight: 400;
+    font-family: Roboto-Medium;
+    font-weight: 500;
     font-size: 16px;
     line-height: 35px;
     text-align: left;
@@ -1066,7 +1099,6 @@ gap: 59px;
     color: black;
   }
   .top-product p {
-    
     font-family: Roboto-Medium;
     font-weight: 500;
     font-size: 16px;
@@ -1149,6 +1181,7 @@ gap: 59px;
     justify-items: center;
     gap: 20px 0px;
   }
+
   .testimonial-width {
     max-width: 1056px;
     min-width: 250px;
@@ -1157,7 +1190,7 @@ gap: 59px;
     margin: 0 auto;
     padding: 20px 0;
     background: white;
-    filter: drop-shadow(0px 2px 10px rgba(39, 170, 243, 0.25));
+    box-shadow: 0px 0px 28.8px 5px #cdedf940;
     border-radius: 15px;
     position: relative;
     z-index: -999;
@@ -1239,12 +1272,12 @@ gap: 59px;
     line-height: 23.44px;
     text-align: center;
   }
-  .testimonial-degistion {
+  .testimonial-designation {
     font-family: Roboto-Regular;
     font-weight: 400;
     font-size: 16px;
     line-height: 18.75px;
-    margin: 35px 0;
+    margin: 25px 0;
     text-align: center;
   }
   .testimonial-review p {
@@ -1266,11 +1299,11 @@ gap: 59px;
 
   .d-flex-circle-box {
     display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  align-items: center;
-  align-content: center;
-  justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
     gap: 40px 40px;
   }
   .hexagon-box-pera p {
@@ -1298,9 +1331,9 @@ gap: 59px;
     overflow: hidden;
     border: none;
     cursor: pointer;
-  
-    text-align: left;
-  
+
+    text-align: center;
+
     padding: 3px 28px;
     border-radius: 356px;
     background: black;
@@ -1310,7 +1343,7 @@ gap: 59px;
     position: relative;
     z-index: 1;
     color: white;
-  
+
     font-family: Roboto-Bold;
     font-weight: 700;
     font-size: 14px;
@@ -1328,15 +1361,15 @@ gap: 59px;
     transition: 2.4s;
   }
   .wave::before,
-a .wave::after {
-  width: 200%;
-  height: 200%;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 40%;
-  transform: translate(-50%, -50%);
-}
+  a .wave::after {
+    width: 200%;
+    height: 200%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 40%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1344,7 +1377,7 @@ a .wave::after {
     padding: 0 15px;
   }
   .pure .health .under-impo {
-    font-family: Roboto-Regular;
+    font-family: Roboto-Bold;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -1352,8 +1385,8 @@ a .wave::after {
     /* border: 1px solid black; */
   }
   .pure .health {
-    max-width: 181px;
-    min-width: 100px;
+    /* max-width: 181px;
+    min-width: 100px; */
     width: 100%;
     /* height: 227px; */
     /* border: 1px solid black; */
@@ -1391,11 +1424,11 @@ a .wave::after {
   .all-heading {
     font-family: Roboto-Bold;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 35px;
+    font-size: 25px;
+    /* line-height: 35px; */
     text-align: center;
     color: black;
-    padding-bottom: 50px;
+    padding-bottom: 25px;
     /* border: 1px solid black; */
   }
   .about-choosing .filter-flonix .filter-heading {
@@ -1407,17 +1440,17 @@ a .wave::after {
     color: black;
   }
   .about-choosing .filter-flonix .filter-peragraph {
-    font-family: Roboto-Medium;
-    font-weight: 500;
+    font-family: Roboto-Regular;
+    font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    text-align: left;
+    text-align: justify;
     color: black;
     padding: 20px 0;
   }
   .benifts li {
-    font-family: Roboto-Regular;
-    font-weight: 400;
+    font-family: Roboto-Medium;
+    font-weight: 500;
     font-size: 14px;
     line-height: 35px;
     text-align: left;
@@ -1425,7 +1458,6 @@ a .wave::after {
     color: black;
   }
   .top-product p {
-    
     font-family: Roboto-Medium;
     font-weight: 500;
     font-size: 14px;
@@ -1484,12 +1516,12 @@ a .wave::after {
     line-height: 18.75px;
     text-align: center;
   }
-  .testimonial-degistion {
+  .testimonial-designation {
     font-family: Roboto-Regular;
     font-weight: 400;
     font-size: 14px;
     line-height: 16.41px;
-    margin: 35px 0;
+    margin: 25px 0;
     text-align: center;
   }
   .testimonial-review p {
@@ -1509,9 +1541,9 @@ a .wave::after {
     overflow: hidden;
     border: none;
     cursor: pointer;
-  
+
     text-align: left;
-  
+
     padding: 6px 16px;
     border-radius: 356px;
     background: black;
@@ -1521,11 +1553,11 @@ a .wave::after {
     position: relative;
     z-index: 1;
     color: white;
-  
+
     font-family: Roboto-Bold;
     font-weight: 700;
     font-size: 12px;
-        line-height: 14.06px;
+    line-height: 14.06px;
     text-align: center;
     cursor: pointer;
   }
@@ -1539,39 +1571,39 @@ a .wave::after {
     transition: 2.4s;
   }
   .wave::before,
-a .wave::after {
-  width: 200%;
-  height: 200%;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 30%;
-  transform: translate(-50%, -50%);
-}
-.d-flex-circle-box {
-  display: grid;
-grid-template-columns: repeat(2, 1fr);
-justify-items: center;
-align-items: center;
-align-content: center;
-justify-content: space-between;
-  gap: 40px 40px;
-}
-}
-@media screen and (max-width: 560px){
+  a .wave::after {
+    width: 200%;
+    height: 200%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 30%;
+    transform: translate(-50%, -50%);
+  }
   .d-flex-circle-box {
     display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  justify-items: center;
-  align-items: center;
-  align-content: center;
-  justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    gap: 40px 40px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .d-flex-circle-box {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
     gap: 40px 40px;
   }
   .water-purefire img {
     /* max-width: 515.46px;
     min-width: 250px; */
-    width:350px;
+    width: 350px;
     /* height: 550px; */
     position: relative;
     z-index: 1;
@@ -1588,11 +1620,11 @@ justify-content: space-between;
     /* padding-top: 74px; */
   }
 }
-@media screen and (max-width: 380px){
+@media screen and (max-width: 380px) {
   .water-purefire img {
     /* max-width: 515.46px;
     min-width: 250px; */
-    width:250px;
+    width: 250px;
     /* height: 550px; */
     position: relative;
     z-index: 1;

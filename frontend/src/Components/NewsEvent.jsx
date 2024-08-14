@@ -31,7 +31,11 @@ const NewsEvent = () => {
       try {
         const response = await fetch(`${apiUrl}/newsandevent`);
         const data = await response.json();
-        setNewseventData(data.data);
+
+        const reversedData = data.data.reverse();
+        // setNewseventData(data.data);
+        setNewseventData(reversedData);
+
         console.log(data.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -45,10 +49,7 @@ const NewsEvent = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>{newsheadingData?.meta_title}</title>
-        <meta
-          name="description"
-          content={newsheadingData?.meta_description}
-        />
+        <meta name="description" content={newsheadingData?.meta_description} />
         <link rel="canonical" href={`${domain}/NewsEvent`} />
       </Helmet>
       <section>
@@ -117,7 +118,11 @@ const NewsEvent = () => {
                             <p>
                               <i className="fa-solid fa-calendar"></i>
                               {/* {new Date(item.date).toLocaleDateString()} */}
-                              {new Date(item.date).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' })}
+                              {new Date(item.date).toLocaleDateString("en-GB", {
+                                day: "2-digit",
+                                month: "2-digit",
+                                year: "numeric",
+                              })}
                             </p>
                           </div>
                           <div className="event-icon-div">
@@ -128,10 +133,15 @@ const NewsEvent = () => {
                           </div>
                         </div>
 
-                        <p className="news-event-box-pera">{(item.cardtext).substring(0, 100)}...</p>
+                        <p className="news-event-box-pera">
+                          {item.cardtext.substring(0, 100)}...
+                        </p>
                         {/* {(e?.description).substring(0, 100)}... */}
 
-                        <div className="news-event-button">
+                        <div
+                          className="news-event-button"
+                          onClick={() => window.scrollTo(0, 0)}
+                        >
                           <Link
                             style={{ textDecoration: "none" }}
                             to={`/NewsEventpage/${item.slug}`}
