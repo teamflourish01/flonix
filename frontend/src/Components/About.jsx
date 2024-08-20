@@ -533,10 +533,10 @@ const About = () => {
           </div>
         </div>
       </section >
-      <section className="" style={{ margin: "50px 0 50px 0" }} >
+      <section className="" style={{ margin: "50px 0 50px 0" }} id="certificate" >
         <div className="main-width">
           <div>
-            <div className="under1320width" id="certificate">
+            <div className="under1320width" >
               <div className="all-page-padding">
               <p
                 className="all-heading"
