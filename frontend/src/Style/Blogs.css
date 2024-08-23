@@ -20,6 +20,7 @@
   gap: 50px 10px;
 }
 
+
 .blogsbannerpera p {
   font-family: PlayfairDisplay-Bold;
   font-weight: 700;
@@ -31,6 +32,7 @@
   max-width: 516px;
   min-width: 365px;
   width: 100%;
+
 }
 .blogbannerimage img {
   max-width: 516px;

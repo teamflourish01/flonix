@@ -44,6 +44,13 @@
   text-align: left;
   /* border: 1px solid black; */
 }
+ .drinking-waters{
+  font-family: PlayfairDisplay-Bold;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 60px;
+    text-align: left;
+}
 .banner-inquery-button {
   /* width: 200px; */
   /* padding: 20px 40px; */
@@ -778,6 +785,7 @@ img.vert-move {
 .blog-under-box .blog-heading {
   font-family: Roboto-Medium;
   font-weight: 500;
+
   font-size: 20px;
   line-height: 28.13px;
   height: 50px;
@@ -1013,6 +1021,13 @@ gap: 59px;
     text-align: left;
 
     /* border: 1px solid black; */
+  }
+   .drinking-waters{
+    font-family: PlayfairDisplay-Bold;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: left;
   }
 
   .all-heading {
@@ -1386,6 +1401,14 @@ gap: 59px;
 
     /* border: 1px solid black; */
   }
+   .drinking-waters{
+    font-family: PlayfairDisplay-Bold;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+  }
+  
   .banner-inquery-button button {
     padding: 5px 22px;
     border-radius: 356px;

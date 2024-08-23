@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet";
 const NewsEvent = () => {
   const [newseventData, setNewseventData] = useState([]);
   const [newsheadingData, setNewsheadingData] = useState({});
+  const [clicked, setClicked] = useState(false);
   const apiUrl = process.env.REACT_APP_URL;
   const domain = process.env.REACT_APP_DOMAIN;
 
@@ -144,6 +145,10 @@ const NewsEvent = () => {
                           <Link
                             style={{ textDecoration: "none" }}
                             to={`/NewsEventpage/${item.slug}`}
+                            onClick={() => {
+                              setClicked(!clicked);
+                              window.scrollTo(0, 0);
+                            }}
                           >
                             <button
                               className="banner-inquery-button"
