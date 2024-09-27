@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import "../Style/About.css";
 import blogbannerimage from "../images/blogbannerimage.svg";
 import aboutfourproduct from "../images/aboutfourproduct.svg";
@@ -12,47 +12,45 @@ import goals from "../images/goals.svg";
 import Vectorarrow from "../images/Vectorarrow.svg";
 import downarrowvector from "../images/downarrowvector.svg";
 import TechnologicalTesto from "./TechnologicalTesto";
-import {Helmet} from "react-helmet"
-import { useLocation } from 'react-router-dom';
-
+import { Helmet } from "react-helmet";
+import { useLocation } from "react-router-dom";
 
 const About = () => {
-  const  [aboutData , setAboutData ] = useState({});
-  const apiUrl = process.env.REACT_APP_URL; 
-  const domain=process.env.REACT_APP_DOMAIN
+  const [aboutData, setAboutData] = useState({});
+  const apiUrl = process.env.REACT_APP_URL;
+  const domain = process.env.REACT_APP_DOMAIN;
 
   useEffect(() => {
-    const getAbout = async() =>{
+    const getAbout = async () => {
       try {
-        const response = await fetch(`${apiUrl}/aboutus`)
+        const response = await fetch(`${apiUrl}/aboutus`);
         const data = await response.json();
-        console.log(data.data)
-        setAboutData(data.data[0])
-
+        console.log(data.data);
+        setAboutData(data.data[0]);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
-    }
+    };
     getAbout();
-  },[]);
+  }, []);
   const { hash } = useLocation();
 
   useEffect(() => {
     if (hash) {
-      const element = document.getElementById(hash.replace('#', ''));
+      const element = document.getElementById(hash.replace("#", ""));
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [hash]);
   return (
     <>
-    <Helmet>
-    <meta charSet="utf-8" />
-                <title>{aboutData?.meta_title}</title>
-                <meta name='description' content={aboutData?.meta_description}/>
-                <link rel="canonical" href={`${domain}/About`} />
-    </Helmet>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{aboutData?.meta_title}</title>
+        <meta name="description" content={aboutData?.meta_description} />
+        <link rel="canonical" href={`${domain}/About`} />
+      </Helmet>
       <section>
         <div className="wavebgbanner">
           <div className="main-width">
@@ -80,16 +78,10 @@ const About = () => {
           <div>
             <div className="under1320width">
               <div className="all-page-padding">
-              
                 <div className="about-page-heading-pera">
-                  <p className="about-page-heading">
-                    {aboutData.heading}
-                  </p>
-                  <p className="about-page-pera">
-                    {aboutData.description}
-                  </p>
+                  <p className="about-page-heading">{aboutData.heading}</p>
+                  <p className="about-page-pera">{aboutData.description}</p>
                 </div>
-             
               </div>
             </div>
           </div>
@@ -100,11 +92,12 @@ const About = () => {
           <div>
             <div className="under1320width">
               <div className="all-page-padding">
-             
-                <div className="about-top-4-product " >
-                  <img src={`${apiUrl}/aboutus/${aboutData.banner}`} alt={aboutData.banner} />
+                <div className="about-top-4-product ">
+                  <img
+                    src={`${apiUrl}/aboutus/${aboutData.banner}`}
+                    alt={aboutData.banner}
+                  />
                 </div>
-          
               </div>
             </div>
           </div>
@@ -115,7 +108,6 @@ const About = () => {
           <div>
             <div className="under1320width">
               <div className="all-page-padding">
-              
                 <div className="about-page-heading-pera">
                   <p className="about-page-heading">
                     {aboutData.bannerheading}
@@ -124,7 +116,6 @@ const About = () => {
                     {aboutData.bannerdescription}
                   </p>
                 </div>
-            
               </div>
             </div>
           </div>
@@ -135,15 +126,13 @@ const About = () => {
           <div style={{ padding: "50px 0" }}>
             <div className="under1320width">
               <div className="all-page-padding">
-              
                 <div className="d-grid-auality-img">
                   {aboutData?.logoimages?.map((image, index) => (
-                  <div className="about-quality-img">
-                    <img src={`${apiUrl}/aboutus/${image}`} alt="" />
-                  </div>
-                    ))}
+                    <div className="about-quality-img">
+                      <img src={`${apiUrl}/aboutus/${image}`} alt="" />
+                    </div>
+                  ))}
                 </div>
-               
               </div>
             </div>
           </div>
@@ -167,10 +156,12 @@ const About = () => {
                       <div className="about-step-one widths">
                         <div class="about-inverted-pane-warp-2 ">
                           <div class="about-inverted-steps-pane">
-                            <p className="company-timeline-heading">Company Timeline</p>
+                            {/* <p className="company-timeline-heading">
+                              Company Timeline
+                            </p> */}
                             <p className="company-timeline-pera">
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry.{" "}
+                              Started our brand as a manufacturer of RO water
+                              purification systems.
                             </p>
                           </div>
                         </div>
@@ -179,10 +170,13 @@ const About = () => {
                       <div className="about-step-three widths">
                         <div class="about-inverted-pane-warp-2 ">
                           <div class="about-inverted-steps-pane">
-                          <p className="company-timeline-heading">Company Timeline</p>
+                            {/* <p className="company-timeline-heading">
+                              Company Timeline
+                            </p> */}
                             <p className="company-timeline-pera">
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry.{" "}
+                              Expanded to include a plastic molding unit,
+                              producing inline parts, bowls, and membrane
+                              housings.
                             </p>
                           </div>
                         </div>
@@ -191,10 +185,12 @@ const About = () => {
                       <div className="about-step-five widths">
                         <div class="about-inverted-pane-warp-2 ">
                           <div class="about-inverted-steps-pane">
-                          <p className="company-timeline-heading">Company Timeline</p>
+                            {/* <p className="company-timeline-heading">
+                              Company Timeline
+                            </p> */}
                             <p className="company-timeline-pera">
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry.{" "}
+                              With more than 22 in-house RO products, we add new
+                              expertise PP spun, wound, and MLT units.
                             </p>
                           </div>
                         </div>
@@ -206,7 +202,7 @@ const About = () => {
                         <div class="about-end-circle "></div>
                         <div class="about-step-wrap">
                           <div class="about-steps-stops">
-                            <p className="timeline-year">2000</p>
+                            <p className="timeline-year">2011</p>
                             <div class="about-verticle-line-up about-back-orange">
                               <div className=" about-dots-orange-dots about-dot-orange"></div>
                             </div>
@@ -222,7 +218,7 @@ const About = () => {
                       <div class="about-steps-two">
                         <div class="about-step-wrap">
                           <div class="about-steps-stops">
-                            <p className="timeline-year">2003</p>
+                            <p className="timeline-year">2014</p>
                             <div class="about-verticle-line about-back-orange">
                               <div className=" about-dots-orange-dots-down about-dot-orange"></div>
                             </div>
@@ -236,10 +232,12 @@ const About = () => {
 
                         <div class="about-inverted-pane-warp ">
                           <div class="about-inverted-steps-pane">
-                          <p className="company-timeline-heading">Company Timeline</p>
+                            {/* <p className="company-timeline-heading">
+                              Company Timeline
+                            </p> */}
                             <p className="company-timeline-pera">
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry.{" "}
+                              Began the largest manufacturing of RO components
+                              such as pumps and membranes.
                             </p>
                           </div>
                         </div>
@@ -248,7 +246,7 @@ const About = () => {
                       <div class="about-steps-three">
                         <div class="about-step-wrap">
                           <div class="about-steps-stops">
-                            <p className="timeline-year">2007</p>
+                            <p className="timeline-year">2016</p>
                             <div class="about-verticle-line-up about-back-orange">
                               <div className=" about-dots-orange-dots about-dot-orange"></div>
                             </div>
@@ -264,7 +262,7 @@ const About = () => {
                       <div class="about-steps-four">
                         <div class="about-step-wrap">
                           <div class="about-steps-stops">
-                            <p className="timeline-year">2011</p>
+                            <p className="timeline-year">2019</p>
                             <div class="about-verticle-line about-back-orange">
                               <div className=" about-dots-orange-dots-down about-dot-orange"></div>
                             </div>
@@ -278,10 +276,12 @@ const About = () => {
 
                         <div class="about-inverted-pane-warp ">
                           <div class="about-inverted-steps-pane">
-                          <p className="company-timeline-heading">Company Timeline</p>
+                            {/* <p className="company-timeline-heading">
+                              Company Timeline
+                            </p> */}
                             <p className="company-timeline-pera">
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry.{" "}
+                              Stepped into (SMPS, SV, UV LEDs, Lamps) and start
+                              international exports to seven countries.
                             </p>
                           </div>
                         </div>
@@ -291,7 +291,7 @@ const About = () => {
                         <div class="about-inverted-end-circle about-back-orange"></div>
                         <div class="about-step-wrap">
                           <div class="about-steps-stops">
-                            <p className="timeline-year">2015</p>
+                            <p className="timeline-year">2020</p>
                             <div class="about-verticle-line-up about-back-orange">
                               <div className=" about-dots-orange-dots about-dot-orange"></div>
                             </div>
@@ -306,7 +306,11 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section id="process" className="display-unset-769" style={{ margin: "50px 0" }}>
+      <section
+        id="process"
+        className="display-unset-769"
+        style={{ margin: "50px 0" }}
+      >
         <div className="main-width">
           <div style={{ padding: "15px 0" }}>
             <div className="under1320width ">
@@ -318,169 +322,187 @@ const About = () => {
                   Company Timeline
                 </p>
                 <div>
-                <div class="container-fluid">
-                   <div className="globalbg">
-          <div class="row">
-            <div class="steps-timeline text-center">
-              <div class="steps-one">
-                
-                {/* <div class="end-circle back-orange"></div> */}
-                <div class="step-wrap">
-                  <div class="steps-stops">
-                    <p className="timeline-year">2000</p>
-                    <div class="verticle-line back-orange">
-                      <div className="back-orange-dot"></div>
+                  <div class="container-fluid">
+                    <div className="globalbg">
+                      <div class="row">
+                        <div class="steps-timeline text-center">
+                          <div class="steps-one">
+                            {/* <div class="end-circle back-orange"></div> */}
+                            <div class="step-wrap">
+                              <div class="steps-stops">
+                                <p className="timeline-year">2011</p>
+                                <div class="verticle-line back-orange">
+                                  <div className="back-orange-dot"></div>
+                                </div>
+                              </div>
+                              <div>
+                                <img
+                                  style={{ paddingTop: "26px" }}
+                                  src={downarrowvector}
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+
+                            <div class="pane-warp back-blue">
+                              <div class="steps-pane">
+                                {/* <img src="https://imgur.com/5U7IJvy.png"/> */}
+                              </div>
+                            </div>
+                            <div class="inverted-pane-warp back-blue">
+                              <div class="inverted-steps-pane">
+                                {/* <p className="company-timeline-heading">
+                                  Company Timeline
+                                </p> */}
+                                <p className="company-timeline-pera">
+                                  Started our brand as a manufacturer of RO
+                                  water purification systems.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="steps-two">
+                            <div class="step-wrap">
+                              <div class="steps-stops">
+                                <p className="timeline-year">2014</p>
+                                <div class="verticle-line back-orange">
+                                  <div className="back-orange-dot"></div>
+                                </div>
+                              </div>
+                              <div>
+                                <img
+                                  style={{ paddingTop: "26px" }}
+                                  src={downarrowvector}
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+                            <div class="pane-warp ">
+                              <div class="steps-pane">
+                                {/* <img src="https://imgur.com/ACjjJNm.png"/> */}
+                              </div>
+                            </div>
+                            <div class="inverted-pane-warp ">
+                              <div class="inverted-steps-pane">
+                                {/* <p className="company-timeline-heading">
+                                  Company Timeline
+                                </p> */}
+                                <p className="company-timeline-pera">
+                                  Began the largest manufacturing of RO
+                                  components such as pumps and membranes.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="steps-three">
+                            <div class="step-wrap">
+                              <div class="steps-stops">
+                                <p className="timeline-year">2016</p>
+                                <div class="verticle-line back-orange">
+                                  <div className="back-orange-dot"></div>
+                                </div>
+                              </div>
+                              <div>
+                                <img
+                                  style={{ paddingTop: "26px" }}
+                                  src={downarrowvector}
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+                            <div class="pane-warp back-blue">
+                              <div class="steps-pane">
+                                {/* <img class="third" src="https://imgur.com/5U7IJvy.png"/> */}
+                              </div>
+                            </div>
+                            <div class="inverted-pane-warp back-blue">
+                              <div class="inverted-steps-pane">
+                                {/* <p className="company-timeline-heading">
+                                  Company Timeline
+                                </p> */}
+                                <p className="company-timeline-pera">
+                                  Expanded to include a plastic molding unit,
+                                  producing inline parts, bowls, and membrane
+                                  housings.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="steps-four">
+                            <div class="step-wrap">
+                              <div class="steps-stops">
+                                <p className="timeline-year">2019</p>
+                                <div class="verticle-line back-orange">
+                                  <div className="back-orange-dot"></div>
+                                </div>
+                              </div>
+                              <div>
+                                <img
+                                  style={{ paddingTop: "26px" }}
+                                  src={downarrowvector}
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+                            <div class="pane-warp ">
+                              <div class="steps-pane">
+                                {/* <img src="https://imgur.com/ACjjJNm.png"/> */}
+                              </div>
+                            </div>
+                            <div class="inverted-pane-warp ">
+                              <div class="inverted-steps-pane">
+                                {/* <p className="company-timeline-heading">
+                                  Company Timeline
+                                </p> */}
+                                <p className="company-timeline-pera">
+                                  Stepped into (SMPS, SV, UV LEDs, Lamps) and
+                                  start international exports to seven
+                                  countries.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="steps-five">
+                            {/* <div class="inverted-end-circle back-orange"></div> */}
+                            <div class="step-wrap">
+                              <div class="steps-stops">
+                                <p className="timeline-year">2020</p>
+                                <div class="verticle-line back-orange">
+                                  <div className="back-orange-dot"></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="pane-warp back-blue">
+                              <div class="steps-pane">
+                                {/* <img src="https://imgur.com/5U7IJvy.png"/> */}
+                              </div>
+                            </div>
+                            <div class="inverted-pane-warp back-blue">
+                              <div class="inverted-steps-pane">
+                                {/* <p className="company-timeline-heading">
+                                  Company Timeline
+                                </p> */}
+                                <p className="company-timeline-pera">
+                                  With more than 22 in-house RO products, we add
+                                  new expertise PP spun, wound, and MLT units.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div >
-                    <img style={{paddingTop:"26px"}} src={downarrowvector} alt="" />
-                  </div>
-                </div>
-                
-                <div class="pane-warp back-blue">
-                  <div class="steps-pane">
-                    {/* <img src="https://imgur.com/5U7IJvy.png"/> */}
-                  </div>
-                </div>
-                <div class="inverted-pane-warp back-blue">
-                  
-                  <div class="inverted-steps-pane">
-                  <p className="company-timeline-heading">Company Timeline</p>
-                            <p className="company-timeline-pera">
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry.{" "}
-                            </p>
-                  </div>
-                  
                 </div>
               </div>
-      
-              <div class="steps-two">
-               
-                <div class="step-wrap">
-                  <div class="steps-stops">
-                  <p className="timeline-year">2003</p>
-                    <div class="verticle-line back-orange">
-                    <div className="back-orange-dot"></div>
-                    </div>
-                  </div>
-                  <div >
-                    <img style={{paddingTop:"26px"}} src={downarrowvector} alt="" />
-                  </div>
-                </div>
-                <div class="pane-warp ">
-                  <div class="steps-pane">
-                    {/* <img src="https://imgur.com/ACjjJNm.png"/> */}
-                  </div>
-                </div>
-                <div class="inverted-pane-warp ">
-                  <div class="inverted-steps-pane">
-                  <p className="company-timeline-heading">Company Timeline</p>
-                            <p className="company-timeline-pera">
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry.{" "}
-                            </p>
-                  </div>
-                </div>
-              </div>
-      
-              <div class="steps-three">
-                
-                <div class="step-wrap">
-                  <div class="steps-stops">
-                  <p className="timeline-year">2007</p>
-                    <div class="verticle-line back-orange">
-                    <div className="back-orange-dot"></div>
-                    </div>
-                  </div>
-                  <div >
-                    <img style={{paddingTop:"26px"}} src={downarrowvector} alt="" />
-                  </div>
-                </div>
-                <div class="pane-warp back-blue">
-                  <div class="steps-pane">
-                    {/* <img class="third" src="https://imgur.com/5U7IJvy.png"/> */}
-                  </div>
-                </div>
-                <div class="inverted-pane-warp back-blue">
-                  <div class="inverted-steps-pane">
-                  <p className="company-timeline-heading">Company Timeline</p>
-                            <p className="company-timeline-pera">
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry.{" "}
-                            </p>
-                  </div>
-                </div>
-              </div>
-      
-              <div class="steps-four">
-                
-                <div class="step-wrap">
-                  <div class="steps-stops">
-                  <p className="timeline-year">2011</p>
-                    <div class="verticle-line back-orange">
-                    <div className="back-orange-dot"></div>
-                    </div>
-                  </div>
-                  <div >
-                    <img style={{paddingTop:"26px"}} src={downarrowvector} alt="" />
-                  </div>
-                </div>
-                <div class="pane-warp ">
-                  <div class="steps-pane">
-                    {/* <img src="https://imgur.com/ACjjJNm.png"/> */}
-                  </div>
-                </div>
-                <div class="inverted-pane-warp ">
-                  <div class="inverted-steps-pane">
-                  <p className="company-timeline-heading">Company Timeline</p>
-                            <p className="company-timeline-pera">
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry.{" "}
-                            </p>
-                  </div>
-                </div>
-              </div>
-      
-              <div class="steps-five">
-                
-                {/* <div class="inverted-end-circle back-orange"></div> */}
-                <div class="step-wrap">
-                  <div class="steps-stops">
-                  <p className="timeline-year">2015</p>
-                    <div class="verticle-line back-orange">
-                    <div className="back-orange-dot"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="pane-warp back-blue">
-                  <div class="steps-pane">
-                    {/* <img src="https://imgur.com/5U7IJvy.png"/> */}
-                  </div>
-                </div>
-                <div class="inverted-pane-warp back-blue">
-                  <div class="inverted-steps-pane">
-                  <p className="company-timeline-heading">Company Timeline</p>
-                            <p className="company-timeline-pera">
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry.{" "}
-                            </p>
-                  </div>
-                </div>
-              </div>
-      
             </div>
-            
-          </div>
           </div>
         </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </section>
-      
+      </section>
 
       <section className="bg" style={{ margin: "50px 0 " }}>
         <div className="main-width">
@@ -508,9 +530,7 @@ const About = () => {
                       </div>
                       <div class="features-info">
                         <h4 class="title">vision</h4>
-                        <p className="about-pera-heading">
-                          {aboutData.vision}
-                        </p>
+                        <p className="about-pera-heading">{aboutData.vision}</p>
                       </div>
                     </div>
                   </div>
@@ -519,11 +539,9 @@ const About = () => {
                       <div class="about-mission-box-icon">
                         <img src={goals} alt="" />
                       </div>
-                      <div class="features-info" >
+                      <div class="features-info">
                         <h4 class="title">goals</h4>
-                        <p className="about-pera-heading" >
-                          {aboutData.goals}
-                        </p>
+                        <p className="about-pera-heading">{aboutData.goals}</p>
                       </div>
                     </div>
                   </div>
@@ -532,21 +550,25 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section >
-      <section className="" style={{ margin: "50px 0 50px 0" }} >
+      </section>
+      <section
+        className=""
+        style={{ margin: "50px 0 50px 0" }}
+        id="certificate"
+      >
         <div className="main-width">
           <div>
-            <div className="under1320width" id="certificate">
+            <div className="under1320width">
               <div className="all-page-padding">
-              <p
-                className="all-heading"
-                style={{ padding: "0", margin: "0 0 50px 0" }}
-              >
-                Technological Achievement
-              </p>
-              <div className="under-widt-testo">
-                <TechnologicalTesto />
-              </div>
+                <p
+                  className="all-heading"
+                  style={{ padding: "0", margin: "0 0 50px 0" }}
+                >
+                  Technological Achievement
+                </p>
+                <div className="under-widt-testo">
+                  <TechnologicalTesto />
+                </div>
               </div>
             </div>
           </div>

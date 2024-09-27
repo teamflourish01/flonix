@@ -73,7 +73,7 @@
 .rectengle-all p {
   font-family: PTSans-Regular;
   gap: 0px;
-  opacity: 0px;
+  
   color: black;
   font-size: 20px;
   font-weight: 400;
@@ -231,9 +231,7 @@
       gap: 50px 10px;
   }
   .rectengle-all p {
-    font-family: PTSans-Regular;
-    gap: 0px;
-    opacity: 0px;
+    font-family: PTSans-Regular;    
     color: black;
     font-size: 16px;
     font-weight: 400;
@@ -270,9 +268,7 @@
     scroll-snap-align: start;
   }
   .rectengle-all p {
-    font-family: PTSans-Regular;
-    gap: 0px;
-    opacity: 0px;
+    font-family: PTSans-Regular;    
     color: black;
     font-size: 13px;
     font-weight: 400;

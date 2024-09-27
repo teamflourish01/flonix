@@ -6,7 +6,7 @@ import whatsapp from "../images/whatsapp.svg";
 import fb from "../images/fb.svg";
 import insta from "../images/insta.svg";
 import youtube from "../images/youtube.svg";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [clicked, setClicked] = useState(false);
@@ -24,8 +24,7 @@ const Navbar = () => {
         const response = await fetch(`${apiUrl}/contect`);
         const data = await response.json();
         setContectData(data.data);
-        console.log("Contect-detail msg",contectData);
-        
+        console.log("Contect-detail msg", contectData);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -116,10 +115,34 @@ const Navbar = () => {
                     <div className="social-icon under-d-flex">
                       {contectData.map((item) => (
                         <>
-                          <a href={`https://wa.me/${item.whatsapplink}`} target="_blank" rel="noopener noreferrer"><img src={whatsapp} alt="whatsapp" /></a>
-                          <a href={item.fblink} target="_blank" rel="noopener noreferrer"><img src={fb} alt="Facebook" /></a>
-                          <a href={item.instalink} target="_blank" rel="noopener noreferrer"><img src={insta} alt="Instagram" /></a>
-                          <a href={item.ytlink} target="_blank" rel="noopener noreferrer"><img src={youtube} alt="ytlink" /></a>
+                          <a
+                            href={`https://wa.me/${item.whatsapplink}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <img src={whatsapp} alt="whatsapp" />
+                          </a>
+                          <a
+                            href={item.fblink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <img src={fb} alt="Facebook" />
+                          </a>
+                          <a
+                            href={item.instalink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <img src={insta} alt="Instagram" />
+                          </a>
+                          <a
+                            href={item.ytlink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <img src={youtube} alt="ytlink" />
+                          </a>
                         </>
                       ))}
                     </div>
@@ -134,7 +157,7 @@ const Navbar = () => {
         <div className=" under1320width">
           <div className="all-page-padding">
             <div className="nav">
-              <Link to="/" onClick={()=>window.scrollTo(0,0)}>
+              <Link to="/" onClick={() => window.scrollTo(0, 0)}>
                 <img className="desi-logo" src={flonixlogoblack} alt="" />
               </Link>
 
@@ -149,50 +172,87 @@ const Navbar = () => {
                 >
                   <div className="under-nav-flex">
                     <li className="naves">
-                      <Link className="  under active " to="/">
+                      <NavLink
+                        exact
+                        className="under"
+                        activeClassName="active"
+                        to="/"
+                      >
                         <span className="do">Home</span>
-                      </Link>
+                      </NavLink>
                     </li>
                     <li className="naves">
-                      <Link className="under" to="/About">
+                      <NavLink
+                        className="under"
+                        activeClassName="active"
+                        to="/About"
+                      >
                         <span className="do">About Us</span>
-                      </Link>
+                      </NavLink>
                     </li>
 
                     <li className="naves">
-                      <Link className="under" to="/Product">
+                      <NavLink
+                        className="under"
+                        activeClassName="active"
+                        to="/Product"
+                      >
                         <span className="do">Products</span>
-                      </Link>
+                      </NavLink>
                     </li>
 
                     <li className="naves">
-                      <Link className="under" to="/Blogs">
+                      <NavLink className="under" to="/Blogs" activeClassName="active" >
                         <span className="do">Blogs</span>
-                      </Link>
+                      </NavLink>
                     </li>
                     <li className="naves">
-                      <Link className="under" to="/NewsEvent">
+                      <NavLink className="under" to="/NewsEvent" activeClassName="active">
                         <span className="do">News & Events</span>
-                      </Link>
+                      </NavLink>
                     </li>
                     <li className="naves">
-                      <Link className="under" to="/Contact">
+                      <NavLink className="under" to="/Contact" activeClassName="active">
                         <span className="do">Contact Us</span>
-                      </Link>
+                      </NavLink>
                     </li>
                     <li className="naves">
-                      <Link className="under" to="/Ebrochure">
+                      <NavLink className="under" to="/Ebrochure" >
                         <span className="do">E- Brochure</span>
-                      </Link>
+                      </NavLink>
                     </li>
                     <div className="navs-main-icon">
                       <div className="navs-icon navs-d-flex">
                         {contectData.map((item) => (
                           <>
-                            <a href={`https://wa.me/${item.whatsapplink}`} target="_blank" rel="noopener noreferrer"><img src={whatsapp} alt="whatsapp" /></a>
-                          <a href={item.fblink} target="_blank" rel="noopener noreferrer"><img src={fb} alt="Facebook" /></a>
-                          <a href={item.instalink} target="_blank" rel="noopener noreferrer"><img src={insta} alt="Instagram" /></a>
-                          <a href={item.ytlink} target="_blank" rel="noopener noreferrer"><img src={youtube} alt="ytlink" /></a>
+                            <a
+                              href={`https://wa.me/${item.whatsapplink}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <img src={whatsapp} alt="whatsapp" />
+                            </a>
+                            <a
+                              href={item.fblink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <img src={fb} alt="Facebook" />
+                            </a>
+                            <a
+                              href={item.instalink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <img src={insta} alt="Instagram" />
+                            </a>
+                            <a
+                              href={item.ytlink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <img src={youtube} alt="ytlink" />
+                            </a>
                           </>
                         ))}
                       </div>

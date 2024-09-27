@@ -787,8 +787,8 @@ img.vert-move {
   font-weight: 500;
 
   font-size: 20px;
-  /* line-height: 28.13px; */
-
+  line-height: 28.13px;
+  height: 50px;
 }
 .blog-under-box .blog-service {
   font-family: Roboto-Medium;
@@ -1158,13 +1158,13 @@ gap: 59px;
     font-family: Roboto-Medium;
     font-weight: 500;
     font-size: 20px;
-    text-align: left;
+    text-align: center;
   }
   .water-pera {
     font-family: Roboto-Regular;
     font-weight: 400;
     font-size: 16px;
-    text-align: left;
+    text-align: center;
     /* line-height: 30px; */
     /* align-items: center; */
   }
@@ -1491,13 +1491,13 @@ gap: 59px;
     font-family: Roboto-Medium;
     font-weight: 500;
     font-size: 16px;
-    text-align: left;
+    text-align: center;
   }
   .water-pera {
     font-family: Roboto-Regular;
     font-weight: 400;
     font-size: 16px;
-    text-align: left;
+    text-align: center;
     /* line-height: 30px; */
     /* align-items: center; */
   }
