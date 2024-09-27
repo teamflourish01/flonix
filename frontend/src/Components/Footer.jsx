@@ -96,7 +96,6 @@ const Footer = () => {
                       />
                     </div>
                     <div className="links-policy">
-
                       <Link
                         style={{ textDecoration: "none" }}
                         className=""
@@ -121,7 +120,6 @@ const Footer = () => {
                         <p className="under-hover">Certificate</p>
                       </Link>
                       {/* <p className="under-hover">Career</p> */}
-
                     </div>
                   </div>
                   <div className="part-3-width">
@@ -136,7 +134,6 @@ const Footer = () => {
                       />
                     </div>
                     <div className="our-product">
-
                       <p className="under-hover">
                         <Link
                           style={{ textDecoration: "none" }}
@@ -157,7 +154,6 @@ const Footer = () => {
                           Terms & Conditions{" "}
                         </Link>
                       </p>
-
                     </div>
                   </div>
                   <div className="part-4-width">
@@ -200,8 +196,18 @@ const Footer = () => {
             </div>
           </div>
           <div className="copyright">
-            <p className="copy">Copyrights © 2024 Flonix All rights reserved.</p>
-            <p className="devlopBy">Design & Developed By: Flourish Creations Pvt. Ltd.</p>
+            <p className="copy">
+              Copyrights © 2024 Flonix All rights reserved.
+            </p>
+            <p className="devlopBy">
+              <a
+                href="https://teamflourish.co/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Design & Developed By: Flourish Creations Pvt. Ltd.
+              </a>
+            </p>
           </div>
         </div>
       </footer>

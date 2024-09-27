@@ -16,7 +16,6 @@ const ProductDetail = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [relatedProducts, setRelatedProducts] = useState([]);
-  const [clicked, setClicked] = useState(false);
   const apiUrl = process.env.REACT_APP_URL;
   const domain = process.env.REACT_APP_DOMAIN;
 
